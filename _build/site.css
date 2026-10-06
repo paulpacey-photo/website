@@ -27,3 +27,15 @@ button{-webkit-tap-highlight-color:transparent}
 a[aria-label="LinkedIn"] svg{transition:transform .2s ease;transform-origin:50% 50%}
 a[aria-label="LinkedIn"]:hover svg,a[aria-label="LinkedIn"]:focus-visible svg{transform:scale(1.12)}
 @media (prefers-reduced-motion:reduce){a[aria-label="LinkedIn"] svg{transition:none}}
+
+/* Discovery brief: image upload */
+.up-box{cursor:pointer;transition:border-color .15s ease,background-color .15s ease}
+.up-box:hover,.up-box:focus-visible,.up-box.up-over{border-color:#A42C35!important;background:#FBF8F4!important;outline:none}
+.up-list{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.up-list:empty{display:none}
+.up-list li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 12px;background:#F6F2EC;font-family:'Jost',sans-serif;font-size:14px;color:#1E1E1E}
+.up-list li span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.up-rm{flex:none;width:28px;height:28px;border:0;background:transparent;color:#6B665F;font-size:20px;line-height:1;cursor:pointer}
+.up-rm:hover{color:#A42C35}
+.up-note{margin:8px 0 0;font-family:'Jost',sans-serif;font-size:13px;color:#A42C35}
+.up-note:empty{display:none}

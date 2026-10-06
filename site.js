@@ -117,6 +117,52 @@
     hidden(b, key).value = String(n);
   }
 
+  /* ---------- image upload (Discovery brief, question 14) ---------- */
+  var MAX_FILES = 10, MAX_MB = 10, OK_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
+  Array.prototype.forEach.call(doc.querySelectorAll('form span'), function (sp) {
+    if (sp.firstChild && sp.firstChild.nodeType === 3 && sp.firstChild.nodeValue.indexOf('Drop images here') === 0) setupUpload(sp.parentNode);
+  });
+  function setupUpload(box) {
+    var form = box.closest('form');
+    form._ppFiles = form._ppFiles || [];
+    var input = doc.createElement('input');
+    input.type = 'file'; input.multiple = true; input.accept = 'image/jpeg,image/png,image/webp'; input.hidden = true;
+    box.appendChild(input);
+    var store = doc.createElement('input'); store.type = 'hidden'; store.name = 'images'; box.parentNode.appendChild(store);
+    var list = doc.createElement('ul'); list.className = 'up-list'; box.parentNode.insertBefore(list, box.nextSibling);
+    var note = doc.createElement('p'); note.className = 'up-note'; note.setAttribute('role', 'status'); list.parentNode.insertBefore(note, list.nextSibling);
+    box.setAttribute('role', 'button'); box.setAttribute('tabindex', '0'); box.setAttribute('aria-label', 'Add images, optional. JPG or PNG, up to 10 files');
+    box.classList.add('up-box');
+    box.addEventListener('click', function (e) { if (e.target !== input) input.click(); });
+    box.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); input.click(); } });
+    ['dragenter', 'dragover'].forEach(function (t) { box.addEventListener(t, function (e) { e.preventDefault(); box.classList.add('up-over'); }); });
+    ['dragleave', 'drop'].forEach(function (t) { box.addEventListener(t, function (e) { e.preventDefault(); box.classList.remove('up-over'); }); });
+    box.addEventListener('drop', function (e) { add(e.dataTransfer.files); });
+    input.addEventListener('change', function () { add(input.files); input.value = ''; });
+    function add(files) {
+      var skipped = [];
+      Array.prototype.forEach.call(files, function (f) {
+        if (OK_TYPES.indexOf(f.type) < 0) skipped.push(f.name + ' (not a JPG or PNG)');
+        else if (f.size > MAX_MB * 1024 * 1024) skipped.push(f.name + ' (over ' + MAX_MB + ' MB)');
+        else if (form._ppFiles.length >= MAX_FILES) skipped.push(f.name + ' (limit of ' + MAX_FILES + ' files)');
+        else form._ppFiles.push(f);
+      });
+      note.textContent = skipped.length ? 'Not added: ' + skipped.join(', ') + '.' : '';
+      render();
+    }
+    function render() {
+      list.innerHTML = '';
+      form._ppFiles.forEach(function (f, i) {
+        var li = doc.createElement('li');
+        var name = doc.createElement('span'); name.textContent = f.name;
+        var rm = doc.createElement('button'); rm.type = 'button'; rm.className = 'up-rm'; rm.textContent = '×';
+        rm.setAttribute('aria-label', 'Remove ' + f.name);
+        rm.addEventListener('click', function () { form._ppFiles.splice(i, 1); note.textContent = ''; render(); });
+        li.appendChild(name); li.appendChild(rm); list.appendChild(li);
+      });
+    }
+  }
+
   /* ---------- forms ---------- */
   var KINDS = {
     'Request portfolio access': { kind: 'portfolio', ok: 'Thank you. Your request is with me, and your private portfolio link will follow shortly.' },
@@ -155,6 +201,7 @@
       });
       if (bad.length) { message(form, btn, bad.length === 1 && bad[0].name === 'email' ? 'Please enter a valid email address.' : 'Please add your name and a valid email address.', 'err'); bad[0].focus(); return; }
       btn.disabled = true; btn.style.opacity = '0.6';
+      if (form._ppFiles && form._ppFiles.length) message(form, btn, 'Uploading your images…', '');
       var send = window.ppSubmit ? window.ppSubmit(cfg.kind, data, form) : Promise.resolve();
       send.then(function () {
         if (cfg.next) { location.href = cfg.next; return; }

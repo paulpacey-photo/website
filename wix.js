@@ -60,7 +60,32 @@
     return out;
   }
 
+  function uploadImages(t, form) {
+    var files = (form && form._ppFiles) || [];
+    if (!files.length) return Promise.resolve();
+    return Promise.all(files.map(function (f) {
+      return fetch(API + '/form-submission-service/v4/submissions/media-upload-url', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: t },
+        body: JSON.stringify({ formId: FORMS.discovery, filename: f.name, mimeType: f.type })
+      }).then(function (r) { if (!r.ok) throw new Error('upload url ' + r.status); return r.json(); })
+        .then(function (j) {
+          var u = j.uploadUrl;
+          return fetch(u + (u.indexOf('?') < 0 ? '?' : '&') + 'filename=' + encodeURIComponent(f.name), { method: 'PUT', headers: { 'Content-Type': f.type }, body: f });
+        }).then(function (r) { if (!r.ok) throw new Error('upload ' + r.status); return r.json(); })
+        .then(function (j) { return j.file && j.file.url; });
+    })).then(function (urls) {
+      var store = form.querySelector('input[name="images"]');
+      if (store) store.value = urls.filter(Boolean).join('\n');
+    });
+  }
+
   window.ppSubmit = function (kind, d, form) {
+    if (kind === 'discovery' && form && form._ppFiles && form._ppFiles.length) {
+      return token().then(function (t) { return uploadImages(t, form); }).then(function () { return send(kind, d, form); });
+    }
+    return send(kind, d, form);
+  };
+  function send(kind, d, form) {
     var v;
     if (kind === 'portfolio' || kind === 'message') v = { name: d.name, school: d.school, role: d.role, email: d.email, message: d.message };
     else if (kind === 'guide') v = { name: d.name, school: d.school, email: d.email, newsletter: d.newsletter === 'yes' };
@@ -76,5 +101,5 @@
       if (!r.ok) return r.text().then(function (t) { throw new Error('submit ' + r.status + ' ' + t.slice(0, 300)); });
       return r.json();
     });
-  };
+  }
 })();
