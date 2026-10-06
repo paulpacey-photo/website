@@ -22,3 +22,8 @@ button{-webkit-tap-highlight-color:transparent}
 .menu-foot{margin-top:auto;padding-top:40px;display:flex;flex-direction:column;gap:14px}
 .menu-foot a{color:#1E1E1E;text-decoration:none;font-size:16px}
 .menu-foot .menu-cta{display:flex;align-items:center;justify-content:center;height:54px;background:#A42C35;color:#ffffff;font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+
+/* LinkedIn icon: enlarge slightly on hover (logo colour stays as LinkedIn allows) */
+a[aria-label="LinkedIn"] svg{transition:transform .2s ease;transform-origin:50% 50%}
+a[aria-label="LinkedIn"]:hover svg,a[aria-label="LinkedIn"]:focus-visible svg{transform:scale(1.12)}
+@media (prefers-reduced-motion:reduce){a[aria-label="LinkedIn"] svg{transition:none}}
