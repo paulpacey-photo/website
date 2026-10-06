@@ -17,7 +17,7 @@ BAND = {
     2: '/_blob/4e3a9d8ee137f04633bf6a310ed9f2ea',   # teacher and student
     3: '/_blob/9c30d14da3ed8313b4c30ba054b72f70',   # student concentrating
 }
-PORTRAIT = '/_blob/34f01390389b25089aa6720dc5b4f8f5'
+PORTRAIT = '/_blob/5cbcad31e477110391127e9cf157361c'
 SIGNATURE = '/_blob/ed31b870cf6c1f8e89f4233c4fee7b09'
 
 TITLE = 'The Uncomfortable Truth About International School Marketing'
@@ -65,7 +65,7 @@ P('Here is something that may surprise the marketing teams I work with. In all m
 P('I read them beforehand, of course. I respect the thinking that goes into them, and they help me understand what a school hopes to communicate. But on the day, they stay in the bag.')
 P('This isn’t carelessness. It comes from something I learned early and have relearned on every shoot since: a school reveals its true spirit in front of the camera regardless of its mission statement. The real moments (the actions, interactions and reactions that make a parent stop scrolling) are as obvious as they are fleeting. A teacher leaning in to a student who has just understood something. Two children from different continents laughing at a joke neither could have explained in the other’s language. A coach’s hand on a shoulder after a missed shot.')
 P('These moments last a second, sometimes less. If, in that second, I am consciously checking what I see against a brand pillar (Is this ‘nurturing’? Is this ‘rigorous’?), it’s already gone. Any attempt to recreate a second, performed version comes across as forced, which a parent can always sense.')
-B.append(('band', 2, 'I don’t illustrate the mission statement. I watch, and I trust that what the school actually is <i>will show up.</i>'))
+B.append(('band', 2, 'I don’t just aim to illustrate a mission statement. I watch, and I trust that what the school actually is <i>will show up.</i>'))
 H('Photography as a mirror')
 P('What the language experiment clarified for me is why that trust has always worked.')
 P('If every school uses the same words, the words cannot do the distinguishing. Something else has to. And photography, done honestly, is one of the few forms of marketing that cannot simply assert a claim. It can only show what was there.')
@@ -148,7 +148,7 @@ def render(m):
                 for i, (t, x) in enumerate(blk[1]))
             body.append(f'<div style="{wide}; box-sizing: border-box; margin-top: {28 if m else 40}px; border-bottom: 1px solid {STONE}">{items}</div>')
         elif k == 'final':
-            body.append(f'<div data-reveal="1" style="{col}; box-sizing: border-box; margin-top: {48 if m else 72}px; padding-top: {32 if m else 44}px; border-top: 1px solid {INK}"><p style="margin: 0; font-family: {SERIF}; font-size: {24 if m else 32}px; line-height: 1.38; color: {INK}">{blk[1]}</p><img src="{SIGNATURE}" alt="Paul Pacey" style="display: block; margin-top: {24 if m else 32}px; width: {200 if m else 260}px; height: {76 if m else 98}px"></div>')
+            body.append(f'<div data-reveal="1" style="{col}; box-sizing: border-box; margin-top: {48 if m else 72}px; padding-top: {32 if m else 44}px; border-top: 1px solid {INK}"><p style="margin: 0; font-family: {SERIF}; font-size: {24 if m else 32}px; line-height: 1.38; color: {INK}">{blk[1]}</p><img src="{SIGNATURE}" alt="Paul Pacey" style="display: block; margin-top: {24 if m else 32}px; margin-left: auto; width: {260 if m else 380}px; height: {98 if m else 143}px"></div>')
     top = ''.join(out); out = []
     # author + CTA
     out.append(f'''<!-- 5 AUTHOR -->
