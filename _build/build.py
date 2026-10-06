@@ -32,6 +32,9 @@ PAGES = [
      'Tell me about your school in ten minutes. Your answers shape our first conversation.'),
     ('thanks', 'thanks.html', ['Thanks'], ['Thanks-Mobile'],
      'Thank you | Paul Pacey', 'Your discovery brief has been received.'),
+    ('planning-guide', 'planning-guide.html', ['Guide'], ['Guide-Mobile'],
+     'Planning Your Photo Campaign | Paul Pacey',
+     'A free nine-step framework for planning a school marketing photo campaign, from discovery brief to final edit.'),
     ('privacy', 'privacy.html', ['Privacy'], ['Privacy-Mobile'],
      'Privacy policy | Paul Pacey', 'How Paul Pacey Photography handles your personal data.'),
 ]
@@ -45,7 +48,7 @@ GLOBAL = {
     'faq': 'services.html#faq', 'audit-tool': 'resources.html#audit-tool',
     'essay': 'resources.html#essay', 'lessons': 'resources.html#lessons',
     'guide-download': 'index.html#resources',      # the guide sign-up form
-    'planning-guide': 'resources.html#planning',   # TODO: PDF / online guide
+    'planning-guide': 'planning-guide.html',
     'essay-read': 'resources.html#essay',          # TODO: essay page
     'call': 'services.html#call',
 }
