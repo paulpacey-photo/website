@@ -260,6 +260,7 @@ def build():
             shared.append(pre + '{' + body + '}')
     open(os.path.join(OUT, 'pages.css'), 'w').write(''.join(shared))
     for f in ('site.css', 'site.js', 'wix.js'): shutil.copy(os.path.join(HERE, f), OUT)
+    for p in glob.glob(os.path.join(HERE, 'static', '*')): shutil.copy(p, OUT)  # files served as-is (e.g. PDFs)
     built = {}
     for slug, fname, dboards, mboards, title, desc in PAGES:
         d = [board(b) for b in dboards]; m = [board(b) for b in mboards]
