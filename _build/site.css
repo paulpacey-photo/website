@@ -39,3 +39,32 @@ a[aria-label="LinkedIn"]:hover svg,a[aria-label="LinkedIn"]:focus-visible svg{tr
 .up-rm:hover{color:#A42C35}
 .up-note{margin:8px 0 0;font-family:'Jost',sans-serif;font-size:13px;color:#A42C35}
 .up-note:empty{display:none}
+
+/* Articles: reveal on scroll, highlighted words, parallax, reading progress */
+html.fx [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+html.fx [data-reveal].in{opacity:1;transform:none}
+mark[data-hl]{background-image:linear-gradient(rgba(164,44,53,.18),rgba(164,44,53,.18));background-repeat:no-repeat;background-position:0 88%;background-size:100% 42%}
+html.fx mark[data-hl]{background-size:0% 42%;transition:background-size .7s ease}
+html.fx .in mark[data-hl]{background-size:100% 42%}
+html.fx .in mark[data-hl="1"]{transition-delay:0.47s}
+html.fx .in mark[data-hl="2"]{transition-delay:0.59s}
+html.fx .in mark[data-hl="3"]{transition-delay:0.71s}
+html.fx .in mark[data-hl="4"]{transition-delay:0.83s}
+html.fx .in mark[data-hl="5"]{transition-delay:0.95s}
+html.fx .in mark[data-hl="6"]{transition-delay:1.07s}
+html.fx .in mark[data-hl="7"]{transition-delay:1.19s}
+html.fx .in mark[data-hl="8"]{transition-delay:1.31s}
+html.fx .in mark[data-hl="9"]{transition-delay:1.43s}
+html.fx .in mark[data-hl="10"]{transition-delay:1.55s}
+html.fx .in mark[data-hl="11"]{transition-delay:1.67s}
+html.fx .in mark[data-hl="12"]{transition-delay:1.79s}
+html.fx .in mark[data-hl="13"]{transition-delay:1.91s}
+html.fx .in mark[data-hl="14"]{transition-delay:2.03s}
+html.fx .in mark[data-hl="15"]{transition-delay:2.15s}
+html.fx .in mark[data-hl="16"]{transition-delay:2.27s}
+html.fx .in mark[data-hl="17"]{transition-delay:2.39s}
+html.fx .in mark[data-hl="18"]{transition-delay:2.51s}
+html.fx .in mark[data-hl="19"]{transition-delay:2.63s}
+html.fx .in mark[data-hl="20"]{transition-delay:2.75s}
+[data-parallax-layer]{will-change:transform}
+.read-progress{position:fixed;left:0;top:0;width:100%;height:3px;background:#A42C35;transform-origin:0 50%;transform:scaleX(0);z-index:900;pointer-events:none}

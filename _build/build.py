@@ -35,6 +35,11 @@ PAGES = [
     ('planning-guide', 'planning-guide.html', ['Guide'], ['Guide-Mobile'],
      'Planning Your Photo Campaign | Paul Pacey',
      'A free nine-step framework for planning a school marketing photo campaign, from discovery brief to final edit.'),
+    ('uncomfortable-truth', 'uncomfortable-truth.html',
+     ['Article-Uncomfortable-Truth', 'Article-Uncomfortable-Truth-2'],
+     ['Article-Uncomfortable-Truth-Mobile', 'Article-Uncomfortable-Truth-Mobile-2', 'Article-Uncomfortable-Truth-Mobile-3'],
+     'The Uncomfortable Truth About International School Marketing | Paul Pacey',
+     'Strip the superlatives from competing school websites and the same handful of words remains. Where real distinctiveness lives, and why photography is a mirror.'),
     ('privacy', 'privacy.html', ['Privacy'], ['Privacy-Mobile'],
      'Privacy policy | Paul Pacey', 'How Paul Pacey Photography handles your personal data.'),
 ]
@@ -51,6 +56,8 @@ GLOBAL = {
     'planning-guide': 'planning-guide.html',
     'essay-read': 'resources.html#articles',          # TODO: essay page
     'call': 'services.html#call',
+    'uncomfortable-truth': 'uncomfortable-truth.html',
+    'articles': 'resources.html#articles',
 }
 NAV = {'home': 'index.html', 'top': 'index.html', 'services': 'services.html',
        'resources': 'resources.html', 'portfolio': 'index.html#portfolio', 'contact': 'contact.html'}
@@ -232,7 +239,7 @@ def name_fields(body):
     return re.sub(r'<(input|textarea)\b[^>]*>', rep, body)
 
 # ---------------------------------------------------------------- page assembly
-AUTO_HEIGHT = {'Discovery', 'Discovery-Mobile'}
+AUTO_HEIGHT = {'Discovery', 'Discovery-Mobile', 'Article-Uncomfortable-Truth', 'Article-Uncomfortable-Truth-2', 'Article-Uncomfortable-Truth-Mobile', 'Article-Uncomfortable-Truth-Mobile-2', 'Article-Uncomfortable-Truth-Mobile-3'}
 
 def board(name):
     s = open(os.path.join(SRC, name + '.dc.html')).read()

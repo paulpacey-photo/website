@@ -15,3 +15,7 @@ The live site (the files in the folder above this one) is generated from the des
 2. Run `python3 _build/build.py` from the repository root.
 3. Copy everything in `_build/dist/` to the repository root, replacing the old files. Keep `CNAME`, `.nojekyll`, `README.md` and `_build/`.
 4. Commit and push. GitHub Pages republishes within a minute or two.
+
+## Articles
+
+Each article is a set of boards in `project/` named `Article-<Slug>*.dc.html` (desktop split into 2 boards, mobile into 3, because canvas boards max out at 8000px tall). `tools/make_article.py` generates them from the article text; copy it, replace the content blocks, run it, then add the page to `PAGES` and `AUTO_HEIGHT` in `build.py`. Scroll effects (reveal, highlighted words, parallax bands, reading-progress bar) come from `site.js`/`site.css` and are driven by `data-reveal`, `data-hl`, `data-parallax` and `data-article` attributes.

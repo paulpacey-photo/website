@@ -117,6 +117,39 @@
     hidden(b, key).value = String(n);
   }
 
+  /* ---------- article effects: reveal, parallax, reading progress ---------- */
+  if (doc.documentElement.classList.contains('fx')) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+    doc.querySelectorAll('[data-reveal]').forEach(function (el) { io.observe(el); });
+    var layers = Array.prototype.slice.call(doc.querySelectorAll('[data-parallax]'));
+    var bar = null;
+    if (doc.querySelector('[data-article]')) { bar = doc.createElement('div'); bar.className = 'read-progress'; doc.body.appendChild(bar); }
+    var ticking = false;
+    function frame() {
+      ticking = false;
+      var vh = window.innerHeight;
+      layers.forEach(function (box) {
+        var r = box.getBoundingClientRect();
+        if (!r.height || r.bottom < -200 || r.top > vh + 200) return;
+        var k = parseFloat(box.getAttribute('data-parallax')) || 0.2;
+        var z = parseFloat(getComputedStyle(doc.documentElement).getPropertyValue('--z')) || 1;
+        var off = ((r.top + r.height / 2) - vh / 2) * -k / z;
+        var l = box.querySelector('[data-parallax-layer]');
+        if (l) l.style.transform = 'translate3d(0,' + off.toFixed(1) + 'px,0)';
+      });
+      if (bar) {
+        var h = doc.documentElement.scrollHeight - vh;
+        bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, window.scrollY / h) : 0) + ')';
+      }
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    frame();
+  }
+
   /* ---------- image upload (Discovery brief, question 14) ---------- */
   var MAX_FILES = 10, MAX_MB = 10, OK_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
   Array.prototype.forEach.call(doc.querySelectorAll('form span'), function (sp) {
