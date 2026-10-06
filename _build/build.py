@@ -357,5 +357,19 @@ MENU = '''<div class="menu" id="menu" hidden>
 <a href="mailto:paulpacey@gmail.com">paulpacey@gmail.com</a><a href="tel:+420776182699">+420 776 182 699</a></div>
 </div>'''
 
+def bust_cache():
+    """Add a content fingerprint to each stylesheet/script link so browsers never mix old and new files."""
+    import hashlib
+    tags = {}
+    for f in ('site.css', 'pages.css', 'styles.css', 'site.js', 'wix.js'):
+        tags[f] = hashlib.md5(open(os.path.join(OUT, f), 'rb').read()).hexdigest()[:10]
+    for p in glob.glob(os.path.join(OUT, '*.html')):
+        s = open(p).read()
+        for f, h in tags.items():
+            s = s.replace(f'href="{f}"', f'href="{f}?v={h}"').replace(f'src="{f}"', f'src="{f}?v={h}"')
+        open(p, 'w').write(s)
+
+
 if __name__ == '__main__':
     build()
+    bust_cache()
