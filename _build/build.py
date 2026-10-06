@@ -45,11 +45,11 @@ GLOBAL = {
     'resources': 'resources.html', 'portfolio': 'index.html#portfolio',
     'contact': 'contact.html', 'discovery': 'discovery.html', 'privacy': 'privacy.html',
     'planning': 'resources.html#planning', 'process': 'index.html#process',
-    'faq': 'services.html#faq', 'audit-tool': 'resources.html#audit-tool',
-    'essay': 'resources.html#essay', 'lessons': 'resources.html#lessons',
+    'faq': 'services.html#faq', 'audit-tool': 'resources.html#articles',
+    'essay': 'resources.html#articles', 'lessons': 'resources.html#articles',
     'guide-download': 'index.html#resources',      # the guide sign-up form
     'planning-guide': 'planning-guide.html',
-    'essay-read': 'resources.html#essay',          # TODO: essay page
+    'essay-read': 'resources.html#articles',          # TODO: essay page
     'call': 'services.html#call',
 }
 NAV = {'home': 'index.html', 'top': 'index.html', 'services': 'services.html',
