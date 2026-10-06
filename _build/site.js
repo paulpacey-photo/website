@@ -69,6 +69,7 @@
     return h;
   }
   var LIMITS = { traits: 5 };
+  var EXCLUSIVE = { 'Nothing planned': 1, 'Not sure': 1 };
   function paintChip(b, on) {
     b.setAttribute('aria-pressed', on ? 'true' : 'false');
     b.style.background = on ? '#1E1E1E' : '#ffffff'; b.style.color = on ? '#ffffff' : '#1E1E1E'; b.style.borderColor = on ? '#1E1E1E' : '#CFC7BC';
@@ -83,6 +84,11 @@
       if (count >= LIMITS[key]) return;
     }
     paintChip(b, !on);
+    // "Nothing planned" / "Not sure" can't be combined with other answers
+    if (multi && !on) {
+      var excl = EXCLUSIVE[b.textContent.trim()];
+      all.forEach(function (o) { if (o !== b && (excl || EXCLUSIVE[o.textContent.trim()])) paintChip(o, false); });
+    }
     var vals = []; all.forEach(function (o) { if (o.getAttribute('aria-pressed') === 'true') vals.push(o.textContent.trim()); });
     hidden(b, key).value = vals.join(', ');
   }
