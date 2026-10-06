@@ -92,6 +92,15 @@
     var vals = []; all.forEach(function (o) { if (o.getAttribute('aria-pressed') === 'true') vals.push(o.textContent.trim()); });
     hidden(b, key).value = vals.join(', ');
   }
+  // typing in a "something else" field selects the matching "Something else" option
+  doc.addEventListener('input', function (e) {
+    var t = e.target, key = t.getAttribute && t.getAttribute('data-other');
+    if (!key || !t.value.trim()) return;
+    var form = t.closest('form'); if (!form) return;
+    form.querySelectorAll('[data-on^="chip:' + key + ':"]').forEach(function (o) {
+      if (o.textContent.trim() === 'Something else' && o.getAttribute('aria-pressed') !== 'true') o.click();
+    });
+  });
   function scale(b, key, n) {
     var form = b.closest('form');
     form.querySelectorAll('[data-on^="scale:' + key + ':"]').forEach(function (o, i) {
