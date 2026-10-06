@@ -90,17 +90,23 @@
       all.forEach(function (o) { if (o !== b && (excl || EXCLUSIVE[o.textContent.trim()])) paintChip(o, false); });
     }
     var vals = []; all.forEach(function (o) { if (o.getAttribute('aria-pressed') === 'true') vals.push(o.textContent.trim()); });
+    syncOther(form, key);
     hidden(b, key).value = vals.join(', ');
   }
-  // typing in a "something else" field selects the matching "Something else" option
-  doc.addEventListener('input', function (e) {
-    var t = e.target, key = t.getAttribute && t.getAttribute('data-other');
-    if (!key || !t.value.trim()) return;
-    var form = t.closest('form'); if (!form) return;
+  // "Something else" fields are hidden until that option is selected
+  function syncOther(form, key) {
+    var on = false;
     form.querySelectorAll('[data-on^="chip:' + key + ':"]').forEach(function (o) {
-      if (o.textContent.trim() === 'Something else' && o.getAttribute('aria-pressed') !== 'true') o.click();
+      if (o.textContent.trim() === 'Something else' && o.getAttribute('aria-pressed') === 'true') on = true;
     });
-  });
+    form.querySelectorAll('[data-other="' + key + '"]').forEach(function (inp) {
+      var was = !inp.hidden;
+      inp.hidden = !on;
+      if (!on) inp.value = '';
+      else if (!was) inp.focus();
+    });
+  }
+  doc.querySelectorAll('[data-other]').forEach(function (inp) { inp.hidden = true; });
   function scale(b, key, n) {
     var form = b.closest('form');
     form.querySelectorAll('[data-on^="scale:' + key + ':"]').forEach(function (o, i) {

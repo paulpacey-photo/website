@@ -232,6 +232,8 @@ def name_fields(body):
     return re.sub(r'<(input|textarea)\b[^>]*>', rep, body)
 
 # ---------------------------------------------------------------- page assembly
+AUTO_HEIGHT = {'Discovery', 'Discovery-Mobile'}
+
 def board(name):
     s = open(os.path.join(SRC, name + '.dc.html')).read()
     helmet = re.search(r'<helmet>(.*?)</helmet>', s, re.S).group(1)
@@ -239,6 +241,9 @@ def board(name):
     start = s.index('<div style="width: ', s.index('</helmet>'))
     end = s.rindex('</x-dc>')
     body = s[start:end].rstrip()
+    # pages whose content can grow or shrink (e.g. reveal-on-select fields) size to their content
+    if name in AUTO_HEIGHT:
+        body = re.sub(r'^(<div style="width: \d+px; )height: \d+px;', r'\1height: auto;', body, count=1)
     script = re.search(r'<script type="text/x-dc"[^>]*>(.*?)</script>', s, re.S).group(1)
     if 'TESTIMONIALS' in script and '{{testimonials}}' in body: body = expand(body, testimonial_ctx(script))
     elif 'const GROUPS' in script: body = expand(body, discovery_ctx(script))
