@@ -382,6 +382,21 @@ def bust_cache():
         open(p, 'w').write(s)
 
 
+def lazy_images():
+    """Load photos only when they are about to come into view.
+
+    Each page carries both the desktop and the phone layout and hides one with
+    display:none; lazy images in the hidden layout are never downloaded, and
+    images further down the page load as the visitor scrolls. Logos (SVG) stay
+    immediate."""
+    pat = re.compile(r'<img\b(?![^>]*\bloading=)([^>]*\bsrc="(?!data:)[^"]+?\.(?:webp|jpe?g|png|gif)[^"]*"[^>]*)>')
+    for p in glob.glob(os.path.join(OUT, '*.html')):
+        s = open(p).read()
+        s = pat.sub(r'<img loading="lazy" decoding="async"\1>', s)
+        open(p, 'w').write(s)
+
+
 if __name__ == '__main__':
     build()
+    lazy_images()
     bust_cache()
