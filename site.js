@@ -358,29 +358,34 @@
   window.addEventListener('resize', function () { clouds.forEach(function (c) { c.fit(); }); on(); });
 })();
 
-/* ---------- moving light: card shadows swing as the page scrolls, as if the light crosses the room ---------- */
+/* ---------- moving light: shadows swing as the page scrolls, as if the light crosses the room ----------
+   Any element marked data-light keeps its own designed shadow; each shadow layer is shifted sideways,
+   the softer, deeper layers further than the tight contact shadow. */
 (function () {
   if (!document.documentElement.classList.contains('fx')) return;
-  var cards = Array.prototype.slice.call(document.querySelectorAll('[data-light]'));
-  if (!cards.length) return;
-  var spec = cards.map(function (el) {
-    var a = el.getAttribute('data-light').split('|');
-    var m = a[0] === 'm';
-    return {el: el, a1: a[1], a2: a[2], y1: m ? 18 : 22, b1: m ? 36 : 44, s1: m ? -12 : -14, y2: m ? 30 : 40, b2: m ? 54 : 70, s2: m ? -18 : -22, reach: m ? 36 : 72, on: false};
-  });
+  var els = Array.prototype.slice.call(document.querySelectorAll('[data-light]'));
+  if (!els.length) return;
+  var RX = /(rgba?\([^)]*\))\s+(-?[\d.]+)px\s+(-?[\d.]+)px\s+(-?[\d.]+)px(?:\s+(-?[\d.]+)px)?/g;
+  var items = els.map(function (el) {
+    var cs = getComputedStyle(el).boxShadow || '', L = [], m, maxY = 1;
+    RX.lastIndex = 0;
+    while ((m = RX.exec(cs))) { var y = parseFloat(m[3]); L.push({c: m[1], x: parseFloat(m[2]), y: y, b: parseFloat(m[4]), s: parseFloat(m[5] || 0)}); if (y > maxY) maxY = y; }
+    return {el: el, L: L, maxY: maxY, on: false};
+  }).filter(function (it) { return it.L.length; });
   if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { spec.forEach(function (c) { if (c.el === e.target) c.on = e.isIntersecting; }); }); on(); }, {rootMargin: '120px 0px'});
-    spec.forEach(function (c) { io.observe(c.el); });
-  } else spec.forEach(function (c) { c.on = true; });
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { items.forEach(function (it) { if (it.el === e.target) it.on = e.isIntersecting; }); }); on(); }, {rootMargin: '120px 0px'});
+    items.forEach(function (it) { io.observe(it.el); });
+  } else items.forEach(function (it) { it.on = true; });
   function frame() {
-    var vh = window.innerHeight;
-    spec.forEach(function (c) {
-      if (!c.on) return;
-      var r = c.el.getBoundingClientRect(); if (!r.height) return;
+    var vh = window.innerHeight, reach = document.documentElement.classList.contains('is-m') ? 36 : 72;
+    items.forEach(function (it) {
+      if (!it.on) return;
+      var r = it.el.getBoundingClientRect(); if (!r.height) return;
       var p = Math.max(-1, Math.min(1, ((r.top + r.height / 2) - vh / 2) / (vh / 2)));
-      var sx = p * c.reach;      // low on screen: light from the left, shadow falls right; high: the reverse
-      c.el.style.boxShadow = '0 2px 6px rgba(30,30,30,0.06), ' + (sx * 0.45).toFixed(1) + 'px ' + c.y1 + 'px ' + c.b1 + 'px ' + c.s1 + 'px rgba(30,30,30,' + c.a1 + '), ' +
-        sx.toFixed(1) + 'px ' + c.y2 + 'px ' + c.b2 + 'px ' + c.s2 + 'px rgba(30,30,30,' + c.a2 + ')';
+      var sx = p * reach;   // low on screen: light from the left, shadow falls right; high: the reverse
+      it.el.style.boxShadow = it.L.map(function (l) {
+        return l.c + ' ' + (l.x + sx * l.y / it.maxY).toFixed(1) + 'px ' + l.y + 'px ' + l.b + 'px ' + l.s + 'px';
+      }).join(', ');
     });
   }
   var ticking = false;
