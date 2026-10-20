@@ -357,3 +357,35 @@
   window.addEventListener('scroll', on, {passive: true});
   window.addEventListener('resize', function () { clouds.forEach(function (c) { c.fit(); }); on(); });
 })();
+
+/* ---------- moving light: card shadows swing as the page scrolls, as if the light crosses the room ---------- */
+(function () {
+  if (!document.documentElement.classList.contains('fx')) return;
+  var cards = Array.prototype.slice.call(document.querySelectorAll('[data-light]'));
+  if (!cards.length) return;
+  var spec = cards.map(function (el) {
+    var a = el.getAttribute('data-light').split('|');
+    var m = a[0] === 'm';
+    return {el: el, a1: a[1], a2: a[2], y1: m ? 18 : 22, b1: m ? 36 : 44, s1: m ? -12 : -14, y2: m ? 36 : 48, b2: m ? 70 : 90, s2: m ? -30 : -36, reach: m ? 22 : 36, on: false};
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { spec.forEach(function (c) { if (c.el === e.target) c.on = e.isIntersecting; }); }); on(); }, {rootMargin: '120px 0px'});
+    spec.forEach(function (c) { io.observe(c.el); });
+  } else spec.forEach(function (c) { c.on = true; });
+  function frame() {
+    var vh = window.innerHeight;
+    spec.forEach(function (c) {
+      if (!c.on) return;
+      var r = c.el.getBoundingClientRect(); if (!r.height) return;
+      var p = Math.max(-1, Math.min(1, ((r.top + r.height / 2) - vh / 2) / (vh / 2)));
+      var sx = p * c.reach;      // low on screen: light from the left, shadow falls right; high: the reverse
+      c.el.style.boxShadow = '0 2px 6px rgba(30,30,30,0.06), ' + (sx * 0.5).toFixed(1) + 'px ' + c.y1 + 'px ' + c.b1 + 'px ' + c.s1 + 'px rgba(30,30,30,' + c.a1 + '), ' +
+        sx.toFixed(1) + 'px ' + c.y2 + 'px ' + c.b2 + 'px ' + c.s2 + 'px rgba(30,30,30,' + c.a2 + ')';
+    });
+  }
+  var ticking = false;
+  function on() { if (!ticking) { ticking = true; requestAnimationFrame(function () { ticking = false; frame(); }); } }
+  window.addEventListener('scroll', on, {passive: true});
+  window.addEventListener('resize', on);
+  frame();
+})();
