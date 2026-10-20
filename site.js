@@ -364,8 +364,12 @@
 (function () {
   if (!document.documentElement.classList.contains('fx')) return;
   var els = Array.prototype.slice.call(document.querySelectorAll('[data-light]'));
-  if (!els.length) return;
+  if (!els.length && !document.querySelector('[data-light-move]')) return;
   var RX = /(rgba?\([^)]*\))\s+(-?[\d.]+)px\s+(-?[\d.]+)px\s+(-?[\d.]+)px(?:\s+(-?[\d.]+)px)?/g;
+  // Layers that carry a real photographed shadow (the wax seal's) slide sideways instead of being redrawn
+  var movers = Array.prototype.slice.call(document.querySelectorAll('[data-light-move]')).map(function (el) {
+    return {el: el, k: parseFloat(el.getAttribute('data-light-move')) || 1, on: true};
+  });
   var items = els.map(function (el) {
     var cs = getComputedStyle(el).boxShadow || '', L = [], m, maxY = 1;
     RX.lastIndex = 0;
@@ -386,6 +390,11 @@
       it.el.style.boxShadow = it.L.map(function (l) {
         return l.c + ' ' + (l.x + sx * l.y / it.maxY).toFixed(1) + 'px ' + l.y + 'px ' + l.b + 'px ' + l.s + 'px';
       }).join(', ');
+    });
+    movers.forEach(function (mv) {
+      var r = mv.el.getBoundingClientRect(); if (!r.height || r.bottom < -200 || r.top > vh + 200) return;
+      var p = Math.max(-1, Math.min(1, ((r.top + r.height / 2) - vh / 2) / (vh / 2)));
+      mv.el.style.transform = 'translate3d(' + (p * reach * mv.k).toFixed(1) + 'px,0,0)';
     });
   }
   var ticking = false;
