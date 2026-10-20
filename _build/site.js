@@ -370,7 +370,7 @@
     var cs = getComputedStyle(el).boxShadow || '', L = [], m, maxY = 1;
     RX.lastIndex = 0;
     while ((m = RX.exec(cs))) { var y = parseFloat(m[3]); L.push({c: m[1], x: parseFloat(m[2]), y: y, b: parseFloat(m[4]), s: parseFloat(m[5] || 0)}); if (y > maxY) maxY = y; }
-    return {el: el, L: L, maxY: maxY, on: false};
+    return {el: el, L: L, maxY: maxY, k: parseFloat(el.getAttribute('data-light')) || 1, on: false};
   }).filter(function (it) { return it.L.length; });
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (es) { es.forEach(function (e) { items.forEach(function (it) { if (it.el === e.target) it.on = e.isIntersecting; }); }); on(); }, {rootMargin: '120px 0px'});
@@ -382,7 +382,7 @@
       if (!it.on) return;
       var r = it.el.getBoundingClientRect(); if (!r.height) return;
       var p = Math.max(-1, Math.min(1, ((r.top + r.height / 2) - vh / 2) / (vh / 2)));
-      var sx = p * reach;   // low on screen: light from the left, shadow falls right; high: the reverse
+      var sx = p * reach * it.k;   // k < 1 for things lying close to the surface (the wax seal); low on screen: light from the left, shadow falls right; high: the reverse
       it.el.style.boxShadow = it.L.map(function (l) {
         return l.c + ' ' + (l.x + sx * l.y / it.maxY).toFixed(1) + 'px ' + l.y + 'px ' + l.b + 'px ' + l.s + 'px';
       }).join(', ');
