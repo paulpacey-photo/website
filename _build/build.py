@@ -307,7 +307,7 @@ def build():
 <link rel="icon" type="image/svg+xml" href="img/260b764977aed2393c6045ade5a04036.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Jost:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;display=swap">
 <link rel="stylesheet" href="site.css">
 <link rel="stylesheet" href="pages.css">
 <link rel="stylesheet" href="styles.css">
