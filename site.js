@@ -251,3 +251,109 @@
     form.addEventListener('submit', submit);
   });
 })();
+
+/* ---------- landing page: 3D word cloud (replaces the flat image when motion is welcome) ---------- */
+(function () {
+  var imgs = document.querySelectorAll('img[data-cloud3d]');
+  if (!imgs.length) return;
+  var ok = !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) &&
+    window.CSS && CSS.supports('transform-style', 'preserve-3d') && CSS.supports('mix-blend-mode', 'multiply');
+  if (!ok) return;   // the original flat image stays
+
+  // Bubbles measured from the original artwork on a 1000-unit grid. d = depth (0 front … 1 back), o = opacity.
+  var B = [
+    {t:'Global<br>Citizen', x:640,y:150,w:380,h:320,s:180,d:1.00,c:'#cfdbe0',o:.55,tail:'tr'},
+    {t:'Community',         x:270,y:760,w:690,h:230,s:180,d:0.95,c:'#e6dccd',o:.6, tail:'tl'},
+    {t:'Innovative',        x:560,y:590,w:430,h:115,s:122,d:0.92,c:'#c9d0d8',o:.55,tail:'tr'},
+    {t:'Individual<br>Approach',x:20,y:455,w:285,h:185,s:74,d:0.88,c:'#e2c9be',o:.65,tail:'tl'},
+    {t:'Limitless',         x:40, y:245,w:200,h:100,s:76, d:0.55,c:'#8ea6b5',o:.92,tail:'tl'},
+    {t:'Lifelong',          x:160,y:320,w:215,h:125,s:96, d:0.5, c:'#c9ad86',o:.92,tail:'tr'},
+    {t:'Full<br>Potential', x:170,y:25, w:175,h:180,s:66, d:0.45,c:'#5f5664',o:.9, tail:'tl'},
+    {t:'Unique',            x:485,y:5,  w:165,h:115,s:86, d:0.45,c:'#7a9fb2',o:.92,tail:'tl'},
+    {t:'Caring',            x:290,y:510,w:265,h:180,s:140,d:0.35,c:'#7e9eae',o:.9, tail:'tl'},
+    {t:'Diverse',           x:400,y:340,w:215,h:140,s:96, d:0.3, c:'#5a2832',o:.92,tail:'tl'},
+    {t:'Rigorous',          x:55, y:695,w:275,h:180,s:122,d:0.18,c:'#3c5f79',o:.92,tail:'tr'},
+    {t:'Whole<br>Child',    x:700,y:-10,w:300,h:260,s:124,d:0.15,c:'#5a2b33',o:.95,tail:'tr'},
+    {t:'Empowered',         x:585,y:440,w:415,h:160,s:124,d:0.12,c:'#2c4b66',o:.93,tail:'tr'},
+    {t:'Inclusive',         x:315,y:120,w:360,h:220,s:176,d:0.08,c:'#a8303b',o:.93,tail:'tr'},
+    {t:'Holistic',          x:515,y:640,w:455,h:260,s:204,d:0.0, c:'#a3232d',o:.95,tail:'tr'}
+  ];
+  // Ghost words: faint white words on their own plane, visible only where they pass over colour
+  var G = [
+    {t:'Inclusive Global',x:300,y:130,s:150},{t:'Diverse',x:330,y:300,s:110},{t:'Lifelong',x:150,y:300,s:80},
+    {t:'Empowered',x:600,y:400,s:120},{t:'Caring',x:230,y:500,s:120},{t:'Holistic',x:520,y:600,s:150},
+    {t:'Rigorous',x:40,y:690,s:110},{t:'Innovative',x:500,y:540,s:110},{t:'Community',x:250,y:720,s:150},
+    {t:'Individual',x:20,y:430,s:90},{t:'Leadership',x:650,y:20,s:120},{t:'Potential',x:150,y:40,s:70}
+  ];
+  // Paul's settings: front words slower, depth 95%, tilt 19°, ghost words 19%, soft focus off
+  var ST = {sign: 1, depth: .95, tilt: 19, ghost: .19};
+  var P = 1500, OX = 250, OY = 500;
+
+  function build(img) {
+    var mode = img.getAttribute('data-cloud3d');          // 'd' desktop (wide artwork) or 'm' phone (square crop)
+    var wrap = document.createElement('div');
+    wrap.className = img.className + ' cloud3d';
+    img.parentNode.insertBefore(wrap, img); wrap.appendChild(img);
+    img.className = 'cloud3d-flat';
+    wrap.setAttribute('role', 'img'); wrap.setAttribute('aria-label', img.alt);
+    var stage = document.createElement('div'); stage.className = 'cloud3d-stage'; stage.setAttribute('aria-hidden', 'true');
+    wrap.appendChild(stage);
+    var bEls = [], lEls = [], gEls = [];
+    B.forEach(function (b, i) {
+      var e = document.createElement('div'); e.className = 'c3-bub ' + b.tail;
+      e.style.cssText = 'width:' + b.w + 'px;height:' + b.h + 'px;z-index:' + (10 + 2 * i) + ';opacity:' + b.o + ';--c:' + b.c;
+      e.innerHTML = '<div class="c3-box"></div>'; stage.appendChild(e); bEls.push(e);
+      var l = document.createElement('div'); l.className = 'c3-lab';
+      l.style.cssText = 'width:' + b.w + 'px;height:' + b.h + 'px;z-index:' + (11 + 2 * i) + (b.d > 0.8 ? ';opacity:.85' : '');
+      l.innerHTML = '<div class="c3-w" style="font-size:' + b.s + 'px">' + b.t + '</div>'; stage.appendChild(l); lEls.push(l);
+    });
+    G.forEach(function (g) {
+      var e = document.createElement('div'); e.className = 'c3-ghost'; e.style.cssText = 'font-size:' + g.s + 'px;opacity:' + ST.ghost;
+      e.textContent = g.t; stage.appendChild(e); gEls.push(e);
+    });
+    var E = {depth: ST.depth, tilt: ST.tilt}, size = 1000;
+    function fit() {
+      var w = wrap.offsetWidth, h = wrap.offsetHeight;
+      if (mode === 'd') { size = w * 1396 / 2576; stage.style.left = (w - size) + 'px'; stage.style.top = '0px'; }
+      else { size = Math.min(w, h); stage.style.left = (w - size) + 'px'; stage.style.top = ((h - size) / 2) + 'px'; }
+      stage.style.transform = 'scale(' + (size / 1000) + ')';
+      var m = size < 600 ? 0.6 : 1; E.depth = ST.depth * m; E.tilt = ST.tilt * m;
+    }
+    function fitWords() {
+      B.forEach(function (b, i) {
+        var w = lEls[i].firstChild; w.style.fontSize = b.s + 'px'; w.style.transform = 'none';
+        var f = Math.min(1, (b.w * 0.84) / w.scrollWidth);
+        w.style.fontSize = (b.s * f).toFixed(1) + 'px'; w.style.transform = 'scaleY(' + Math.min(1.45, 1 / f).toFixed(3) + ')';
+      });
+    }
+    function settle(p) { var a = Math.abs(p), q = Math.max(0, a - 0.05); return (p < 0 ? -1 : 1) * (q * q / (q + 0.08)); }
+    function place(el, x, y, w, h, d, dy) {
+      var z = (0.3 - d) * 360 * E.depth, k = (P - z) / P;
+      var bx = OX + (x + w / 2 - OX) * k, by = OY + (y + h / 2 - OY) * k;
+      el.style.transform = 'translate3d(' + (bx - w / 2).toFixed(1) + 'px,' + (by - h / 2 + dy).toFixed(1) + 'px,' + z.toFixed(0) + 'px) scale(' + k.toFixed(4) + ') rotateY(' + (-E.tilt) + 'deg)';
+    }
+    function frame() {
+      var r = stage.getBoundingClientRect(), vh = window.innerHeight;
+      if (!r.height || r.bottom < -300 || r.top > vh + 300) return;
+      stage.style.perspectiveOrigin = '25% ' + ((vh / 2 - r.top) / (r.height / 1000)).toFixed(1) + 'px';
+      var p = settle(((r.top + r.height / 2) - vh / 2) / vh);
+      B.forEach(function (b, i) {
+        var dy = -p * ST.sign * (1 - 1.8 * b.d) * 110 * E.depth;
+        place(bEls[i], b.x, b.y, b.w, b.h, b.d, dy); place(lEls[i], b.x, b.y, b.w, b.h, b.d, dy);
+      });
+      G.forEach(function (g, i) {
+        place(gEls[i], g.x, g.y, gEls[i].offsetWidth, gEls[i].offsetHeight, 1.35, -p * ST.sign * (1 - 1.8 * 1.35) * 110 * E.depth);
+      });
+    }
+    wrap.classList.add('live');
+    fit(); fitWords(); frame();
+    if (document.fonts) document.fonts.ready.then(function () { fitWords(); frame(); });
+    return {fit: fit, frame: frame};
+  }
+
+  var clouds = Array.prototype.map.call(imgs, build);
+  var ticking = false;
+  function on() { if (!ticking) { ticking = true; requestAnimationFrame(function () { ticking = false; clouds.forEach(function (c) { c.frame(); }); }); } }
+  window.addEventListener('scroll', on, {passive: true});
+  window.addEventListener('resize', function () { clouds.forEach(function (c) { c.fit(); }); on(); });
+})();
