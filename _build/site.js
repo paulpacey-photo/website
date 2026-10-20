@@ -366,7 +366,7 @@
   var spec = cards.map(function (el) {
     var a = el.getAttribute('data-light').split('|');
     var m = a[0] === 'm';
-    return {el: el, a1: a[1], a2: a[2], y1: m ? 18 : 22, b1: m ? 36 : 44, s1: m ? -12 : -14, y2: m ? 30 : 40, b2: m ? 54 : 70, s2: m ? -18 : -22, reach: m ? 70 : 140, on: false};
+    return {el: el, a1: a[1], a2: a[2], y1: m ? 18 : 22, b1: m ? 36 : 44, s1: m ? -12 : -14, y2: m ? 30 : 40, b2: m ? 54 : 70, s2: m ? -18 : -22, reach: m ? 50 : 100, on: false};
   });
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (es) { es.forEach(function (e) { spec.forEach(function (c) { if (c.el === e.target) c.on = e.isIntersecting; }); }); on(); }, {rootMargin: '120px 0px'});
