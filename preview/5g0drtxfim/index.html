@@ -26,7 +26,12 @@
   .lede { max-width:620px; color:var(--muted); margin:0 0 36px; font-size:17px; }
   .frame { background:#000; border-radius:4px; overflow:hidden; box-shadow:0 18px 50px rgba(30,30,30,.14); }
   video { display:block; width:100%; height:auto; background:#000; }
-  .credits { display:flex; flex-wrap:wrap; gap:14px 48px; margin:26px 0 0; }
+  .label { display:flex; align-items:baseline; gap:12px; margin:0 0 12px; font-size:13px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+  .label span { font-family:"Newsreader", Georgia, serif; font-size:20px; letter-spacing:0; color:var(--accent); }
+  .frame + .label { margin-top:48px; }
+  .frame-v { max-width:420px; }
+  .credits-head { margin:40px 0 0; padding-top:24px; border-top:1px solid var(--rule); font-size:12px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+  .credits { display:flex; flex-wrap:wrap; gap:14px 48px; margin:16px 0 0; }
   .credits div { margin:0; }
   .credits dt { font-size:11px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 3px; }
   .credits dd { margin:0; font-family:"Newsreader", Georgia, serif; font-size:19px; color:var(--ink); }
@@ -44,6 +49,8 @@
     footer { padding:20px 16px; }
     .lede { font-size:16px; margin-bottom:28px; }
     .notes { grid-template-columns:1fr; }
+    .frame-v { max-width:none; }
+    .frame + .label { margin-top:36px; }
     .credits { flex-direction:column; gap:12px; }
   }
 </style>
@@ -57,14 +64,23 @@
 </header>
 <main>
   <p class="eyebrow">Private preview</p>
-  <h1>Demo reel</h1>
-  <p class="lede">A concept reel bringing still photographs to life through motion and music.</p>
+  <h1>Demo reels</h1>
+  <p class="lede">Two concept reels bringing still photographs to life through motion and music: one landscape, one vertical for social.</p>
+  <p class="label"><span>01</span>Landscape</p>
   <div class="frame">
     <video controls playsinline preload="metadata" poster="poster.jpg" controlslist="nodownload" disablepictureinpicture oncontextmenu="return false;">
       <source src="reel.mp4" type="video/mp4">
       Your browser can't play this video.
     </video>
   </div>
+  <p class="label"><span>02</span>Vertical</p>
+  <div class="frame frame-v">
+    <video controls playsinline preload="metadata" poster="poster-2.jpg" controlslist="nodownload" disablepictureinpicture oncontextmenu="return false;">
+      <source src="reel-2.mp4" type="video/mp4">
+      Your browser can't play this video.
+    </video>
+  </div>
+  <p class="credits-head">Credits for both reels</p>
   <dl class="credits">
     <div><dt>Photography &amp; art direction</dt><dd>Paul Pacey</dd></div>
     <div><dt>Edit &amp; sound design</dt><dd>Paul Pacey</dd></div>
@@ -74,7 +90,7 @@
   <div class="notes">
     <div class="notice">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
-      <p><strong>Created with AI from original photographs.</strong> The motion in this reel was generated with AI from my original school photographs. It brings each image to life without adding new people or moments.</p>
+      <p><strong>Created with AI from original photographs.</strong> The motion in these reels was generated with AI from my original school photographs, bringing each image to life without adding new people or moments.</p>
     </div>
     <div class="notice">
       <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
