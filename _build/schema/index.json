@@ -1,0 +1,91 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://paulpacey.photography/#business",
+      "name": "Paul Pacey Photography",
+      "url": "https://paulpacey.photography/",
+      "image": "https://paulpacey.photography/share-image.jpg",
+      "description": "Marketing photography and visual brand strategy for international schools and school groups: pre-production planning, documentary-style campaign shoots and curated delivery.",
+      "email": "paulpacey@gmail.com",
+      "telephone": "+420 776 182 699",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Prague",
+        "addressCountry": "Czech Republic"
+      },
+      "areaServed": "Worldwide",
+      "founder": {
+        "@id": "https://paulpacey.photography/#paul"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/paul-pacey-02a61a26/"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services for international school marketing teams",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Strategic Shoot",
+              "description": "Pre-production consulting, a one to three day campaign shoot and a curated final edit.",
+              "url": "https://paulpacey.photography/services.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Marketing Visual Audit",
+              "url": "https://paulpacey.photography/services.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Multi-Year Visual Partnership",
+              "url": "https://paulpacey.photography/services.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Remote Critique & Training",
+              "url": "https://paulpacey.photography/services.html"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://paulpacey.photography/#paul",
+      "name": "Paul Pacey",
+      "jobTitle": "Marketing photographer and visual strategist for international schools",
+      "url": "https://paulpacey.photography/",
+      "image": "https://paulpacey.photography/img/34f01390389b25089aa6720dc5b4f8f5.webp",
+      "worksFor": {
+        "@id": "https://paulpacey.photography/#business"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Prague, Czech Republic"
+      },
+      "knowsAbout": [
+        "International school marketing",
+        "School admissions marketing",
+        "Marketing photography",
+        "Documentary photography",
+        "Visual brand strategy"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/paul-pacey-02a61a26/"
+      ]
+    }
+  ]
+}
