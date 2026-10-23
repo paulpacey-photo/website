@@ -28,6 +28,9 @@ def score(href, label):
     for rx, w in PRIORITY:
         if re.search(rx, label, re.I): s = max(s, w + 0.5)
         if re.search(rx, href, re.I): s = max(s, w)
+    if s:
+        depth = len([x for x in urlparse(href).path.split('/') if x])
+        s -= 0.4 * max(0, depth - 2)
     return s
 
 
@@ -81,7 +84,7 @@ def main():
                     if href.rstrip('/') == home['url'].rstrip('/') or not same_site(home['url'] if urlparse(s['url']).path in ('', '/') else s['url'], href):
                         continue
                     sc = score(href, label)
-                    if sc and sc > cands.get(href, (0, ''))[0]:
+                    if sc > 0.5 and sc > cands.get(href, (0, ''))[0]:
                         cands[href] = (sc, label)
                 picked = sorted(cands.items(), key=lambda kv: (-kv[1][0], len(kv[0])))[:2]
                 for href, (sc, label) in picked:
