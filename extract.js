@@ -1,8 +1,8 @@
 // Runs inside each page. Collects visible marketing text with its rendered size and position.
 () => {
-  const SKIP = 'nav,footer,[role=navigation],[role=contentinfo],[aria-hidden="true"],script,style,noscript,svg,form,select,option,button,' +
+  const SKIP = 'nav,footer,[role=navigation],[role=contentinfo],[aria-hidden="true"],script,style,noscript,svg,select,option,button,dialog,[role=dialog],[role=menu],[role=menubar],' +
     '[class*="cookie" i],[id*="cookie" i],[class*="consent" i],[id*="consent" i],[class*="gdpr" i],' +
-    '[class*="footer" i],[id*="footer" i],[class*="breadcrumb" i],[class*="skip" i],[class*="megamenu" i],[class*="mega-menu" i]';
+    '[class*="footer" i],[id*="footer" i],[class*="breadcrumb" i],a[class*="skip" i],[class*="megamenu" i],[class*="mega-menu" i]';
   const vh = window.innerHeight;
   const blocks = new Map();
   const order = [];
@@ -40,7 +40,7 @@
     out.push([Math.round(b.fs * 10) / 10, b.tag, Math.round(b.top), b.top < vh ? 1 : 0, inHeader ? 1 : 0, text.slice(0, 1500)]);
   }
   // candidate links about mission / values / why choose us
-  const RX = /(mission|vision|values|ethos|philosoph|guiding|purpose|why[- ]?(choose|us|[a-z]+)|about|welcome|who[- ]we[- ]are|our[- ]school|our[- ]story|principal|head'?s?[- ]welcome)/i;
+  const RX = /((?<![a-z])mission|vision|values|ethos|philosoph|guiding|purpose|why[- ]?(choose|us|[a-z]+)|about|welcome|who[- ]we[- ]are|our[- ]school|our[- ]story|principal|head'?s?[- ]welcome)/i;
   const links = [];
   for (const a of document.querySelectorAll('a[href]')) {
     const href = a.href.split('#')[0];

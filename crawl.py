@@ -17,7 +17,7 @@ UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML
       'Chrome/130.0.0.0 Safari/537.36')
 
 PRIORITY = [
-    (r'mission|vision|values|ethos|philosoph|guiding|purpose', 3),
+    (r'(?<![a-z])mission|vision|values|ethos|philosoph|guiding|purpose', 3),
     (r'why[- ]?(choose|us)|why-', 2),
     (r'about|welcome|who[- ]we[- ]are|our[- ]school|our[- ]story', 1),
 ]
