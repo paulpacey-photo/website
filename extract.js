@@ -15,7 +15,10 @@
     if (txt.length < 2) continue;
     const el = node.parentElement;
     if (!el) continue;
-    const hit = el.closest(SKIP);
+    let hit = null;
+    for (let a = el; a && a !== document.body && a !== document.documentElement; a = a.parentElement) {
+      if (a.matches(SKIP)) { hit = a; break; }
+    }
     if (hit) {
       const sel = SKIPS.find(q => { try { return hit.matches(q); } catch (e) { return false; } }) || '?';
       const k = sel + ' @' + hit.tagName.toLowerCase() + '.' + String(hit.className || '').slice(0, 40) + '#' + (hit.id || '');
