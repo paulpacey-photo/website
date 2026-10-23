@@ -19,8 +19,8 @@ PAGES = [
      'Paul Pacey | Marketing Photography for International Schools',
      'Marketing photography and visual brand strategy for international schools. 200+ campaigns in 30+ countries.'),
     ('services', 'services.html', ['Services'], ['Services-Mobile', 'Services-Mobile-2'],
-     'Services | Paul Pacey',
-     'Campaign photography, image audits, partnerships and training for international school marketing teams.'),
+     'International School Photo Campaigns & Audits | Paul Pacey',
+     'Strategic Shoots, visual audits, multi-year partnerships and team training for international schools and school groups across 30+ countries.'),
     ('resources', 'resources.html', ['Resources'], ['Resources-Mobile'],
      'Resources | Paul Pacey',
      'Free guides and essays for international school marketing teams, drawn from 200+ campaigns.'),
@@ -310,7 +310,7 @@ def build():
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
 <meta name="twitter:card" content="summary_large_image">
-{schema(slug)}<link rel="icon" type="image/svg+xml" href="img/260b764977aed2393c6045ade5a04036.svg">
+{schema(slug, dbody)}<link rel="icon" type="image/svg+xml" href="img/260b764977aed2393c6045ade5a04036.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Jost:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;display=swap">
@@ -366,11 +366,20 @@ MEDIA = json.load(open(os.path.join(HERE, 'media.json'))) if os.path.exists(os.p
 SHARE = MEDIA.get('share', DOMAIN + '/share-image.jpg')
 
 
-def schema(slug):
-    """Structured data (JSON-LD) for search engines and AI assistants, from schema/<slug>.json if the page has one."""
+def schema(slug, body):
+    """Structured data (JSON-LD) for search engines and AI assistants: schema/<slug>.json if the page has one,
+    plus an FAQPage built from the page's FAQ (<details class="faq">), so it always matches the answers on screen."""
     p = os.path.join(HERE, 'schema', slug + '.json')
-    if not os.path.exists(p): return ''
-    return '<script type="application/ld+json">\n' + json.dumps(json.load(open(p)), ensure_ascii=False, indent=2) + '\n</script>\n'
+    data = json.load(open(p)) if os.path.exists(p) else {'@context': 'https://schema.org', '@graph': []}
+    text = lambda h: re.sub(r'\s+([,.;:!?])', r'\1', re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', h)))).strip()
+    faq = [{'@type': 'Question', 'name': text(q),
+            'acceptedAnswer': {'@type': 'Answer', 'text': ' '.join(text(a) for a in re.findall(r'<p\b[^>]*>(.*?)</p>', rest, re.S))}}
+           for q, rest in re.findall(r'<details class="faq".*?<summary[^>]*>(.*?)</summary>(.*?)</details>', body, re.S)]
+    if faq:
+        url = f"{DOMAIN}/{'' if slug == 'index' else dict((s, f) for s, f, *_ in PAGES)[slug]}"
+        data['@graph'].append({'@type': 'FAQPage', '@id': url + '#faq', 'mainEntity': faq})
+    if not data['@graph']: return ''
+    return '<script type="application/ld+json">\n' + json.dumps(data, ensure_ascii=False, indent=2) + '\n</script>\n'
 
 MENU = '''<div class="menu" id="menu" hidden>
 <div class="menu-top"><a href="index.html" class="menu-logo" aria-label="Paul Pacey — home"><img src="img/260b764977aed2393c6045ade5a04036.svg" alt="" width="30" height="42"></a>

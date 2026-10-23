@@ -1,0 +1,77 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://paulpacey.photography/services.html#core",
+      "name": "Full Strategic Shoot",
+      "serviceType": "Marketing photography",
+      "description": "Strategy, planning and photography for international schools: an audit of your website and imagery, a tailored shot list, drafted teacher and parent communications, one to three days on location and a final edit within 72 hours.",
+      "provider": {
+        "@type": "ProfessionalService",
+        "@id": "https://paulpacey.photography/#business",
+        "name": "Paul Pacey Photography"
+      },
+      "areaServed": "Worldwide",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "International school marketing and admissions teams"
+      },
+      "url": "https://paulpacey.photography/services.html#core"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://paulpacey.photography/services.html#audit",
+      "name": "Marketing Visual Audit",
+      "serviceType": "Marketing photography",
+      "description": "A standalone review of how an international school's brand language and images work together, with prioritized, practical recommendations.",
+      "provider": {
+        "@type": "ProfessionalService",
+        "@id": "https://paulpacey.photography/#business",
+        "name": "Paul Pacey Photography"
+      },
+      "areaServed": "Worldwide",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "International school marketing and admissions teams"
+      },
+      "url": "https://paulpacey.photography/services.html#audit"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://paulpacey.photography/services.html#partnership",
+      "name": "Multi-Year Visual Partnership",
+      "serviceType": "Marketing photography",
+      "description": "Planned campaign photography for schools and school groups, with future shoot dates reserved, price protection and an annual remote check-in.",
+      "provider": {
+        "@type": "ProfessionalService",
+        "@id": "https://paulpacey.photography/#business",
+        "name": "Paul Pacey Photography"
+      },
+      "areaServed": "Worldwide",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "International school marketing and admissions teams"
+      },
+      "url": "https://paulpacey.photography/services.html#partnership"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://paulpacey.photography/services.html#training",
+      "name": "Remote Critique & Training",
+      "serviceType": "Marketing photography",
+      "description": "Small-group online sessions for in-house school photographers and content creators: practical feedback and techniques.",
+      "provider": {
+        "@type": "ProfessionalService",
+        "@id": "https://paulpacey.photography/#business",
+        "name": "Paul Pacey Photography"
+      },
+      "areaServed": "Worldwide",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "International school marketing and admissions teams"
+      },
+      "url": "https://paulpacey.photography/services.html#training"
+    }
+  ]
+}
