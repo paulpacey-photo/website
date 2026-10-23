@@ -22,7 +22,7 @@ SIGNATURE = '/_blob/ed31b870cf6c1f8e89f4233c4fee7b09'
 
 TITLE = 'The Uncomfortable Truth About International School Marketing'
 DEK = 'What remains when you strip the carefully worded mission statements away, and where a school’s real distinctiveness has been living all along.'
-READ = '9 min read'
+READ = '10 min read'
 
 # ---- content: a list of blocks -------------------------------------------------
 # ('p', text) ('h', heading) ('spec', text, [words]) ('band', n, quote) ('pull', quote)
@@ -32,18 +32,21 @@ P = lambda t: B.append(('p', t))
 H = lambda t: B.append(('h', t))
 
 B.append(('lead', 'I’ve spent more than a decade on the creative front line of international schools. I’ve been in their corridors before the first bell, in their science labs and music rooms, on their playing fields in the last light of the afternoon. Through more campaigns and countries than I can count, I have developed a strong instinct about what makes one school feel different from another, and very little of it has to do with what schools say about themselves.'))
-P('I’ve always been able to feel those differences, but never able to objectively quantify them. Until recently.')
+P('I’ve always been able to feel those differences, but never able to put a number on them. So I decided to test it.')
 H('An experiment in subtraction')
-P('For some time now, I’ve been developing software designed to read a school’s website in a way that consolidates and prioritizes its positioning pillars into actionable words that would translate visually. Think of it as both a marketing audit and an action plan, used to better serve my clients.')
-P('Beyond analyzing visual content (an article for another day), the software crawls a site and scores its language by prominence, measuring word frequency, visual scale and page placement. Then it does what a prospective parent rarely has time to do: it strips away the superlative, ‘fluffy’ vocabulary to reveal what lies beneath.')
-P('By fluffy, I mean the words every institution reaches for when it wants to sound impressive: <i>exceptional, world-class, outstanding, excellent, limitless.</i> These words aren’t lies. Most of the schools using them are, in fact, very good. But they carry no real information. A parent can’t learn anything about a school from being told it is exceptional, because every school they are considering says the same.')
-P('Once those words are gone, what remains should be the school’s real self-description, the words it has chosen to define its true character.')
-P('I ran the tool on five schools with no connection to each other. Different cities, different ownership, different histories, catering to different families walking through the gates each morning.')
-P('Well, their core language was almost indistinguishable. If the following sounds familiar, you’ll know what I’m talking about:')
+P('I gathered the websites of 57 international schools and school groups with no connection to each other: Europe, the Middle East, Asia, Africa and the Americas; IB, British and American curricula; small independents and large groups. Then I read their homepages and the pages where they describe who they are (mission, values, “why choose us”) the way a busy parent takes them in. I paid attention not just to how often a word appears, but to how large it is on screen and how prominently it’s placed.')
+P('Next came the subtraction. I set aside the superlatives, the words every institution reaches for when it wants to sound impressive: <i>excellent, world-class, outstanding, exceptional, leading.</i> These words aren’t lies. Most of the schools using them are, in fact, very good. But they carry no real information. A parent can’t learn anything about a school from being told it is exceptional, because every school they are considering says the same. And nearly every one does: 56 of the 57 sites used at least one superlative, and “excellence” alone appeared on 49.')
+P('Once those words are gone, what remains should be each school’s real self-description, the words it has chosen to define its true character.')
+H('What remained')
+P('After the subtraction, I expected each school’s character to come into focus. Instead, the same words kept surfacing. 54 of the 57 sites described themselves as a community. 51 called themselves supportive, and 51 creative. 49 promised to inspire.')
+B.append(('top20', 57, [('community', 54), ('supportive', 51), ('creative', 51), ('inspire', 49), ('opportunity', 47), ('challenging', 46), ('success', 46), ('growth', 45), ('future', 44), ('diverse', 42), ('passion', 42), ('inclusive', 40), ('caring', 38), ('journey', 38), ('thrive', 38), ('collaborative', 38), ('nurturing', 37), ('respect', 37), ('confident', 36), ('innovative', 35)]))
+P('The average site used 15 of these 20 words. Even the most distinctive used five. And when I looked only at the ten words each school gave the most visual weight, an average of six or seven came from this same shared list.')
+P('Put those twenty words together, and you get a mission statement that could belong to almost any of them. If the following sounds familiar, you’ll know what I’m talking about:')
 B.append(('spec', 'At [Insert School Name], we are a welcoming, diverse and inclusive community where every child is known, supported and inspired. In a caring, nurturing environment, our students are challenged to discover their passions, grow in confidence and reach their full potential. Through a creative, collaborative and innovative approach to learning, we offer every learner the opportunity to thrive, within a culture of respect and excellence. Together, we prepare curious, compassionate global citizens for success on their journey into the future.',
           ['diverse', 'inclusive', 'community', 'supported', 'inspired', 'caring', 'nurturing', 'challenged', 'passions', 'grow', 'confidence', 'creative', 'collaborative', 'innovative', 'opportunity', 'thrive', 'respect', 'success', 'journey', 'future']))
-P('The vast majority of what each school presented as its distinctive character appeared, in nearly the same words, on the others’ sites. If you’d swapped their vocabularies overnight, I doubt any of their communities would have noticed.')
-P('School after school, the pattern held everywhere I looked.')
+P('It doesn’t read like jargon. It reads warm, sincere and entirely plausible, which is exactly the problem. If you’d swapped the schools’ vocabularies overnight, I doubt any of their communities would have noticed.')
+P('Two more patterns stood out. First, these words rarely get the biggest type. On average they appear at little more than body-text size; the headlines go to the school’s name, a welcome, campus facts and buttons. Only three of the twenty regularly earn headline space: <i>community, inspire</i> and <i>journey</i>. That last one is telling: it describes the experience of joining a school rather than the school itself. Second, schools belonging to the same group shared even more of their vocabulary with each other than unrelated schools did, often more than half of it.')
+P('School after school, region after region, the pattern held.')
 H('This is not a failure')
 P('The easy response to this finding is cynicism: schools are lazy, marketing is empty, it’s all the same brochure. I want to resist that, because I think it’s wrong, and because I’ve worked with enough school marketing teams to know how thoughtful and hardworking they generally are.')
 P('What I found isn’t a failure of marketing. It’s what marketing looks like in a mature category that has been optimized to resonate with prospective families.')
@@ -69,7 +72,7 @@ B.append(('band', 2, 'I don’t just aim to illustrate a mission statement. I wa
 H('Photography as a mirror')
 P('What the language experiment clarified for me is why that trust has always worked.')
 P('If every school uses the same words, the words cannot do the distinguishing. Something else has to. And photography, done honestly, is one of the few forms of marketing that cannot simply assert a claim. It can only show what was there.')
-P('That makes it something closer to a mirror than a tool. A school can write “caring” on its homepage, and it will be believed about as much as every other school that writes it. But when a camera is present for a full day, moving through classrooms and corridors without a script, the images become a test of whether what the school says and what the school does line up. When they do, the photographs carry a conviction no copy can manufacture. When they don’t, when a school’s language is warm but its interactions are guarded, or its words celebrate curiosity but its classrooms are silent rows, the camera tends to notice that too.')
+P('That makes it something closer to a mirror than a tool. A school can write “caring” on its homepage, as 38 of the 57 in my study did, and it will be believed about as much as every other school that writes it. But when a camera is present for a full day, moving through classrooms and corridors without a script, the images become a test of whether what the school says and what the school does line up. When they do, the photographs carry a conviction no copy can manufacture. When they don’t, when a school’s language is warm but its interactions are guarded, or its words celebrate curiosity but its classrooms are silent rows, the camera tends to notice that too.')
 P('This is why I’ve come to think of honest school photography not as decoration for a brand but as evidence for it. Parents, whether they articulate it or not, read images this way. They are looking past the words for proof.')
 B.append(('band', 3, 'Not decoration for a brand, but <i>evidence for it.</i>'))
 H('On making every school look the same')
@@ -81,9 +84,10 @@ B.append(('pull', 'A consistent style isn’t what makes schools look the same; 
 P('The differentiator isn’t how I make a school look. It’s how the school actually conducts itself in front of the mirror I hold up to it.')
 H('What this means for schools')
 P('None of this is an argument against brand strategy, careful copywriting, or the teams who produce them. Clear language matters. Shared values should be stated well. But I think schools would benefit from being honest with themselves about where that work’s returns run out.')
-P('If your positioning rests on an eloquently crafted mission statement, you are competing on the one ground where everyone has already arrived at the same place. The more productive questions lie elsewhere. What do you choose to lead with, and does that reflect what you actually prioritize? Which facts about your school are true of no one else, and are they visible, or hidden three clicks deep? And when someone watches your community honestly for a day, does what they see confirm what you’ve written?')
+P('If your positioning rests on an eloquently crafted mission statement, you are competing on the one ground where everyone has already arrived at the same place. The more productive questions lie elsewhere. What do you choose to lead with, and does that reflect what you actually prioritize? Which facts about your school are true of no one else, and are they visible, or hidden three clicks deep? What are you doing with your biggest headlines, the space most schools spend on a welcome and a list of facilities? And when someone watches your community honestly for a day, does what they see confirm what you’ve written?')
 P('That last question is the hardest, and the most valuable. It can’t be answered in a brand workshop. It can only be answered by looking.')
 B.append(('final', 'After all my years behind the camera, the most useful thing I’ve learned about international school marketing is that the schools that stand out aren’t always the ones with the best mission statement. They are the ones whose words turn out to be true <i>when you look.</i>'))
+B.append(('note', 'About the study', 'In October 2026 I analyzed the websites of 57 international schools and school groups across Europe, the Middle East, Asia, Africa and the Americas: 163 pages in all, covering each homepage and the pages where schools describe their mission, values and character. Every piece of text was measured by how often it appears and how large it is on screen. Word variants were counted together (for example, <i>inspire, inspiring</i> and <i>inspired</i>), and generic words such as <i>school, students</i> and <i>curriculum</i> were left out. No school is named, because the point is the pattern, not any individual school.'))
 
 
 # ---- rendering ----------------------------------------------------------------
@@ -147,6 +151,15 @@ def render(m):
                 f'<div data-reveal="1" style="display: {"block" if m else "grid"}; {"" if m else "grid-template-columns: 180px minmax(0, 1fr); column-gap: 40px;"} padding: {28 if m else 40}px 0; border-top: 1px solid {STONE}"><span style="display: block; font-family: {SERIF}; font-weight: 300; font-size: {64 if m else 96}px; line-height: 0.85; color: {RED}">0{i + 1}</span><div style="margin-top: {14 if m else 0}px"><h3 style="margin: 0; font-family: {SERIF}; font-weight: 400; font-size: {24 if m else 30}px; line-height: 1.2; color: {INK}">{t}</h3><p style="margin: 12px 0 0 0; font-family: {SERIF}; font-size: {fs}px; line-height: {lh}; color: {BODY}">{x}</p></div></div>'
                 for i, (t, x) in enumerate(blk[1]))
             body.append(f'<div style="{wide}; box-sizing: border-box; margin-top: {28 if m else 40}px; border-bottom: 1px solid {STONE}">{items}</div>')
+        elif k == 'top20':
+            n, rows = blk[1], blk[2]
+            lw, bw = (100, 160) if m else (170, 640)
+            items = ''.join(
+                f'<div style="display: flex; align-items: center; gap: {10 if m else 16}px; height: {22 if m else 26}px"><span style="flex: none; width: {lw}px; text-align: right; font-size: {13 if m else 14}px; color: {INK}">{w}</span><span style="flex: none; height: {14 if m else 16}px; width: {round(bw * c / n)}px; background: {RED if i == 0 else '#CFC7BC'}"></span><span style="font-size: {12 if m else 13}px; font-weight: 500; color: {INK}">{c}</span></div>'
+                for i, (w, c) in enumerate(rows))
+            body.append(f'<figure data-reveal="1" style="{wide}; box-sizing: border-box; margin-top: {32 if m else 48}px; margin-bottom: 0; {"margin-left: 24px; margin-right: 24px; padding: 24px 16px" if m else "padding: 44px 56px"}; background: #ffffff; border: 1px solid {STONE}"><span style="display: block; font-size: {10 if m else 11}px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: {RED}">The shared vocabulary</span><h3 style="margin: {10 if m else 12}px 0 0 0; font-family: {SERIF}; font-weight: 400; font-size: {23 if m else 30}px; line-height: 1.2; color: {INK}">The same 20 words appear on most school websites</h3><p style="margin: 6px 0 {18 if m else 26}px 0; font-size: 13px; color: {MUTED}">Number of the {n} websites using each word</p>{items}<figcaption style="margin-top: {16 if m else 22}px; font-size: 12px; line-height: 1.5; color: {MUTED}">Source: website language study of {n} international schools and school groups, October 2026. Word variants counted together.</figcaption></figure>')
+        elif k == 'note':
+            body.append(f'<aside style="{col}; box-sizing: border-box; margin-top: {40 if m else 56}px; padding-top: 20px; border-top: 1px solid {STONE}"><span style="display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: {MUTED}">{blk[1]}</span><p style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.65; color: #3d3a36">{blk[2]}</p></aside>')
         elif k == 'final':
             body.append(f'<div data-reveal="1" style="{col}; box-sizing: border-box; margin-top: {48 if m else 72}px; padding-top: {32 if m else 44}px; border-top: 1px solid {INK}"><p style="margin: 0; font-family: {SERIF}; font-size: {24 if m else 32}px; line-height: 1.38; color: {INK}">{blk[1]}</p><img src="{SIGNATURE}" alt="Paul Pacey" style="display: block; margin-top: {24 if m else 32}px; margin-left: auto; width: {260 if m else 380}px; height: {98 if m else 143}px"></div>')
     top = ''.join(out); out = []
@@ -162,7 +175,7 @@ def art(blocks, m, last):
     return '<!-- BODY -->\n<article style="box-sizing: border-box; padding-bottom: ' + pb + '">' + '\n'.join(blocks) + '</article>\n'
 
 
-SPLIT = {False: [int(x) for x in os.environ.get('SPLIT_D', '28').split(',')], True: [int(x) for x in os.environ.get('SPLIT_M', '19,36').split(',')]}
+SPLIT = {False: [int(x) for x in os.environ.get('SPLIT_D', '24').split(',')], True: [int(x) for x in os.environ.get('SPLIT_M', '15,33').split(',')]}
 HEIGHTS = {}
 for spec in sys.argv[2:]:
     k, v = spec.split('=')
