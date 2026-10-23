@@ -26,6 +26,10 @@
   .lede { max-width:620px; color:var(--muted); margin:0 0 36px; font-size:17px; }
   .frame { background:#000; border-radius:4px; overflow:hidden; box-shadow:0 18px 50px rgba(30,30,30,.14); }
   video { display:block; width:100%; height:auto; background:#000; }
+  .credits { display:flex; flex-wrap:wrap; gap:14px 48px; margin:26px 0 0; }
+  .credits div { margin:0; }
+  .credits dt { font-size:11px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 3px; }
+  .credits dd { margin:0; font-family:"Newsreader", Georgia, serif; font-size:19px; color:var(--ink); }
   .notes { display:grid; grid-template-columns:1fr 1fr; gap:16px 40px; margin:28px 0 0; padding-top:24px; border-top:1px solid var(--rule); }
   .notice { display:flex; gap:14px; align-items:flex-start; }
   .notice svg { flex:none; width:22px; height:22px; margin-top:2px; fill:none; stroke:var(--accent); stroke-width:1.4; stroke-linejoin:round; stroke-linecap:round; }
@@ -40,6 +44,7 @@
     footer { padding:20px 16px; }
     .lede { font-size:16px; margin-bottom:28px; }
     .notes { grid-template-columns:1fr; }
+    .credits { flex-direction:column; gap:12px; }
   }
 </style>
 </head>
@@ -52,7 +57,7 @@
 </header>
 <main>
   <p class="eyebrow">Private preview</p>
-  <h1>Sample reel</h1>
+  <h1>Demo reel</h1>
   <p class="lede">A concept reel bringing still photographs to life through motion and music.</p>
   <div class="frame">
     <video controls playsinline preload="metadata" poster="poster.jpg" controlslist="nodownload" disablepictureinpicture oncontextmenu="return false;">
@@ -60,6 +65,11 @@
       Your browser can't play this video.
     </video>
   </div>
+  <dl class="credits">
+    <div><dt>Photography &amp; art direction</dt><dd>Paul Pacey</dd></div>
+    <div><dt>Edit &amp; sound design</dt><dd>Paul Pacey</dd></div>
+    <div><dt>Motion</dt><dd>AI-generated from the original photographs</dd></div>
+  </dl>
   <div class="notes">
     <div class="notice">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
