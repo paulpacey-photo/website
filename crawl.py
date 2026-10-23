@@ -47,13 +47,23 @@ def same_site(base, href):
 def read(page, url):
     page.goto(url, wait_until='domcontentloaded', timeout=45000)
     try:
-        page.wait_for_load_state('networkidle', timeout=12000)
+        page.wait_for_load_state('networkidle', timeout=20000)
     except Exception:
         pass
     # scroll through the page so lazy sections render, then return to the top
     h = page.evaluate('document.body.scrollHeight')
     for y in range(0, min(h, 20000), 800):
         page.evaluate(f'window.scrollTo(0, {y})'); time.sleep(0.15)
+    # open collapsed accordions / <details> so mission statements tucked inside them are read
+    page.evaluate('''() => {
+      document.querySelectorAll('details').forEach(d => d.open = true);
+      const sel = 'button[aria-expanded="false"], [role=button][aria-expanded="false"]:not([href])';
+      for (const b of document.querySelectorAll(sel)) {
+        if (b.closest('nav,header,footer,[role=navigation],[role=menu],[role=menubar],[class*="menu" i],[class*="cookie" i],[id*="cookie" i]')) continue;
+        try { b.click(); } catch (e) {}
+      }
+    }''')
+    time.sleep(1.5)
     page.evaluate('window.scrollTo(0, 0)'); time.sleep(1.2)
     return page.evaluate(EXTRACT)
 
