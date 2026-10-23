@@ -3,6 +3,8 @@
   const SKIP = 'nav,footer,[role=navigation],[role=contentinfo],[aria-hidden="true"],script,style,noscript,svg,select,option,button,dialog,[role=dialog],[role=menu],[role=menubar],' +
     '[class*="cookie" i],[id*="cookie" i],[class*="consent" i],[id*="consent" i],[class*="gdpr" i],' +
     '[class*="footer" i],[id*="footer" i],[class*="breadcrumb" i],a[class*="skip" i],[class*="megamenu" i],[class*="mega-menu" i]';
+  const SKIPS = SKIP.split(',');
+  const why = {};
   const vh = window.innerHeight;
   const blocks = new Map();
   const order = [];
@@ -12,7 +14,14 @@
     const txt = node.textContent.replace(/\s+/g, ' ').trim();
     if (txt.length < 2) continue;
     const el = node.parentElement;
-    if (!el || el.closest(SKIP)) continue;
+    if (!el) continue;
+    const hit = el.closest(SKIP);
+    if (hit) {
+      const sel = SKIPS.find(q => { try { return hit.matches(q); } catch (e) { return false; } }) || '?';
+      const k = sel + ' @' + hit.tagName.toLowerCase() + '.' + String(hit.className || '').slice(0, 40) + '#' + (hit.id || '');
+      why[k] = (why[k] || 0) + txt.length;
+      continue;
+    }
     const cs = getComputedStyle(el);
     if (cs.display === 'none' || cs.visibility === 'hidden' || parseFloat(cs.opacity) === 0) continue;
     const r = el.getBoundingClientRect();
@@ -48,5 +57,7 @@
     if (!/^https?:/.test(href) || /\.(pdf|jpg|png|docx?)$/i.test(href)) continue;
     if (RX.test(label) || RX.test(href)) links.push([href, label]);
   }
-  return { url: location.href, title: document.title, lang: document.documentElement.lang || '', vh, blocks: out, links: links.slice(0, 80) };
+  const skipped = Object.entries(why).sort((a, b) => b[1] - a[1]).slice(0, 8);
+  return { url: location.href, title: document.title, lang: document.documentElement.lang || '', vh, blocks: out, links: links.slice(0, 80), skipped,
+           sample: out.length ? '' : (document.body.innerText || '').slice(0, 600) };
 }
