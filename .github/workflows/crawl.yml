@@ -1,0 +1,26 @@
+name: language-study
+on:
+  push:
+    branches: [language-study]
+    paths: [run.json]
+permissions:
+  contents: write
+concurrency:
+  group: language-study
+  cancel-in-progress: true
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: language-study
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install playwright==1.48.0 && python -m playwright install --with-deps chromium
+      - run: |
+          git config user.name "language-study-bot"
+          git config user.email "paulpacey@gmail.com"
+          COMMIT=1 python crawl.py
