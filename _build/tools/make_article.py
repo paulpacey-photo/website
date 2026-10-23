@@ -40,8 +40,8 @@ P('By fluffy, I mean the words every institution reaches for when it wants to so
 P('Once those words are gone, what remains should be the school’s real self-description, the words it has chosen to define its true character.')
 P('I ran the tool on five schools with no connection to each other. Different cities, different ownership, different histories, catering to different families walking through the gates each morning.')
 P('Well, their core language was almost indistinguishable. If the following sounds familiar, you’ll know what I’m talking about:')
-B.append(('spec', 'In our welcoming, safe, and community-oriented environment, we provide a holistic and rigorous education that is both innovative and challenging. We empower a diverse and inclusive student body through a caring and nurturing culture, preparing global citizens to thrive in the future.',
-          ['welcoming', 'safe', 'community-oriented', 'holistic', 'rigorous', 'innovative', 'challenging', 'empower', 'diverse', 'inclusive', 'caring', 'nurturing', 'global citizens', 'thrive']))
+B.append(('spec', 'At [Insert School Name], our mission is to empower dynamic, lifelong learners in a collaborative, inclusive, and student-centered environment. Through a rigorous, inquiry-based curriculum and cutting-edge, innovative technology, we foster critical thinking, 21st-century skills, and holistic character development. We are dedicated to cultivating global citizens who excel in an ever-changing world by leveraging data-driven instructional strategies, community partnerships, and a culture of excellence and equity.',
+          ['empower', 'dynamic', 'lifelong learners', 'collaborative', 'inclusive', 'student-centered', 'rigorous', 'inquiry-based', 'cutting-edge', 'innovative', 'critical thinking', '21st-century skills', 'holistic', 'global citizens', 'excel', 'data-driven', 'excellence', 'equity']))
 P('The vast majority of what each school presented as its distinctive character appeared, in nearly the same words, on the others’ sites. If you’d swapped their vocabularies overnight, I doubt any of their communities would have noticed.')
 P('School after school, the pattern held everywhere I looked.')
 H('This is not a failure')
@@ -133,9 +133,9 @@ def render(m):
             def mark(mm, _c=[0]):
                 _c[0] += 1
                 return f'<mark data-hl="{_c[0]}" style="background-color: transparent; color: inherit; padding: 0 2px">{mm.group(0)}</mark>'
-            pat = re.compile(r'\b(' + '|'.join(re.escape(w) for w in sorted(words, key=len, reverse=True)) + r')\b')
+            pat = re.compile(r'(?<![\w-])(' + '|'.join(re.escape(w) for w in sorted(words, key=len, reverse=True)) + r')(?![\w-])')
             t2 = pat.sub(mark, t)
-            body.append(f'<figure data-reveal="1" data-spec="1" style="{wide}; box-sizing: border-box; margin-top: {32 if m else 44}px; margin-bottom: 0; {"margin-left: 24px; margin-right: 24px; padding: 28px 22px" if m else "padding: 48px 56px"}; background: {CREAM}; border-left: 3px solid {RED}"><span style="display: block; font-size: {10 if m else 11}px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: {RED}">Sound familiar?</span><blockquote style="margin: {14 if m else 18}px 0 0 0; font-family: {SERIF}; font-style: italic; font-size: {21 if m else 28}px; line-height: 1.5; color: {INK}">“{t2}”</blockquote><figcaption style="margin-top: {14 if m else 18}px; font-size: 13px; line-height: 1.5; color: {MUTED}">The shared vocabulary of five unconnected schools, once the superlatives are stripped away.</figcaption></figure>')
+            body.append(f'<figure data-reveal="1" data-spec="1" style="{wide}; box-sizing: border-box; margin-top: {32 if m else 44}px; margin-bottom: 0; {"margin-left: 24px; margin-right: 24px; padding: 28px 22px" if m else "padding: 48px 56px"}; background: {CREAM}; border-left: 3px solid {RED}"><span style="display: block; font-size: {10 if m else 11}px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: {RED}">Sound familiar?</span><blockquote style="margin: {14 if m else 18}px 0 0 0; font-family: {SERIF}; font-style: italic; font-size: {21 if m else 28}px; line-height: 1.5; color: {INK}">“{t2}”</blockquote><figcaption style="margin-top: {14 if m else 18}px; font-size: 13px; line-height: 1.5; color: {MUTED}">A composite mission statement, built from the vocabulary five unconnected schools share.</figcaption></figure>')
         elif k == 'band':
             n, q = blk[1], blk[2]
             h = 460 if m else 620
