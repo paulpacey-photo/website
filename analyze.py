@@ -27,7 +27,7 @@ curriculum curricula course courses subject subjects lesson lessons education ed
 learn learner learners study studies primary secondary early elementary middle high upper lower junior senior nursery kindergarten reception sixth
 form college university universities ib diploma ap igcse gcse baccalaureate international bilingual english french german spanish language languages
 admission admissions apply application fees fee boarding day week weeks term terms open event events news calendar home page website
-team head director principal leadership alumni community world global life time also more""".split())
+team head director principal leadership alumni world global life time also more we're""".split())
 
 SUPERLATIVES = set("""excellence excellent outstanding exceptional exceptionally world-class leading leader premier premium top finest best unrivalled
 unrivaled unparalleled unmatched extraordinary remarkable superb renowned prestigious elite highest unique distinctive incredible amazing
@@ -57,15 +57,15 @@ for canon, forms in {
     'compassionate': 'compassion compassionate', 'respect': 'respect respectful respected', 'resilient': 'resilient resilience', 'confident': 'confident confidence',
     'rigorous': 'rigorous rigour rigor', 'challenging': 'challenge challenging challenges challenged', 'supportive': 'support supportive supporting supported supports',
     'inspire': 'inspire inspiring inspired inspires inspiration inspirational', 'passion': 'passion passionate passions', 'thrive': 'thrive thriving thrives',
-    'flourish': 'flourish flourishing', 'excellence': 'excellence excellent excel excels', 'leading': 'leading leader leaders leadership lead leads',
+    'flourish': 'flourish flourishing', 'excellence': 'excellence excellent excel excels excelling', 'leading': 'leading leader leaders', 'leadership': 'leadership lead leads',
     'responsible': 'responsible responsibility', 'kind': 'kind kindness', 'happy': 'happy happiness', 'safe': 'safe safety safeguarding secure',
     'sustainable': 'sustainable sustainability', 'independent': 'independent independence independently', 'balanced': 'balanced balance',
     'opportunity': 'opportunity opportunities', 'potential': 'potential', 'success': 'success successful succeed succeeding', 'values': 'values value valued',
     'unique': 'unique uniquely uniqueness', 'individual': 'individual individuals individuality individually', 'engage': 'engage engaging engaged engagement',
-    'explore': 'exploration exploring', 'discovery': 'discovery', 'growth': 'grow growing grows', 'welcoming': 'welcoming welcome welcomes welcomed',
+    'explore': 'exploration exploring', 'discovery': 'discovery', 'growth': 'grow growing grows', 'welcoming': 'welcoming', 'welcome': 'welcome welcomes welcomed',
     'connected': 'connected connection connections connect', 'ambitious': 'ambition ambitious ambitions', 'character': 'character',
     'integrity': 'integrity', 'authentic': 'authentic authenticity', 'joy': 'joy joyful', 'purpose': 'purpose purposeful', 'impact': 'impact impactful',
-    'exceptional': 'exceptional exceptionally', 'personalised': 'personal personalised personalized personalisation', 'future': 'future futures',
+    'exceptional': 'exceptional exceptionally', 'personalised': 'personalised personalized personalisation', 'personal': 'personal', 'future': 'future futures',
     'world': 'worlds', 'experience': 'experience experiences experiential', 'skills': 'skill skills', 'tradition': 'tradition traditions traditional',
     'heritage': 'heritage', 'family': 'family-like', 'belonging': 'belong belonging belongs', 'agency': 'agency', 'mindful': 'mindful mindfulness',
     'reflective': 'reflective reflection reflect', 'principled': 'principled principles', 'open-minded': 'open-minded open-mindedness',
@@ -91,7 +91,7 @@ def tokens(text):
             found.append(canon)
             return ' '
         t = re.sub(r'\b(?:' + rx + r')\b', rep, t)
-    for w in re.findall(r"[a-z][a-z'-]*[a-z]|[a-z]", t):
+    for w in re.findall(r"[^\W\d_][^\W\d_'-]*(?:['-][^\W\d_]+)*", t):
         w = w.strip("'-")
         if w.endswith("'s"): w = w[:-2]
         if len(w) < 3 or w in STOP: continue
@@ -124,17 +124,36 @@ def site_blocks(rec):
 
 def load():
     recs = []
-    for f in sorted(glob.glob(os.path.join(HERE, 'results', '*.json'))):
+    for f in sorted(glob.glob(os.path.join(os.environ.get('DATA', HERE), 'results', '*.json'))):
         recs.append(json.load(open(f)))
     return recs
+
+
+def own_words(site):
+    from urllib.parse import urlparse
+    t = norm(site['name'] + ' ' + urlparse(site['url']).netloc + ' ' + urlparse(site['url']).path + ' ' + site['country'])
+    return set(re.findall(r"[^\W\d_]+", t))
+
+
+def site_profile(rec):
+    """Per site: for each term, total weight, max weight, appearances, whether in a headline (weight>=2) or first screen."""
+    own = own_words(rec['site'])
+    prof = collections.defaultdict(lambda: {'w': 0.0, 'max': 0.0, 'n': 0, 'headline': 0, 'fold': 0})
+    total = 0.0
+    for w, text, fs, base, fold, role in site_blocks(rec):
+        for t in tokens(text):
+            if t in GENERIC or t in own: continue
+            d = prof[t]
+            d['w'] += w; d['max'] = max(d['max'], w); d['n'] += 1
+            if w >= 2.0: d['headline'] = 1
+            if fold: d['fold'] = 1
+            total += w
+    return prof, total
 
 
 if __name__ == '__main__':
     recs = load()
     for r in recs:
-        bl = site_blocks(r)
-        c = collections.Counter()
-        for w, text, *_ in bl:
-            for t in tokens(text):
-                if t not in GENERIC: c[t] += w
-        print(r['site']['name'], len(bl), 'blocks;', ', '.join(f'{k} {v:.1f}' for k, v in c.most_common(15)))
+        prof, total = site_profile(r)
+        top = sorted(prof.items(), key=lambda kv: -kv[1]['w'])[:15]
+        print(r['site']['name'], f'{total:.0f}', ', '.join(f"{k} {v['w']:.1f}" for k, v in top))

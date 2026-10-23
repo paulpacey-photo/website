@@ -1,0 +1,5703 @@
+{
+ "summary": {
+  "sites_read": 57,
+  "sites_total": 59,
+  "pages_read": 163,
+  "avg_top20_used": 14.982456140350877,
+  "min_top20_used": 5,
+  "avg_top10_in_top20": 6.614035087719298,
+  "sites_with_superlative": 56,
+  "avg_superlative_share": 0.14971719231412384,
+  "avg_pair_similarity_schools": 0.3888284100659882,
+  "avg_pair_similarity_nae": 0.567098329454982,
+  "avg_pair_similarity_non_nae": 0.3718106314303542,
+  "sites_using_5plus_of_top10": 56
+ },
+ "top20": [
+  {
+   "term": "community",
+   "sites": 54,
+   "share": 0.9473684210526315,
+   "uses": 435,
+   "prominence": 1.2621311635349197,
+   "headline_sites": 27,
+   "first_screen_sites": 26,
+   "weighted_total": 549.0270561376901,
+   "impact_score": 9.632053616450705,
+   "prominence_rank": 1,
+   "reach_rank": 1
+  },
+  {
+   "term": "supportive",
+   "sites": 51,
+   "share": 0.8947368421052632,
+   "uses": 205,
+   "prominence": 1.1292230367078098,
+   "headline_sites": 7,
+   "first_screen_sites": 18,
+   "weighted_total": 231.490722525101,
+   "impact_score": 4.061240746054404,
+   "prominence_rank": 3,
+   "reach_rank": 2
+  },
+  {
+   "term": "creative",
+   "sites": 51,
+   "share": 0.8947368421052632,
+   "uses": 192,
+   "prominence": 1.1495086797233858,
+   "headline_sites": 7,
+   "first_screen_sites": 12,
+   "weighted_total": 220.70566650689008,
+   "impact_score": 3.872029236962984,
+   "prominence_rank": 4,
+   "reach_rank": 3
+  },
+  {
+   "term": "inspire",
+   "sites": 49,
+   "share": 0.8596491228070176,
+   "uses": 234,
+   "prominence": 1.3110886765251395,
+   "headline_sites": 13,
+   "first_screen_sites": 22,
+   "weighted_total": 306.79475030688263,
+   "impact_score": 5.382364040471625,
+   "prominence_rank": 2,
+   "reach_rank": 4
+  },
+  {
+   "term": "opportunity",
+   "sites": 47,
+   "share": 0.8245614035087719,
+   "uses": 140,
+   "prominence": 1.177651276238164,
+   "headline_sites": 10,
+   "first_screen_sites": 12,
+   "weighted_total": 164.87117867334294,
+   "impact_score": 2.892476818830578,
+   "prominence_rank": 7,
+   "reach_rank": 5
+  },
+  {
+   "term": "challenging",
+   "sites": 46,
+   "share": 0.8070175438596491,
+   "uses": 132,
+   "prominence": 1.1916003299677376,
+   "headline_sites": 4,
+   "first_screen_sites": 11,
+   "weighted_total": 157.29124355574135,
+   "impact_score": 2.7594955009779185,
+   "prominence_rank": 8,
+   "reach_rank": 6
+  },
+  {
+   "term": "success",
+   "sites": 46,
+   "share": 0.8070175438596491,
+   "uses": 112,
+   "prominence": 1.170796463239384,
+   "headline_sites": 6,
+   "first_screen_sites": 11,
+   "weighted_total": 131.129203882811,
+   "impact_score": 2.3005123488212456,
+   "prominence_rank": 10,
+   "reach_rank": 7
+  },
+  {
+   "term": "growth",
+   "sites": 45,
+   "share": 0.7894736842105263,
+   "uses": 147,
+   "prominence": 1.2259936859614704,
+   "headline_sites": 6,
+   "first_screen_sites": 11,
+   "weighted_total": 180.22107183633614,
+   "impact_score": 3.1617731901111603,
+   "prominence_rank": 5,
+   "reach_rank": 8
+  },
+  {
+   "term": "future",
+   "sites": 44,
+   "share": 0.7719298245614035,
+   "uses": 126,
+   "prominence": 1.3967204752919038,
+   "headline_sites": 10,
+   "first_screen_sites": 12,
+   "weighted_total": 175.98677988677989,
+   "impact_score": 3.087487366434735,
+   "prominence_rank": 6,
+   "reach_rank": 9
+  },
+  {
+   "term": "diverse",
+   "sites": 42,
+   "share": 0.7368421052631579,
+   "uses": 107,
+   "prominence": 1.1851347378106327,
+   "headline_sites": 4,
+   "first_screen_sites": 11,
+   "weighted_total": 126.8094169457377,
+   "impact_score": 2.2247266130831176,
+   "prominence_rank": 12,
+   "reach_rank": 10
+  },
+  {
+   "term": "passion",
+   "sites": 42,
+   "share": 0.7368421052631579,
+   "uses": 81,
+   "prominence": 1.1429320145278752,
+   "headline_sites": 3,
+   "first_screen_sites": 6,
+   "weighted_total": 92.57749317675788,
+   "impact_score": 1.6241665469606645,
+   "prominence_rank": 18,
+   "reach_rank": 11
+  },
+  {
+   "term": "inclusive",
+   "sites": 40,
+   "share": 0.7017543859649122,
+   "uses": 100,
+   "prominence": 1.2516709344115005,
+   "headline_sites": 6,
+   "first_screen_sites": 5,
+   "weighted_total": 125.16709344115004,
+   "impact_score": 2.195913920020176,
+   "prominence_rank": 13,
+   "reach_rank": 12
+  },
+  {
+   "term": "caring",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 101,
+   "prominence": 1.3095684958935088,
+   "headline_sites": 7,
+   "first_screen_sites": 10,
+   "weighted_total": 132.2664180852444,
+   "impact_score": 2.3204634751797264,
+   "prominence_rank": 9,
+   "reach_rank": 13
+  },
+  {
+   "term": "journey",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 87,
+   "prominence": 1.471099344886825,
+   "headline_sites": 13,
+   "first_screen_sites": 7,
+   "weighted_total": 127.98564300515378,
+   "impact_score": 2.245362157985154,
+   "prominence_rank": 11,
+   "reach_rank": 14
+  },
+  {
+   "term": "thrive",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 83,
+   "prominence": 1.2537568738844431,
+   "headline_sites": 5,
+   "first_screen_sites": 9,
+   "weighted_total": 104.06182053240877,
+   "impact_score": 1.8256459742527855,
+   "prominence_rank": 14,
+   "reach_rank": 15
+  },
+  {
+   "term": "collaborative",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 75,
+   "prominence": 1.1334320965101017,
+   "headline_sites": 4,
+   "first_screen_sites": 5,
+   "weighted_total": 85.00740723825763,
+   "impact_score": 1.491358021723818,
+   "prominence_rank": 20,
+   "reach_rank": 16
+  },
+  {
+   "term": "nurturing",
+   "sites": 37,
+   "share": 0.6491228070175439,
+   "uses": 83,
+   "prominence": 1.2165558720471767,
+   "headline_sites": 6,
+   "first_screen_sites": 6,
+   "weighted_total": 100.97413737991567,
+   "impact_score": 1.7714760943844856,
+   "prominence_rank": 15,
+   "reach_rank": 17
+  },
+  {
+   "term": "respect",
+   "sites": 37,
+   "share": 0.6491228070175439,
+   "uses": 77,
+   "prominence": 1.1344082429998872,
+   "headline_sites": 3,
+   "first_screen_sites": 6,
+   "weighted_total": 87.34943471099132,
+   "impact_score": 1.5324462229998477,
+   "prominence_rank": 19,
+   "reach_rank": 18
+  },
+  {
+   "term": "confident",
+   "sites": 36,
+   "share": 0.631578947368421,
+   "uses": 83,
+   "prominence": 1.1250311102606243,
+   "headline_sites": 2,
+   "first_screen_sites": 4,
+   "weighted_total": 93.37758215163181,
+   "impact_score": 1.6382031956426635,
+   "prominence_rank": 17,
+   "reach_rank": 19
+  },
+  {
+   "term": "innovative",
+   "sites": 35,
+   "share": 0.6140350877192983,
+   "uses": 80,
+   "prominence": 1.2320072416831227,
+   "headline_sites": 4,
+   "first_screen_sites": 7,
+   "weighted_total": 98.56057933464982,
+   "impact_score": 1.72913297078333,
+   "prominence_rank": 16,
+   "reach_rank": 20
+  }
+ ],
+ "buzz": [
+  {
+   "term": "community",
+   "sites": 54,
+   "share": 0.9473684210526315,
+   "uses": 435,
+   "prominence": 1.2621311635349197,
+   "headline_sites": 27,
+   "first_screen_sites": 26,
+   "weighted_total": 549.0270561376901,
+   "impact_score": 9.632053616450705,
+   "prominence_rank": 1,
+   "reach_rank": 1
+  },
+  {
+   "term": "supportive",
+   "sites": 51,
+   "share": 0.8947368421052632,
+   "uses": 205,
+   "prominence": 1.1292230367078098,
+   "headline_sites": 7,
+   "first_screen_sites": 18,
+   "weighted_total": 231.490722525101,
+   "impact_score": 4.061240746054404,
+   "prominence_rank": 3,
+   "reach_rank": 2
+  },
+  {
+   "term": "creative",
+   "sites": 51,
+   "share": 0.8947368421052632,
+   "uses": 192,
+   "prominence": 1.1495086797233858,
+   "headline_sites": 7,
+   "first_screen_sites": 12,
+   "weighted_total": 220.70566650689008,
+   "impact_score": 3.872029236962984,
+   "prominence_rank": 4,
+   "reach_rank": 3
+  },
+  {
+   "term": "inspire",
+   "sites": 49,
+   "share": 0.8596491228070176,
+   "uses": 234,
+   "prominence": 1.3110886765251395,
+   "headline_sites": 13,
+   "first_screen_sites": 22,
+   "weighted_total": 306.79475030688263,
+   "impact_score": 5.382364040471625,
+   "prominence_rank": 2,
+   "reach_rank": 4
+  },
+  {
+   "term": "opportunity",
+   "sites": 47,
+   "share": 0.8245614035087719,
+   "uses": 140,
+   "prominence": 1.177651276238164,
+   "headline_sites": 10,
+   "first_screen_sites": 12,
+   "weighted_total": 164.87117867334294,
+   "impact_score": 2.892476818830578,
+   "prominence_rank": 7,
+   "reach_rank": 5
+  },
+  {
+   "term": "challenging",
+   "sites": 46,
+   "share": 0.8070175438596491,
+   "uses": 132,
+   "prominence": 1.1916003299677376,
+   "headline_sites": 4,
+   "first_screen_sites": 11,
+   "weighted_total": 157.29124355574135,
+   "impact_score": 2.7594955009779185,
+   "prominence_rank": 8,
+   "reach_rank": 6
+  },
+  {
+   "term": "success",
+   "sites": 46,
+   "share": 0.8070175438596491,
+   "uses": 112,
+   "prominence": 1.170796463239384,
+   "headline_sites": 6,
+   "first_screen_sites": 11,
+   "weighted_total": 131.129203882811,
+   "impact_score": 2.3005123488212456,
+   "prominence_rank": 10,
+   "reach_rank": 7
+  },
+  {
+   "term": "growth",
+   "sites": 45,
+   "share": 0.7894736842105263,
+   "uses": 147,
+   "prominence": 1.2259936859614704,
+   "headline_sites": 6,
+   "first_screen_sites": 11,
+   "weighted_total": 180.22107183633614,
+   "impact_score": 3.1617731901111603,
+   "prominence_rank": 5,
+   "reach_rank": 8
+  },
+  {
+   "term": "future",
+   "sites": 44,
+   "share": 0.7719298245614035,
+   "uses": 126,
+   "prominence": 1.3967204752919038,
+   "headline_sites": 10,
+   "first_screen_sites": 12,
+   "weighted_total": 175.98677988677989,
+   "impact_score": 3.087487366434735,
+   "prominence_rank": 6,
+   "reach_rank": 9
+  },
+  {
+   "term": "diverse",
+   "sites": 42,
+   "share": 0.7368421052631579,
+   "uses": 107,
+   "prominence": 1.1851347378106327,
+   "headline_sites": 4,
+   "first_screen_sites": 11,
+   "weighted_total": 126.8094169457377,
+   "impact_score": 2.2247266130831176,
+   "prominence_rank": 12,
+   "reach_rank": 10
+  },
+  {
+   "term": "passion",
+   "sites": 42,
+   "share": 0.7368421052631579,
+   "uses": 81,
+   "prominence": 1.1429320145278752,
+   "headline_sites": 3,
+   "first_screen_sites": 6,
+   "weighted_total": 92.57749317675788,
+   "impact_score": 1.6241665469606645,
+   "prominence_rank": 18,
+   "reach_rank": 11
+  },
+  {
+   "term": "inclusive",
+   "sites": 40,
+   "share": 0.7017543859649122,
+   "uses": 100,
+   "prominence": 1.2516709344115005,
+   "headline_sites": 6,
+   "first_screen_sites": 5,
+   "weighted_total": 125.16709344115004,
+   "impact_score": 2.195913920020176,
+   "prominence_rank": 13,
+   "reach_rank": 12
+  },
+  {
+   "term": "caring",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 101,
+   "prominence": 1.3095684958935088,
+   "headline_sites": 7,
+   "first_screen_sites": 10,
+   "weighted_total": 132.2664180852444,
+   "impact_score": 2.3204634751797264,
+   "prominence_rank": 9,
+   "reach_rank": 13
+  },
+  {
+   "term": "journey",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 87,
+   "prominence": 1.471099344886825,
+   "headline_sites": 13,
+   "first_screen_sites": 7,
+   "weighted_total": 127.98564300515378,
+   "impact_score": 2.245362157985154,
+   "prominence_rank": 11,
+   "reach_rank": 14
+  },
+  {
+   "term": "thrive",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 83,
+   "prominence": 1.2537568738844431,
+   "headline_sites": 5,
+   "first_screen_sites": 9,
+   "weighted_total": 104.06182053240877,
+   "impact_score": 1.8256459742527855,
+   "prominence_rank": 14,
+   "reach_rank": 15
+  },
+  {
+   "term": "collaborative",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 75,
+   "prominence": 1.1334320965101017,
+   "headline_sites": 4,
+   "first_screen_sites": 5,
+   "weighted_total": 85.00740723825763,
+   "impact_score": 1.491358021723818,
+   "prominence_rank": 20,
+   "reach_rank": 16
+  },
+  {
+   "term": "nurturing",
+   "sites": 37,
+   "share": 0.6491228070175439,
+   "uses": 83,
+   "prominence": 1.2165558720471767,
+   "headline_sites": 6,
+   "first_screen_sites": 6,
+   "weighted_total": 100.97413737991567,
+   "impact_score": 1.7714760943844856,
+   "prominence_rank": 15,
+   "reach_rank": 17
+  },
+  {
+   "term": "respect",
+   "sites": 37,
+   "share": 0.6491228070175439,
+   "uses": 77,
+   "prominence": 1.1344082429998872,
+   "headline_sites": 3,
+   "first_screen_sites": 6,
+   "weighted_total": 87.34943471099132,
+   "impact_score": 1.5324462229998477,
+   "prominence_rank": 19,
+   "reach_rank": 18
+  },
+  {
+   "term": "confident",
+   "sites": 36,
+   "share": 0.631578947368421,
+   "uses": 83,
+   "prominence": 1.1250311102606243,
+   "headline_sites": 2,
+   "first_screen_sites": 4,
+   "weighted_total": 93.37758215163181,
+   "impact_score": 1.6382031956426635,
+   "prominence_rank": 17,
+   "reach_rank": 19
+  },
+  {
+   "term": "innovative",
+   "sites": 35,
+   "share": 0.6140350877192983,
+   "uses": 80,
+   "prominence": 1.2320072416831227,
+   "headline_sites": 4,
+   "first_screen_sites": 7,
+   "weighted_total": 98.56057933464982,
+   "impact_score": 1.72913297078333,
+   "prominence_rank": 16,
+   "reach_rank": 20
+  },
+  {
+   "term": "individual",
+   "sites": 35,
+   "share": 0.6140350877192983,
+   "uses": 86,
+   "prominence": 1.1052216352951325,
+   "headline_sites": 2,
+   "first_screen_sites": 8,
+   "weighted_total": 95.0490606353814
+  },
+  {
+   "term": "connected",
+   "sites": 35,
+   "share": 0.6140350877192983,
+   "uses": 71,
+   "prominence": 1.238425369704973,
+   "headline_sites": 5,
+   "first_screen_sites": 7,
+   "weighted_total": 87.92820124905307
+  },
+  {
+   "term": "responsible",
+   "sites": 34,
+   "share": 0.5964912280701754,
+   "uses": 70,
+   "prominence": 1.103410077867625,
+   "headline_sites": 1,
+   "first_screen_sites": 4,
+   "weighted_total": 77.23870545073375
+  },
+  {
+   "term": "curious",
+   "sites": 32,
+   "share": 0.5614035087719298,
+   "uses": 77,
+   "prominence": 1.210677831738756,
+   "headline_sites": 4,
+   "first_screen_sites": 6,
+   "weighted_total": 93.22219304388422
+  },
+  {
+   "term": "independent",
+   "sites": 32,
+   "share": 0.5614035087719298,
+   "uses": 62,
+   "prominence": 1.160188699135568,
+   "headline_sites": 2,
+   "first_screen_sites": 6,
+   "weighted_total": 71.93169934640522
+  },
+  {
+   "term": "engage",
+   "sites": 31,
+   "share": 0.543859649122807,
+   "uses": 67,
+   "prominence": 1.2336550799558135,
+   "headline_sites": 2,
+   "first_screen_sites": 8,
+   "weighted_total": 82.6548903570395
+  },
+  {
+   "term": "empower",
+   "sites": 31,
+   "share": 0.543859649122807,
+   "uses": 68,
+   "prominence": 1.2146841108238167,
+   "headline_sites": 5,
+   "first_screen_sites": 5,
+   "weighted_total": 82.59851953601954
+  },
+  {
+   "term": "purpose",
+   "sites": 30,
+   "share": 0.5263157894736842,
+   "uses": 61,
+   "prominence": 1.410549543673941,
+   "headline_sites": 5,
+   "first_screen_sites": 12,
+   "weighted_total": 86.0435221641104
+  },
+  {
+   "term": "impact",
+   "sites": 30,
+   "share": 0.5263157894736842,
+   "uses": 60,
+   "prominence": 1.098591519416991,
+   "headline_sites": 1,
+   "first_screen_sites": 4,
+   "weighted_total": 65.91549116501946
+  },
+  {
+   "term": "potential",
+   "sites": 30,
+   "share": 0.5263157894736842,
+   "uses": 49,
+   "prominence": 1.2031369502324394,
+   "headline_sites": 4,
+   "first_screen_sites": 4,
+   "weighted_total": 58.95371056138953
+  },
+  {
+   "term": "global citizens",
+   "sites": 28,
+   "share": 0.49122807017543857,
+   "uses": 56,
+   "prominence": 1.3172920369610792,
+   "headline_sites": 7,
+   "first_screen_sites": 7,
+   "weighted_total": 73.76835406982043
+  },
+  {
+   "term": "compassionate",
+   "sites": 28,
+   "share": 0.49122807017543857,
+   "uses": 48,
+   "prominence": 1.1605213279103206,
+   "headline_sites": 3,
+   "first_screen_sites": 1,
+   "weighted_total": 55.705023739695385
+  },
+  {
+   "term": "vibrant",
+   "sites": 27,
+   "share": 0.47368421052631576,
+   "uses": 46,
+   "prominence": 1.1532444005270093,
+   "headline_sites": 2,
+   "first_screen_sites": 2,
+   "weighted_total": 53.04924242424242
+  },
+  {
+   "term": "reflective",
+   "sites": 26,
+   "share": 0.45614035087719296,
+   "uses": 49,
+   "prominence": 1.1604784470759635,
+   "headline_sites": 2,
+   "first_screen_sites": 2,
+   "weighted_total": 56.86344390672221
+  },
+  {
+   "term": "safe",
+   "sites": 26,
+   "share": 0.45614035087719296,
+   "uses": 52,
+   "prominence": 1.0823870596969931,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 56.28412710424364
+  },
+  {
+   "term": "sustainable",
+   "sites": 24,
+   "share": 0.42105263157894735,
+   "uses": 67,
+   "prominence": 1.2134732549266773,
+   "headline_sites": 5,
+   "first_screen_sites": 3,
+   "weighted_total": 81.30270808008738
+  },
+  {
+   "term": "wellbeing",
+   "sites": 24,
+   "share": 0.42105263157894735,
+   "uses": 52,
+   "prominence": 1.13291077597275,
+   "headline_sites": 1,
+   "first_screen_sites": 4,
+   "weighted_total": 58.911360350582996
+  },
+  {
+   "term": "lifelong",
+   "sites": 24,
+   "share": 0.42105263157894735,
+   "uses": 31,
+   "prominence": 1.056346498483595,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 32.74674145299145
+  },
+  {
+   "term": "personalised",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 47,
+   "prominence": 1.181031076956408,
+   "headline_sites": 4,
+   "first_screen_sites": 0,
+   "weighted_total": 55.50846061695118
+  },
+  {
+   "term": "integrity",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 31,
+   "prominence": 1.1903097798259088,
+   "headline_sites": 2,
+   "first_screen_sites": 3,
+   "weighted_total": 36.89960317460317
+  },
+  {
+   "term": "principled",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 43,
+   "prominence": 1.335171371459217,
+   "headline_sites": 4,
+   "first_screen_sites": 6,
+   "weighted_total": 57.41236897274633
+  },
+  {
+   "term": "inquiry",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 43,
+   "prominence": 1.1790626606860948,
+   "headline_sites": 2,
+   "first_screen_sites": 0,
+   "weighted_total": 50.69969440950208
+  },
+  {
+   "term": "resilient",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 35,
+   "prominence": 1.1002994908655286,
+   "headline_sites": 0,
+   "first_screen_sites": 5,
+   "weighted_total": 38.5104821802935
+  },
+  {
+   "term": "critical thinking",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 31,
+   "prominence": 1.1048506265526314,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 34.25036942313157
+  },
+  {
+   "term": "belonging",
+   "sites": 21,
+   "share": 0.3684210526315789,
+   "uses": 38,
+   "prominence": 1.3149915540077786,
+   "headline_sites": 3,
+   "first_screen_sites": 4,
+   "weighted_total": 49.96967905229559
+  },
+  {
+   "term": "character",
+   "sites": 21,
+   "share": 0.3684210526315789,
+   "uses": 36,
+   "prominence": 1.2573839519704824,
+   "headline_sites": 4,
+   "first_screen_sites": 6,
+   "weighted_total": 45.26582227093736
+  },
+  {
+   "term": "ambitious",
+   "sites": 21,
+   "share": 0.3684210526315789,
+   "uses": 29,
+   "prominence": 1.1953499790720887,
+   "headline_sites": 2,
+   "first_screen_sites": 4,
+   "weighted_total": 34.66514939309057
+  },
+  {
+   "term": "rigorous",
+   "sites": 20,
+   "share": 0.3508771929824561,
+   "uses": 33,
+   "prominence": 1.2217522257616595,
+   "headline_sites": 2,
+   "first_screen_sites": 5,
+   "weighted_total": 40.31782345013477
+  },
+  {
+   "term": "holistic",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 43,
+   "prominence": 1.285030593340159,
+   "headline_sites": 3,
+   "first_screen_sites": 4,
+   "weighted_total": 55.25631551362683
+  },
+  {
+   "term": "welcoming",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 26,
+   "prominence": 1.2888519066403683,
+   "headline_sites": 4,
+   "first_screen_sites": 2,
+   "weighted_total": 33.510149572649574
+  },
+  {
+   "term": "kind",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 26,
+   "prominence": 1.1261446886446886,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 29.279761904761905
+  },
+  {
+   "term": "love of learning",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 20,
+   "prominence": 1.110531517094017,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 22.210630341880343
+  },
+  {
+   "term": "empathy",
+   "sites": 16,
+   "share": 0.2807017543859649,
+   "uses": 22,
+   "prominence": 1.1682359307359307,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 25.701190476190476
+  },
+  {
+   "term": "joy",
+   "sites": 16,
+   "share": 0.2807017543859649,
+   "uses": 18,
+   "prominence": 1.3919201940035275,
+   "headline_sites": 2,
+   "first_screen_sites": 4,
+   "weighted_total": 25.054563492063494
+  },
+  {
+   "term": "flourish",
+   "sites": 15,
+   "share": 0.2631578947368421,
+   "uses": 26,
+   "prominence": 1.1674193861693862,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 30.35290404040404
+  },
+  {
+   "term": "real-world",
+   "sites": 13,
+   "share": 0.22807017543859648,
+   "uses": 17,
+   "prominence": 1.0330882352941178,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 17.5625
+  },
+  {
+   "term": "balanced",
+   "sites": 12,
+   "share": 0.21052631578947367,
+   "uses": 18,
+   "prominence": 1.150220458553792,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 20.703968253968256
+  },
+  {
+   "term": "future-ready",
+   "sites": 11,
+   "share": 0.19298245614035087,
+   "uses": 14,
+   "prominence": 1.9433374009669875,
+   "headline_sites": 4,
+   "first_screen_sites": 2,
+   "weighted_total": 27.206723613537825
+  },
+  {
+   "term": "tailored",
+   "sites": 7,
+   "share": 0.12280701754385964,
+   "uses": 11,
+   "prominence": 1.1830808080808082,
+   "headline_sites": 1,
+   "first_screen_sites": 1,
+   "weighted_total": 13.01388888888889
+  },
+  {
+   "term": "agency",
+   "sites": 7,
+   "share": 0.12280701754385964,
+   "uses": 10,
+   "prominence": 1.25,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 12.5
+  },
+  {
+   "term": "authentic",
+   "sites": 6,
+   "share": 0.10526315789473684,
+   "uses": 9,
+   "prominence": 1.1111111111111112,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 10.0
+  },
+  {
+   "term": "student-centred",
+   "sites": 6,
+   "share": 0.10526315789473684,
+   "uses": 7,
+   "prominence": 1.1071428571428572,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 7.75
+  },
+  {
+   "term": "whole child",
+   "sites": 6,
+   "share": 0.10526315789473684,
+   "uses": 6,
+   "prominence": 1.09375,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 6.5625
+  },
+  {
+   "term": "open-minded",
+   "sites": 5,
+   "share": 0.08771929824561403,
+   "uses": 5,
+   "prominence": 1.0285714285714285,
+   "headline_sites": 0,
+   "first_screen_sites": 0,
+   "weighted_total": 5.142857142857142
+  },
+  {
+   "term": "21st-century",
+   "sites": 4,
+   "share": 0.07017543859649122,
+   "uses": 4,
+   "prominence": 1.5555555555555556,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 6.222222222222222
+  },
+  {
+   "term": "international-mindedness",
+   "sites": 2,
+   "share": 0.03508771929824561,
+   "uses": 2,
+   "prominence": 1.0625,
+   "headline_sites": 0,
+   "first_screen_sites": 0,
+   "weighted_total": 2.125
+  }
+ ],
+ "superlatives": [
+  {
+   "term": "excellence",
+   "sites": 49,
+   "share": 0.8596491228070176,
+   "uses": 202,
+   "prominence": 1.2566837464411393,
+   "headline_sites": 9,
+   "first_screen_sites": 12,
+   "weighted_total": 253.85011678111013
+  },
+  {
+   "term": "leading",
+   "sites": 40,
+   "share": 0.7017543859649122,
+   "uses": 110,
+   "prominence": 1.2836703359029562,
+   "headline_sites": 7,
+   "first_screen_sites": 10,
+   "weighted_total": 141.2037369493252
+  },
+  {
+   "term": "unique",
+   "sites": 39,
+   "share": 0.6842105263157895,
+   "uses": 78,
+   "prominence": 1.394692291595412,
+   "headline_sites": 8,
+   "first_screen_sites": 5,
+   "weighted_total": 108.78599874444214
+  },
+  {
+   "term": "world-class",
+   "sites": 30,
+   "share": 0.5263157894736842,
+   "uses": 53,
+   "prominence": 1.324404467361113,
+   "headline_sites": 5,
+   "first_screen_sites": 6,
+   "weighted_total": 70.19343677013899
+  },
+  {
+   "term": "exceptional",
+   "sites": 28,
+   "share": 0.49122807017543857,
+   "uses": 51,
+   "prominence": 1.2789877293533363,
+   "headline_sites": 3,
+   "first_screen_sites": 3,
+   "weighted_total": 65.22837419702014
+  },
+  {
+   "term": "outstanding",
+   "sites": 27,
+   "share": 0.47368421052631576,
+   "uses": 87,
+   "prominence": 1.1589231496111783,
+   "headline_sites": 4,
+   "first_screen_sites": 6,
+   "weighted_total": 100.8263140161725
+  },
+  {
+   "term": "top",
+   "sites": 20,
+   "share": 0.3508771929824561,
+   "uses": 46,
+   "prominence": 1.2314585616855438,
+   "headline_sites": 3,
+   "first_screen_sites": 3,
+   "weighted_total": 56.64709383753501
+  },
+  {
+   "term": "highest",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 27,
+   "prominence": 1.145288287688707,
+   "headline_sites": 1,
+   "first_screen_sites": 1,
+   "weighted_total": 30.92278376759509
+  },
+  {
+   "term": "high-quality",
+   "sites": 13,
+   "share": 0.22807017543859648,
+   "uses": 20,
+   "prominence": 1.1716470125786163,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 23.432940251572326
+  },
+  {
+   "term": "state-of-the-art",
+   "sites": 12,
+   "share": 0.21052631578947367,
+   "uses": 16,
+   "prominence": 1.2265625,
+   "headline_sites": 1,
+   "first_screen_sites": 1,
+   "weighted_total": 19.625
+  },
+  {
+   "term": "prestigious",
+   "sites": 12,
+   "share": 0.21052631578947367,
+   "uses": 15,
+   "prominence": 1.0333333333333334,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 15.5
+  },
+  {
+   "term": "remarkable",
+   "sites": 8,
+   "share": 0.14035087719298245,
+   "uses": 10,
+   "prominence": 1.0142857142857142,
+   "headline_sites": 0,
+   "first_screen_sites": 0,
+   "weighted_total": 10.142857142857142
+  },
+  {
+   "term": "extraordinary",
+   "sites": 7,
+   "share": 0.12280701754385964,
+   "uses": 17,
+   "prominence": 1.3838702147525677,
+   "headline_sites": 3,
+   "first_screen_sites": 1,
+   "weighted_total": 23.525793650793652
+  },
+  {
+   "term": "renowned",
+   "sites": 6,
+   "share": 0.10526315789473684,
+   "uses": 7,
+   "prominence": 1.1587301587301586,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 8.11111111111111
+  },
+  {
+   "term": "unparalleled",
+   "sites": 6,
+   "share": 0.10526315789473684,
+   "uses": 7,
+   "prominence": 1.10515873015873,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 7.736111111111111
+  },
+  {
+   "term": "award-winning",
+   "sites": 5,
+   "share": 0.08771929824561403,
+   "uses": 5,
+   "prominence": 1.3015873015873016,
+   "headline_sites": 1,
+   "first_screen_sites": 0,
+   "weighted_total": 6.507936507936508
+  },
+  {
+   "term": "cutting-edge",
+   "sites": 5,
+   "share": 0.08771929824561403,
+   "uses": 5,
+   "prominence": 1.0,
+   "headline_sites": 0,
+   "first_screen_sites": 0,
+   "weighted_total": 5.0
+  },
+  {
+   "term": "premier",
+   "sites": 3,
+   "share": 0.05263157894736842,
+   "uses": 5,
+   "prominence": 1.8361904761904762,
+   "headline_sites": 1,
+   "first_screen_sites": 1,
+   "weighted_total": 9.18095238095238
+  },
+  {
+   "term": "finest",
+   "sites": 3,
+   "share": 0.05263157894736842,
+   "uses": 3,
+   "prominence": 1.2708333333333333,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 3.8125
+  },
+  {
+   "term": "unrivalled",
+   "sites": 2,
+   "share": 0.03508771929824561,
+   "uses": 2,
+   "prominence": 1.0,
+   "headline_sites": 0,
+   "first_screen_sites": 0,
+   "weighted_total": 2.0
+  },
+  {
+   "term": "elite",
+   "sites": 1,
+   "share": 0.017543859649122806,
+   "uses": 1,
+   "prominence": 1.0,
+   "headline_sites": 0,
+   "first_screen_sites": 0,
+   "weighted_total": 1.0
+  },
+  {
+   "term": "first-class",
+   "sites": 1,
+   "share": 0.017543859649122806,
+   "uses": 1,
+   "prominence": 1.0,
+   "headline_sites": 0,
+   "first_screen_sites": 0,
+   "weighted_total": 1.0
+  }
+ ],
+ "per_site": [
+  {
+   "id": "01-nord-anglia-education",
+   "name": "Nord Anglia Education",
+   "type": "Group site",
+   "region": "Global",
+   "curriculum": "Mixed",
+   "ownership": "Group",
+   "client": false,
+   "pages": 3,
+   "top20_used": 17,
+   "top10_buzz": [
+    "community",
+    "future",
+    "supportive",
+    "nurturing",
+    "success",
+    "sustainable",
+    "challenging",
+    "collaborative",
+    "growth",
+    "confident"
+   ],
+   "top10_in_top20": 9,
+   "superlatives_used": [
+    "elite",
+    "excellence",
+    "exceptional",
+    "highest",
+    "leading",
+    "outstanding",
+    "premier",
+    "renowned",
+    "state-of-the-art",
+    "top",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.262558259968928,
+   "urls": [
+    "https://www.nordangliaeducation.com/",
+    "https://www.nordangliaeducation.com/outstanding-experiences/social-purpose",
+    "https://www.nordangliaeducation.com/boarding"
+   ]
+  },
+  {
+   "id": "02-inspired-education",
+   "name": "Inspired Education",
+   "type": "Group site",
+   "region": "Global",
+   "curriculum": "Mixed",
+   "ownership": "Group",
+   "client": false,
+   "pages": 3,
+   "top20_used": 18,
+   "top10_buzz": [
+    "inspire",
+    "individual",
+    "creative",
+    "future",
+    "growth",
+    "success",
+    "confident",
+    "engage",
+    "potential",
+    "supportive"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "first-class",
+    "high-quality",
+    "highest",
+    "leading",
+    "outstanding",
+    "top",
+    "unique"
+   ],
+   "superlative_share": 0.18533815178110483,
+   "urls": [
+    "https://www.inspirededu.com/",
+    "https://www.inspirededu.com/education-learning/our-philosophy",
+    "https://www.inspirededu.com/news/why-ready-school-no-longer-enough-and-whats-replacing-it"
+   ]
+  },
+  {
+   "id": "03-dukes-education",
+   "name": "Dukes Education",
+   "type": "Group site",
+   "region": "Global",
+   "curriculum": "Mixed",
+   "ownership": "Group",
+   "client": false,
+   "pages": 3,
+   "top20_used": 9,
+   "top10_buzz": [
+    "supportive",
+    "joy",
+    "individual",
+    "independent",
+    "character",
+    "purpose",
+    "passion",
+    "nurturing",
+    "inspire",
+    "flourish"
+   ],
+   "top10_in_top20": 4,
+   "superlatives_used": [
+    "excellence",
+    "extraordinary",
+    "finest",
+    "highest",
+    "leading"
+   ],
+   "superlative_share": 0.23697535726341848,
+   "urls": [
+    "https://dukeseducation.com/",
+    "https://dukeseducation.com/our-story/",
+    "https://dukeseducation.com/schools-colleges/"
+   ]
+  },
+  {
+   "id": "04-cognita",
+   "name": "Cognita",
+   "type": "Group site",
+   "region": "Global",
+   "curriculum": "Mixed",
+   "ownership": "Group",
+   "client": false,
+   "pages": 3,
+   "top20_used": 15,
+   "top10_buzz": [
+    "supportive",
+    "thrive",
+    "sustainable",
+    "community",
+    "holistic",
+    "individual",
+    "creative",
+    "purpose",
+    "opportunity",
+    "success"
+   ],
+   "top10_in_top20": 6,
+   "superlatives_used": [
+    "excellence",
+    "leading",
+    "outstanding",
+    "top",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.1370678691178171,
+   "urls": [
+    "https://www.cognita.com/",
+    "https://www.cognita.com/about-us/",
+    "https://www.cognita.com/our-schools/"
+   ]
+  },
+  {
+   "id": "05-gems-education",
+   "name": "GEMS Education",
+   "type": "Group site",
+   "region": "Global",
+   "curriculum": "Mixed",
+   "ownership": "Group",
+   "client": false,
+   "pages": 3,
+   "top20_used": 17,
+   "top10_buzz": [
+    "opportunity",
+    "supportive",
+    "caring",
+    "future",
+    "challenging",
+    "potential",
+    "safe",
+    "creative",
+    "community",
+    "success"
+   ],
+   "top10_in_top20": 8,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "extraordinary",
+    "high-quality",
+    "highest",
+    "leading",
+    "outstanding",
+    "top",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.18487037824054398,
+   "urls": [
+    "https://www.gemseducation.com/en/",
+    "https://www.gemseducation.com/en/We-Are-GEMS/Mission-and-Values",
+    "https://www.gemseducation.com/en/Our-Promise/Values-led-Education"
+   ]
+  },
+  {
+   "id": "06-international-schools-partnership-isp",
+   "name": "International Schools Partnership (ISP)",
+   "type": "Group site",
+   "region": "Global",
+   "curriculum": "Mixed",
+   "ownership": "Group",
+   "client": false,
+   "pages": 3,
+   "top20_used": 18,
+   "top10_buzz": [
+    "growth",
+    "future",
+    "purpose",
+    "curious",
+    "confident",
+    "community",
+    "principled",
+    "empower",
+    "innovative",
+    "success"
+   ],
+   "top10_in_top20": 6,
+   "superlatives_used": [
+    "award-winning",
+    "excellence",
+    "exceptional",
+    "leading",
+    "renowned",
+    "top",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.09794289223211543,
+   "urls": [
+    "https://internationalschoolspartnership.com/",
+    "https://internationalschoolspartnership.com/about-us/our-vision-purpose-principles/",
+    "https://internationalschoolspartnership.com/about-us/who-and-where-we-are/"
+   ]
+  },
+  {
+   "id": "07-globeducate",
+   "name": "Globeducate",
+   "type": "Group site",
+   "region": "Global",
+   "curriculum": "Mixed",
+   "ownership": "Group",
+   "client": false,
+   "pages": 3,
+   "top20_used": 18,
+   "top10_buzz": [
+    "supportive",
+    "inspire",
+    "creative",
+    "innovative",
+    "independent",
+    "respect",
+    "individual",
+    "holistic",
+    "ambitious",
+    "principled"
+   ],
+   "top10_in_top20": 5,
+   "superlatives_used": [
+    "excellence",
+    "high-quality",
+    "leading",
+    "outstanding",
+    "prestigious",
+    "renowned",
+    "state-of-the-art",
+    "unique",
+    "unparalleled"
+   ],
+   "superlative_share": 0.35753575357535755,
+   "urls": [
+    "https://www.globeducate.com/",
+    "https://www.globeducate.com/about-globeducate/our-values",
+    "https://www.globeducate.com/our-schools"
+   ]
+  },
+  {
+   "id": "08-taaleem",
+   "name": "Taaleem",
+   "type": "Group site",
+   "region": "Middle East",
+   "curriculum": "Mixed",
+   "ownership": "Group",
+   "client": false,
+   "pages": 3,
+   "top20_used": 15,
+   "top10_buzz": [
+    "inspire",
+    "empower",
+    "nurturing",
+    "supportive",
+    "creative",
+    "individual",
+    "community",
+    "connected",
+    "caring",
+    "future"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "highest",
+    "leading",
+    "outstanding",
+    "top"
+   ],
+   "superlative_share": 0.10526315789473684,
+   "urls": [
+    "https://www.taaleem.ae/",
+    "https://www.taaleem.ae/about-us/mission-vision/",
+    "https://www.taaleem.ae/about-us/mission-vision/"
+   ]
+  },
+  {
+   "id": "09-aldar-education",
+   "name": "Aldar Education",
+   "type": "Group site",
+   "region": "Middle East",
+   "curriculum": "Mixed",
+   "ownership": "Group",
+   "client": false,
+   "pages": 2,
+   "top20_used": 20,
+   "top10_buzz": [
+    "future",
+    "sustainable",
+    "inclusive",
+    "community",
+    "supportive",
+    "diverse",
+    "opportunity",
+    "empower",
+    "innovative",
+    "inspire"
+   ],
+   "top10_in_top20": 8,
+   "superlatives_used": [
+    "cutting-edge",
+    "excellence",
+    "high-quality",
+    "highest",
+    "leading",
+    "outstanding",
+    "prestigious",
+    "state-of-the-art",
+    "unique"
+   ],
+   "superlative_share": 0.1969309462915601,
+   "urls": [
+    "https://www.aldar.com/education",
+    "https://www.aldar.com/education/about-aldar-education"
+   ]
+  },
+  {
+   "id": "10-international-school-of-geneva-ecolint",
+   "name": "International School of Geneva (Ecolint)",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 9,
+   "top10_buzz": [
+    "inclusive",
+    "innovative",
+    "diverse",
+    "rigorous",
+    "principled",
+    "student-centred",
+    "inspire",
+    "respect",
+    "potential",
+    "supportive"
+   ],
+   "top10_in_top20": 6,
+   "superlatives_used": [
+    "excellence",
+    "high-quality",
+    "highest",
+    "outstanding",
+    "unique",
+    "unrivalled"
+   ],
+   "superlative_share": 0.2673992673992674,
+   "urls": [
+    "https://www.ecolint.ch/en",
+    "https://www.ecolint.ch/en/our-values",
+    "https://www.ecolint.ch/en/why-ecolint"
+   ]
+  },
+  {
+   "id": "11-zurich-international-school",
+   "name": "Zurich International School",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 12,
+   "top10_buzz": [
+    "community",
+    "thrive",
+    "curious",
+    "growth",
+    "future",
+    "inspire",
+    "impact",
+    "journey",
+    "supportive",
+    "confident"
+   ],
+   "top10_in_top20": 8,
+   "superlatives_used": [
+    "exceptional",
+    "leading"
+   ],
+   "superlative_share": 0.057730155259129674,
+   "urls": [
+    "https://www.zis.ch/",
+    "https://www.zis.ch/our-school/strategic-plan",
+    "https://www.zis.ch/our-school/welcome"
+   ]
+  },
+  {
+   "id": "12-aiglon-college",
+   "name": "Aiglon College",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "British / IB",
+   "ownership": "Independent",
+   "client": false,
+   "pages": 3,
+   "top20_used": 14,
+   "top10_buzz": [
+    "inspire",
+    "challenging",
+    "community",
+    "diverse",
+    "responsible",
+    "principled",
+    "respect",
+    "balanced",
+    "opportunity",
+    "creative"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "leading",
+    "outstanding",
+    "unique"
+   ],
+   "superlative_share": 0.06183820415078357,
+   "urls": [
+    "https://www.aiglon.ch/",
+    "https://www.aiglon.ch/about/guiding-principles",
+    "https://www.aiglon.ch/about"
+   ]
+  },
+  {
+   "id": "13-institut-le-rosey",
+   "name": "Institut Le Rosey",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB / French Bac",
+   "ownership": "Independent",
+   "client": false,
+   "pages": 1,
+   "top20_used": 6,
+   "top10_buzz": [
+    "holistic",
+    "challenging",
+    "collaborative",
+    "rigorous",
+    "opportunity",
+    "passion",
+    "respect",
+    "success",
+    "independent"
+   ],
+   "top10_in_top20": 6,
+   "superlatives_used": [
+    "exceptional",
+    "unparalleled"
+   ],
+   "superlative_share": 0.14376996805111822,
+   "urls": [
+    "https://www.rosey.ch/"
+   ]
+  },
+  {
+   "id": "14-international-school-of-amsterdam",
+   "name": "International School of Amsterdam",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 17,
+   "top10_buzz": [
+    "community",
+    "creative",
+    "character",
+    "inspire",
+    "supportive",
+    "diverse",
+    "connected",
+    "individual",
+    "opportunity",
+    "inquiry"
+   ],
+   "top10_in_top20": 6,
+   "superlatives_used": [
+    "leading",
+    "state-of-the-art",
+    "unique"
+   ],
+   "superlative_share": 0.05100161505114329,
+   "urls": [
+    "https://www.isa.nl/",
+    "https://www.isa.nl/mission-philosophy/",
+    "https://www.isa.nl/about-isa/"
+   ]
+  },
+  {
+   "id": "15-frankfurt-international-school",
+   "name": "Frankfurt International School",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 11,
+   "top10_buzz": [
+    "community",
+    "belonging",
+    "welcoming",
+    "connected",
+    "passion",
+    "opportunity",
+    "safe",
+    "wellbeing",
+    "individual",
+    "thrive"
+   ],
+   "top10_in_top20": 4,
+   "superlatives_used": [
+    "excellence",
+    "extraordinary",
+    "highest",
+    "top",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.16346881232377417,
+   "urls": [
+    "https://www.fis.edu/",
+    "https://www.fis.edu/about",
+    "https://www.fis.edu/about/belonging"
+   ]
+  },
+  {
+   "id": "16-international-school-of-brussels",
+   "name": "International School of Brussels",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB / American",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 17,
+   "top10_buzz": [
+    "inclusive",
+    "community",
+    "independent",
+    "future",
+    "challenging",
+    "journey",
+    "connected",
+    "personalised",
+    "supportive",
+    "collaborative"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "leading",
+    "unique"
+   ],
+   "superlative_share": 0.15612535612535614,
+   "urls": [
+    "https://www.isb.be/",
+    "https://www.isb.be/about/mission",
+    "https://www.isb.be/about"
+   ]
+  },
+  {
+   "id": "17-acs-international-schools",
+   "name": "ACS International Schools",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB / American",
+   "ownership": "Independent",
+   "client": false,
+   "pages": 3,
+   "top20_used": 16,
+   "top10_buzz": [
+    "community",
+    "inspire",
+    "purpose",
+    "inclusive",
+    "caring",
+    "creative",
+    "diverse",
+    "thrive",
+    "belonging",
+    "ambitious"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "highest",
+    "leading",
+    "outstanding",
+    "renowned",
+    "state-of-the-art",
+    "top",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.1671547096144461,
+   "urls": [
+    "https://www.acs-schools.com/",
+    "https://www.acs-schools.com/about/purpose-vision-and-values/",
+    "https://www.acs-schools.com/about/about-acs/"
+   ]
+  },
+  {
+   "id": "19-international-school-of-prague",
+   "name": "International School of Prague",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB / American",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 16,
+   "top10_buzz": [
+    "engage",
+    "inspire",
+    "community",
+    "creative",
+    "curious",
+    "innovative",
+    "compassionate",
+    "connected",
+    "opportunity",
+    "empower"
+   ],
+   "top10_in_top20": 5,
+   "superlatives_used": [
+    "cutting-edge",
+    "excellence",
+    "exceptional",
+    "outstanding",
+    "state-of-the-art",
+    "unique"
+   ],
+   "superlative_share": 0.06635071090047394,
+   "urls": [
+    "https://www.isp.cz/",
+    "https://www.isp.cz/about-us/mapping-isps-future/elementary-school-cafeteria-multipurpose-space",
+    "https://www.isp.cz/about-us/why-isp"
+   ]
+  },
+  {
+   "id": "20-vienna-international-school",
+   "name": "Vienna International School",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 10,
+   "top10_buzz": [
+    "inspire",
+    "community",
+    "opportunity",
+    "diverse",
+    "supportive",
+    "responsible",
+    "passion",
+    "creative",
+    "empower",
+    "success"
+   ],
+   "top10_in_top20": 8,
+   "superlatives_used": [
+    "state-of-the-art",
+    "world-class"
+   ],
+   "superlative_share": 0.06920415224913495,
+   "urls": [
+    "https://www.vis.ac.at/",
+    "https://www.vis.ac.at/about-us",
+    "https://www.vis.ac.at/about-us/campus"
+   ]
+  },
+  {
+   "id": "22-carlucci-american-international-school-o",
+   "name": "Carlucci American International School of Lisbon",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "American / IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 2,
+   "top20_used": 17,
+   "top10_buzz": [
+    "community",
+    "journey",
+    "growth",
+    "challenging",
+    "diverse",
+    "responsible",
+    "individual",
+    "belonging",
+    "inspire",
+    "reflective"
+   ],
+   "top10_in_top20": 6,
+   "superlatives_used": [
+    "excellence"
+   ],
+   "superlative_share": 0.018044249420738585,
+   "urls": [
+    "https://www.caislisbon.org/",
+    "https://www.caislisbon.org/meet-us"
+   ]
+  },
+  {
+   "id": "23-st-julian-s-school",
+   "name": "St Julian's School",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "British / IB",
+   "ownership": "Independent",
+   "client": false,
+   "pages": 3,
+   "top20_used": 15,
+   "top10_buzz": [
+    "future",
+    "growth",
+    "community",
+    "supportive",
+    "thrive",
+    "journey",
+    "inspire",
+    "creative",
+    "diverse",
+    "opportunity"
+   ],
+   "top10_in_top20": 10,
+   "superlatives_used": [
+    "excellence",
+    "highest",
+    "leading",
+    "top",
+    "unique"
+   ],
+   "superlative_share": 0.14088213738423613,
+   "urls": [
+    "https://www.stjulians.com/",
+    "https://www.stjulians.com/about-us/welcome-from-the-head/",
+    "https://www.stjulians.com/about-us/welcome-from-the-head/"
+   ]
+  },
+  {
+   "id": "24-american-school-of-dubai",
+   "name": "American School of Dubai",
+   "type": "School",
+   "region": "Middle East",
+   "curriculum": "American / IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 17,
+   "top10_buzz": [
+    "community",
+    "inspire",
+    "inclusive",
+    "nurturing",
+    "engage",
+    "thrive",
+    "potential",
+    "growth",
+    "creative",
+    "curious"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "leading",
+    "outstanding",
+    "world-class"
+   ],
+   "superlative_share": 0.0759052259482182,
+   "urls": [
+    "https://www.asdubai.org/",
+    "https://www.asdubai.org/about/mission-values",
+    "https://www.asdubai.org/about"
+   ]
+  },
+  {
+   "id": "25-dubai-college",
+   "name": "Dubai College",
+   "type": "School",
+   "region": "Middle East",
+   "curriculum": "British",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 11,
+   "top10_buzz": [
+    "community",
+    "character",
+    "holistic",
+    "flourish",
+    "creative",
+    "inspire",
+    "growth",
+    "kind",
+    "integrity",
+    "individual"
+   ],
+   "top10_in_top20": 4,
+   "superlatives_used": [
+    "excellence",
+    "highest",
+    "leading",
+    "outstanding",
+    "unparalleled"
+   ],
+   "superlative_share": 0.27529249827942187,
+   "urls": [
+    "https://www.dubaicollege.org/",
+    "https://www.dubaicollege.org/about/vision-values",
+    "https://www.dubaicollege.org/about"
+   ]
+  },
+  {
+   "id": "26-jumeirah-english-speaking-school-jess",
+   "name": "Jumeirah English Speaking School (JESS)",
+   "type": "School",
+   "region": "Middle East",
+   "curriculum": "British / IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 15,
+   "top10_buzz": [
+    "community",
+    "supportive",
+    "respect",
+    "curious",
+    "confident",
+    "journey",
+    "belonging",
+    "caring",
+    "integrity",
+    "purpose"
+   ],
+   "top10_in_top20": 6,
+   "superlatives_used": [
+    "excellence",
+    "outstanding",
+    "remarkable",
+    "top",
+    "unique"
+   ],
+   "superlative_share": 0.13125845737483086,
+   "urls": [
+    "https://www.jess.sch.ae/",
+    "https://www.jess.sch.ae/about-jess/the-jess-ethos/",
+    "https://www.jess.sch.ae/about-jess/governance/"
+   ]
+  },
+  {
+   "id": "27-doha-college",
+   "name": "Doha College",
+   "type": "School",
+   "region": "Middle East",
+   "curriculum": "British / IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 2,
+   "top20_used": 19,
+   "top10_buzz": [
+    "community",
+    "inspire",
+    "confident",
+    "opportunity",
+    "kind",
+    "curious",
+    "challenging",
+    "creative",
+    "nurturing",
+    "journey"
+   ],
+   "top10_in_top20": 8,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "leading",
+    "outstanding",
+    "top",
+    "world-class"
+   ],
+   "superlative_share": 0.08392656425627576,
+   "urls": [
+    "https://www.dohacollege.com/",
+    "https://www.dohacollege.com/vision-mission-values"
+   ]
+  },
+  {
+   "id": "28-american-school-of-doha",
+   "name": "American School of Doha",
+   "type": "School",
+   "region": "Middle East",
+   "curriculum": "American / IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 20,
+   "top10_buzz": [
+    "community",
+    "growth",
+    "purpose",
+    "diverse",
+    "impact",
+    "nurturing",
+    "passion",
+    "future-ready",
+    "success",
+    "challenging"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "award-winning",
+    "cutting-edge",
+    "excellence",
+    "exceptional",
+    "leading",
+    "premier",
+    "prestigious",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.15332031250000003,
+   "urls": [
+    "https://asd.sch.qa/",
+    "https://asd.sch.qa/mission",
+    "https://asd.sch.qa/about-us"
+   ]
+  },
+  {
+   "id": "29-singapore-american-school",
+   "name": "Singapore American School",
+   "type": "School",
+   "region": "Asia",
+   "curriculum": "American / AP",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 15,
+   "top10_buzz": [
+    "community",
+    "caring",
+    "collaborative",
+    "supportive",
+    "creative",
+    "future-ready",
+    "inspire",
+    "reflective",
+    "curious",
+    "journey"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "extraordinary",
+    "leading",
+    "remarkable",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.29777401216976046,
+   "urls": [
+    "https://www.sas.edu.sg/",
+    "https://www.sas.edu.sg/about-us",
+    "https://www.sas.edu.sg/academics/elc"
+   ]
+  },
+  {
+   "id": "30-uwc-south-east-asia",
+   "name": "UWC South East Asia",
+   "type": "School",
+   "region": "Asia",
+   "curriculum": "IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 11,
+   "top10_buzz": [
+    "future",
+    "community",
+    "sustainable",
+    "challenging",
+    "inspire",
+    "holistic",
+    "principled",
+    "connected",
+    "individual",
+    "responsible"
+   ],
+   "top10_in_top20": 4,
+   "superlatives_used": [
+    "leading",
+    "unique"
+   ],
+   "superlative_share": 0.032778355879292405,
+   "urls": [
+    "https://www.uwcsea.edu.sg/",
+    "https://www.uwcsea.edu.sg/about/uwc-movement",
+    "https://www.uwcsea.edu.sg/about/guiding-statements"
+   ]
+  },
+  {
+   "id": "31-tanglin-trust-school",
+   "name": "Tanglin Trust School",
+   "type": "School",
+   "region": "Asia",
+   "curriculum": "British / IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 16,
+   "top10_buzz": [
+    "community",
+    "responsible",
+    "individual",
+    "growth",
+    "success",
+    "creative",
+    "reflective",
+    "respect",
+    "nurturing",
+    "safe"
+   ],
+   "top10_in_top20": 6,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "highest",
+    "outstanding",
+    "top",
+    "unique"
+   ],
+   "superlative_share": 0.2689698781329041,
+   "urls": [
+    "https://www.tts.edu.sg/",
+    "https://www.tts.edu.sg/about-tanglin/mission-vision",
+    "https://www.tts.edu.sg/about-tanglin/main"
+   ]
+  },
+  {
+   "id": "32-hong-kong-international-school",
+   "name": "Hong Kong International School",
+   "type": "School",
+   "region": "Asia",
+   "curriculum": "American / AP",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 9,
+   "top10_buzz": [
+    "compassionate",
+    "inquiry",
+    "growth",
+    "journey",
+    "purpose",
+    "community",
+    "impact",
+    "inspire",
+    "passion",
+    "future"
+   ],
+   "top10_in_top20": 6,
+   "superlatives_used": [
+    "exceptional",
+    "leading",
+    "remarkable",
+    "unique"
+   ],
+   "superlative_share": 0.08155613227964503,
+   "urls": [
+    "https://www.hkis.edu.hk/",
+    "https://www.hkis.edu.hk/about-hkis/mission-vision",
+    "https://www.hkis.edu.hk/about-hkis/welcome"
+   ]
+  },
+  {
+   "id": "33-canadian-international-school-of-hong-ko",
+   "name": "Canadian International School of Hong Kong",
+   "type": "School",
+   "region": "Asia",
+   "curriculum": "IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 19,
+   "top10_buzz": [
+    "community",
+    "growth",
+    "creative",
+    "supportive",
+    "opportunity",
+    "empower",
+    "diverse",
+    "inspire",
+    "thrive",
+    "innovative"
+   ],
+   "top10_in_top20": 9,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "leading",
+    "outstanding",
+    "top",
+    "world-class"
+   ],
+   "superlative_share": 0.11423603335397098,
+   "urls": [
+    "https://www.cdnis.edu.hk/en/",
+    "https://www.cdnis.edu.hk/en/discover-cdnis/why-cdnis/introduction/",
+    "https://www.cdnis.edu.hk/en/discover-cdnis/welcome/"
+   ]
+  },
+  {
+   "id": "34-shanghai-american-school",
+   "name": "Shanghai American School",
+   "type": "School",
+   "region": "Asia",
+   "curriculum": "American / IB / AP",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 20,
+   "top10_buzz": [
+    "journey",
+    "innovative",
+    "community",
+    "creative",
+    "global citizens",
+    "opportunity",
+    "growth",
+    "future",
+    "diverse",
+    "inspire"
+   ],
+   "top10_in_top20": 9,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "leading",
+    "unparalleled",
+    "world-class"
+   ],
+   "superlative_share": 0.08098159509202456,
+   "urls": [
+    "https://www.saschina.org/",
+    "https://www.saschina.org/about-sas/mission-philosophy",
+    "https://www.saschina.org/about-sas"
+   ]
+  },
+  {
+   "id": "35-international-school-bangkok",
+   "name": "International School Bangkok",
+   "type": "School",
+   "region": "Asia",
+   "curriculum": "IB / American",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 14,
+   "top10_buzz": [
+    "community",
+    "wellbeing",
+    "growth",
+    "empower",
+    "curious",
+    "responsible",
+    "journey",
+    "personalised",
+    "independent",
+    "balanced"
+   ],
+   "top10_in_top20": 3,
+   "superlatives_used": [
+    "excellence",
+    "high-quality",
+    "leading",
+    "premier",
+    "remarkable",
+    "state-of-the-art",
+    "top",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.2333333333333333,
+   "urls": [
+    "https://www.isb.ac.th/",
+    "https://www.isb.ac.th/about-isb/our-mission-and-vision-for-excellence",
+    "https://www.isb.ac.th/about-isb"
+   ]
+  },
+  {
+   "id": "36-nist-international-school",
+   "name": "NIST International School",
+   "type": "School",
+   "region": "Asia",
+   "curriculum": "IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 17,
+   "top10_buzz": [
+    "community",
+    "inspire",
+    "empower",
+    "global citizens",
+    "growth",
+    "caring",
+    "creative",
+    "diverse",
+    "nurturing",
+    "individual"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "leading",
+    "state-of-the-art",
+    "top",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.11788617886178862,
+   "urls": [
+    "https://www.nist.ac.th/",
+    "https://www.nist.ac.th/about-nist/guiding-statements",
+    "https://www.nist.ac.th/about-nist"
+   ]
+  },
+  {
+   "id": "37-seoul-foreign-school",
+   "name": "Seoul Foreign School",
+   "type": "School",
+   "region": "Asia",
+   "curriculum": "IB / American",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 11,
+   "top10_buzz": [
+    "creative",
+    "inspire",
+    "community",
+    "passion",
+    "character",
+    "belonging",
+    "diverse",
+    "impact",
+    "supportive",
+    "compassionate"
+   ],
+   "top10_in_top20": 6,
+   "superlatives_used": [
+    "excellence",
+    "highest",
+    "leading",
+    "remarkable"
+   ],
+   "superlative_share": 0.19824893516327496,
+   "urls": [
+    "https://www.seoulforeign.org/",
+    "https://www.seoulforeign.org/about/mission-and-values",
+    "https://www.seoulforeign.org/about"
+   ]
+  },
+  {
+   "id": "38-american-school-in-japan",
+   "name": "American School in Japan",
+   "type": "School",
+   "region": "Asia",
+   "curriculum": "American",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 14,
+   "top10_buzz": [
+    "community",
+    "engage",
+    "independent",
+    "impact",
+    "compassionate",
+    "empower",
+    "caring",
+    "empathy",
+    "creative",
+    "safe"
+   ],
+   "top10_in_top20": 3,
+   "superlatives_used": [
+    "excellence",
+    "leading",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.09515283700641299,
+   "urls": [
+    "https://www.asij.ac.jp/",
+    "https://www.asij.ac.jp/our-school/our-values",
+    "https://www.asij.ac.jp/our-school/our-values"
+   ]
+  },
+  {
+   "id": "39-international-school-of-kuala-lumpur",
+   "name": "International School of Kuala Lumpur",
+   "type": "School",
+   "region": "Asia",
+   "curriculum": "IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 17,
+   "top10_buzz": [
+    "community",
+    "creative",
+    "caring",
+    "growth",
+    "future",
+    "inclusive",
+    "journey",
+    "passion",
+    "opportunity",
+    "inspire"
+   ],
+   "top10_in_top20": 10,
+   "superlatives_used": [
+    "excellence",
+    "high-quality",
+    "leading",
+    "prestigious",
+    "state-of-the-art",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.11759868421052631,
+   "urls": [
+    "https://www.iskl.edu.my/",
+    "https://www.iskl.edu.my/about-us/iskl-guiding-statements",
+    "https://www.iskl.edu.my/about-us"
+   ]
+  },
+  {
+   "id": "40-jakarta-intercultural-school",
+   "name": "Jakarta Intercultural School",
+   "type": "School",
+   "region": "Asia",
+   "curriculum": "IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 15,
+   "top10_buzz": [
+    "community",
+    "creative",
+    "passion",
+    "supportive",
+    "reflective",
+    "inclusive",
+    "resilient",
+    "engage",
+    "challenging",
+    "collaborative"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "high-quality",
+    "state-of-the-art"
+   ],
+   "superlative_share": 0.02954915806626833,
+   "urls": [
+    "https://www.jisedu.or.id/",
+    "https://www.jisedu.or.id/about/mission-vision",
+    "https://www.jisedu.or.id/about"
+   ]
+  },
+  {
+   "id": "41-international-school-of-kenya",
+   "name": "International School of Kenya",
+   "type": "School",
+   "region": "Africa",
+   "curriculum": "IB / American",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 18,
+   "top10_buzz": [
+    "community",
+    "opportunity",
+    "challenging",
+    "creative",
+    "rigorous",
+    "supportive",
+    "inclusive",
+    "real-world",
+    "confident",
+    "inspire"
+   ],
+   "top10_in_top20": 8,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "highest",
+    "leading",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.15099070371465675,
+   "urls": [
+    "https://www.isk.ac.ke/",
+    "https://www.isk.ac.ke/our-school/mission-vision",
+    "https://www.isk.ac.ke/our-school"
+   ]
+  },
+  {
+   "id": "42-brookhouse-school",
+   "name": "Brookhouse School",
+   "type": "School",
+   "region": "Africa",
+   "curriculum": "British",
+   "ownership": "Independent",
+   "client": false,
+   "pages": 3,
+   "top20_used": 12,
+   "top10_buzz": [
+    "inspire",
+    "success",
+    "opportunity",
+    "community",
+    "independent",
+    "welcoming",
+    "individual",
+    "global citizens",
+    "potential",
+    "thrive"
+   ],
+   "top10_in_top20": 5,
+   "superlatives_used": [
+    "cutting-edge",
+    "excellence",
+    "exceptional",
+    "high-quality",
+    "highest",
+    "leading",
+    "outstanding",
+    "prestigious",
+    "unique",
+    "unrivalled"
+   ],
+   "superlative_share": 0.19434102755026061,
+   "urls": [
+    "https://www.brookhouse.ac.ke/",
+    "https://www.brookhouse.ac.ke/our-school/about-us",
+    "https://www.brookhouse.ac.ke/our-school/alumni"
+   ]
+  },
+  {
+   "id": "43-american-international-school-of-johanne",
+   "name": "American International School of Johannesburg",
+   "type": "School",
+   "region": "Africa",
+   "curriculum": "IB / American",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 2,
+   "top20_used": 13,
+   "top10_buzz": [
+    "growth",
+    "community",
+    "opportunity",
+    "connected",
+    "creative",
+    "challenging",
+    "diverse",
+    "independent",
+    "welcoming",
+    "supportive"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "leading",
+    "outstanding",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.2178702570379437,
+   "urls": [
+    "https://www.aisj-jhb.com/",
+    "https://www.aisj-jhb.com/about-us"
+   ]
+  },
+  {
+   "id": "44-lincoln-community-school",
+   "name": "Lincoln Community School",
+   "type": "School",
+   "region": "Africa",
+   "curriculum": "IB / American",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 16,
+   "top10_buzz": [
+    "diverse",
+    "belonging",
+    "opportunity",
+    "thrive",
+    "inclusive",
+    "innovative",
+    "growth",
+    "agency",
+    "success",
+    "engage"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "award-winning",
+    "excellence",
+    "high-quality",
+    "top",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.22319383718509264,
+   "urls": [
+    "https://www.lincoln.edu.gh/",
+    "https://www.lincoln.edu.gh/about-us/vision-and-mission/",
+    "https://www.lincoln.edu.gh/about-us/lcs-strategic-vision/"
+   ]
+  },
+  {
+   "id": "45-american-school-foundation-asf",
+   "name": "American School Foundation (ASF)",
+   "type": "School",
+   "region": "Americas",
+   "curriculum": "American / IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 15,
+   "top10_buzz": [
+    "community",
+    "inclusive",
+    "rigorous",
+    "responsible",
+    "inspire",
+    "empathy",
+    "independent",
+    "journey",
+    "diverse",
+    "21st-century"
+   ],
+   "top10_in_top20": 5,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "high-quality",
+    "world-class"
+   ],
+   "superlative_share": 0.1362862010221465,
+   "urls": [
+    "https://www.asf.edu.mx/",
+    "https://www.asf.edu.mx/about-us/mission-vision-and-values",
+    "https://www.asf.edu.mx/programs/us/asfmun/mission-statement"
+   ]
+  },
+  {
+   "id": "46-graded-the-american-school-of-s-o-paulo",
+   "name": "Graded – The American School of São Paulo",
+   "type": "School",
+   "region": "Americas",
+   "curriculum": "American / IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 5,
+   "top10_buzz": [
+    "community",
+    "empower",
+    "success",
+    "principled",
+    "reflective",
+    "supportive",
+    "connected",
+    "future",
+    "opportunity"
+   ],
+   "top10_in_top20": 5,
+   "superlatives_used": [
+    "excellence"
+   ],
+   "superlative_share": 0.12195121951219512,
+   "urls": [
+    "https://www.graded.br/",
+    "https://www.graded.br/about/mission-vision-values",
+    "https://www.graded.br/alumni/welcome-back"
+   ]
+  },
+  {
+   "id": "47-escola-americana-do-rio-de-janeiro",
+   "name": "Escola Americana do Rio de Janeiro",
+   "type": "School",
+   "region": "Americas",
+   "curriculum": "IB / American",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 13,
+   "top10_buzz": [
+    "community",
+    "inspire",
+    "purpose",
+    "passion",
+    "creative",
+    "opportunity",
+    "critical thinking",
+    "confident",
+    "principled",
+    "collaborative"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "high-quality",
+    "leading",
+    "outstanding",
+    "prestigious",
+    "renowned",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.23728813559322035,
+   "urls": [
+    "https://www.earj.com.br/",
+    "https://www.earj.com.br/why-choose-earj/mission-vision-purpose",
+    "https://www.earj.com.br/why-choose-earj/head-of-school-message"
+   ]
+  },
+  {
+   "id": "48-colegio-nueva-granada",
+   "name": "Colegio Nueva Granada",
+   "type": "School",
+   "region": "Americas",
+   "curriculum": "American / IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 12,
+   "top10_buzz": [
+    "community",
+    "responsible",
+    "caring",
+    "supportive",
+    "respect",
+    "innovative",
+    "creative",
+    "global citizens",
+    "inclusive",
+    "wellbeing"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "exceptional"
+   ],
+   "superlative_share": 0.10391867234338344,
+   "urls": [
+    "https://www.cng.edu/",
+    "https://www.cng.edu/discover-cng/our-vision-mission-philosophy",
+    "https://www.cng.edu/admissions/welcome"
+   ]
+  },
+  {
+   "id": "49-united-nations-international-school",
+   "name": "United Nations International School",
+   "type": "School",
+   "region": "Americas",
+   "curriculum": "IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 13,
+   "top10_buzz": [
+    "community",
+    "principled",
+    "supportive",
+    "diverse",
+    "thrive",
+    "caring",
+    "rigorous",
+    "opportunity",
+    "connected",
+    "journey"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.1503316138540899,
+   "urls": [
+    "https://www.unis.org/",
+    "https://www.unis.org/belonging-at-unis/mission-guiding-principles",
+    "https://www.unis.org/admissions/why-unis"
+   ]
+  },
+  {
+   "id": "50-washington-international-school",
+   "name": "Washington International School",
+   "type": "School",
+   "region": "Americas",
+   "curriculum": "IB",
+   "ownership": "Non-profit",
+   "client": false,
+   "pages": 3,
+   "top20_used": 10,
+   "top10_buzz": [
+    "community",
+    "inquiry",
+    "rigorous",
+    "reflective",
+    "connected",
+    "respect",
+    "integrity",
+    "inclusive",
+    "curious",
+    "growth"
+   ],
+   "top10_in_top20": 4,
+   "superlatives_used": [
+    "world-class"
+   ],
+   "superlative_share": 0.019536019536019536,
+   "urls": [
+    "https://www.wis.edu/",
+    "https://www.wis.edu/mission-values",
+    "https://www.wis.edu/guiding-wis-students-to-ireland"
+   ]
+  },
+  {
+   "id": "51-international-college-spain",
+   "name": "International College Spain",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB / British",
+   "ownership": "Group",
+   "client": true,
+   "pages": 3,
+   "top20_used": 18,
+   "top10_buzz": [
+    "community",
+    "inspire",
+    "success",
+    "creative",
+    "supportive",
+    "caring",
+    "collaborative",
+    "challenging",
+    "respect",
+    "growth"
+   ],
+   "top10_in_top20": 10,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "extraordinary",
+    "outstanding",
+    "prestigious",
+    "remarkable",
+    "unique"
+   ],
+   "superlative_share": 0.20468343451864698,
+   "urls": [
+    "https://www.nordangliaeducation.com/ics-madrid",
+    "https://www.nordangliaeducation.com/ics-madrid/about-us/our-mission-and-vision",
+    "https://www.nordangliaeducation.com/ics-madrid/outstanding-experiences/social-purpose"
+   ]
+  },
+  {
+   "id": "52-la-c-te-international-school-aubonne",
+   "name": "La Côte International School Aubonne",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB",
+   "ownership": "Group",
+   "client": true,
+   "pages": 3,
+   "top20_used": 19,
+   "top10_buzz": [
+    "community",
+    "opportunity",
+    "challenging",
+    "personalised",
+    "future",
+    "vibrant",
+    "global citizens",
+    "supportive",
+    "thrive",
+    "caring"
+   ],
+   "top10_in_top20": 7,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "highest",
+    "leading",
+    "outstanding",
+    "prestigious",
+    "top",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.16007416563658838,
+   "urls": [
+    "https://www.nordangliaeducation.com/la-cote-aubonne",
+    "https://www.nordangliaeducation.com/la-cote-aubonne/outstanding-experiences/social-purpose",
+    "https://www.nordangliaeducation.com/la-cote-aubonne/news/why-a-smaller-international-school-might-be-the-best-decision-for-your-child"
+   ]
+  },
+  {
+   "id": "53-coll-ge-du-l-man",
+   "name": "Collège du Léman",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB / Swiss / French Bac",
+   "ownership": "Group",
+   "client": true,
+   "pages": 3,
+   "top20_used": 20,
+   "top10_buzz": [
+    "community",
+    "journey",
+    "inspire",
+    "success",
+    "global citizens",
+    "supportive",
+    "diverse",
+    "tailored",
+    "confident",
+    "inclusive"
+   ],
+   "top10_in_top20": 8,
+   "superlatives_used": [
+    "award-winning",
+    "excellence",
+    "exceptional",
+    "extraordinary",
+    "leading",
+    "outstanding",
+    "prestigious",
+    "remarkable",
+    "unique",
+    "unparalleled",
+    "world-class"
+   ],
+   "superlative_share": 0.16030989272943982,
+   "urls": [
+    "https://www.nordangliaeducation.com/college-du-leman",
+    "https://www.nordangliaeducation.com/college-du-leman/outstanding-experiences/social-purpose",
+    "https://www.nordangliaeducation.com/college-du-leman/about-us"
+   ]
+  },
+  {
+   "id": "54-coll-ge-champittet",
+   "name": "Collège Champittet",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB / Swiss / French Bac",
+   "ownership": "Group",
+   "client": true,
+   "pages": 3,
+   "top20_used": 18,
+   "top10_buzz": [
+    "community",
+    "inspire",
+    "journey",
+    "creative",
+    "supportive",
+    "respect",
+    "inquiry",
+    "purpose",
+    "future",
+    "collaborative"
+   ],
+   "top10_in_top20": 8,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "extraordinary",
+    "finest",
+    "highest",
+    "leading",
+    "outstanding",
+    "prestigious",
+    "remarkable",
+    "renowned",
+    "top",
+    "unique"
+   ],
+   "superlative_share": 0.2899817850637523,
+   "urls": [
+    "https://www.nordangliaeducation.com/champittet",
+    "https://www.nordangliaeducation.com/champittet/beyond-the-classroom/social-purpose",
+    "https://www.nordangliaeducation.com/champittet/admissions"
+   ]
+  },
+  {
+   "id": "55-nord-anglia-international-school-dublin",
+   "name": "Nord Anglia International School Dublin",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB",
+   "ownership": "Group",
+   "client": true,
+   "pages": 3,
+   "top20_used": 19,
+   "top10_buzz": [
+    "community",
+    "opportunity",
+    "future",
+    "vibrant",
+    "creative",
+    "supportive",
+    "growth",
+    "challenging",
+    "caring",
+    "curious"
+   ],
+   "top10_in_top20": 8,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "finest",
+    "leading",
+    "outstanding",
+    "prestigious",
+    "top",
+    "unique",
+    "unparalleled",
+    "world-class"
+   ],
+   "superlative_share": 0.21834658459434042,
+   "urls": [
+    "https://www.nordangliaeducation.com/nais-dublin",
+    "https://www.nordangliaeducation.com/nais-dublin/outstanding-experiences/social-purpose",
+    "https://www.nordangliaeducation.com/nais-dublin/about-us"
+   ]
+  },
+  {
+   "id": "56-nord-anglia-international-school-rotterd",
+   "name": "Nord Anglia International School Rotterdam (formerly AIS Rotterdam)",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "IB / American",
+   "ownership": "Group",
+   "client": true,
+   "pages": 3,
+   "top20_used": 18,
+   "top10_buzz": [
+    "supportive",
+    "community",
+    "caring",
+    "creative",
+    "opportunity",
+    "inspire",
+    "principled",
+    "personalised",
+    "holistic",
+    "global citizens"
+   ],
+   "top10_in_top20": 6,
+   "superlatives_used": [
+    "award-winning",
+    "cutting-edge",
+    "excellence",
+    "exceptional",
+    "leading",
+    "outstanding",
+    "top",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.14071510957324104,
+   "urls": [
+    "https://www.nordangliaeducation.com/nais-rotterdam",
+    "https://www.nordangliaeducation.com/nais-rotterdam/outstanding-experiences/social-purpose",
+    "https://www.nordangliaeducation.com/nais-rotterdam/about-us"
+   ]
+  },
+  {
+   "id": "57-riverside-international-school",
+   "name": "Riverside International School",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "British / IB",
+   "ownership": "Independent",
+   "client": true,
+   "pages": 3,
+   "top20_used": 19,
+   "top10_buzz": [
+    "community",
+    "challenging",
+    "caring",
+    "creative",
+    "success",
+    "supportive",
+    "innovative",
+    "wellbeing",
+    "individual",
+    "diverse"
+   ],
+   "top10_in_top20": 8,
+   "superlatives_used": [
+    "excellence",
+    "exceptional",
+    "high-quality",
+    "highest",
+    "leading",
+    "outstanding",
+    "prestigious",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.13583554175603293,
+   "urls": [
+    "https://www.riversideschool.cz/",
+    "https://www.riversideschool.cz/about-riverside/riverside-mission-and-values/",
+    "https://www.riversideschool.cz/our-schools/early-years/"
+   ]
+  },
+  {
+   "id": "58-sherfield-school",
+   "name": "Sherfield School",
+   "type": "School",
+   "region": "Europe",
+   "curriculum": "British",
+   "ownership": "Independent",
+   "client": true,
+   "pages": 2,
+   "top20_used": 17,
+   "top10_buzz": [
+    "engage",
+    "journey",
+    "supportive",
+    "creative",
+    "community",
+    "safe",
+    "wellbeing",
+    "flourish",
+    "future",
+    "connected"
+   ],
+   "top10_in_top20": 5,
+   "superlatives_used": [],
+   "superlative_share": 0.0,
+   "urls": [
+    "https://www.sherfieldschool.co.uk/",
+    "https://www.sherfieldschool.co.uk/early-years-approach"
+   ]
+  },
+  {
+   "id": "59-dulwich-college-singapore",
+   "name": "Dulwich College (Singapore)",
+   "type": "School",
+   "region": "Asia",
+   "curriculum": "British / IB",
+   "ownership": "Group",
+   "client": true,
+   "pages": 2,
+   "top20_used": 12,
+   "top10_buzz": [
+    "holistic",
+    "connected",
+    "supportive",
+    "potential",
+    "inspire",
+    "opportunity",
+    "growth",
+    "community",
+    "independent",
+    "innovative"
+   ],
+   "top10_in_top20": 6,
+   "superlatives_used": [
+    "excellence",
+    "leading",
+    "state-of-the-art",
+    "unique",
+    "world-class"
+   ],
+   "superlative_share": 0.15300546448087432,
+   "urls": [
+    "https://singapore.dulwich.org/",
+    "https://singapore.dulwich.org/why-dulwich/our-college/from-head-of-college"
+   ]
+  }
+ ],
+ "by_region": {
+  "Europe": {
+   "sites": 20,
+   "top": [
+    [
+     "inspire",
+     19
+    ],
+    [
+     "community",
+     19
+    ],
+    [
+     "success",
+     19
+    ],
+    [
+     "opportunity",
+     18
+    ],
+    [
+     "supportive",
+     18
+    ],
+    [
+     "creative",
+     18
+    ],
+    [
+     "challenging",
+     16
+    ],
+    [
+     "future",
+     16
+    ]
+   ]
+  },
+  "Middle East": {
+   "sites": 7,
+   "top": [
+    [
+     "passion",
+     7
+    ],
+    [
+     "community",
+     7
+    ],
+    [
+     "success",
+     7
+    ],
+    [
+     "diverse",
+     7
+    ],
+    [
+     "confident",
+     7
+    ],
+    [
+     "inspire",
+     7
+    ],
+    [
+     "supportive",
+     6
+    ],
+    [
+     "nurturing",
+     6
+    ]
+   ]
+  },
+  "Asia": {
+   "sites": 13,
+   "top": [
+    [
+     "community",
+     13
+    ],
+    [
+     "creative",
+     12
+    ],
+    [
+     "inspire",
+     12
+    ],
+    [
+     "challenging",
+     11
+    ],
+    [
+     "supportive",
+     11
+    ],
+    [
+     "collaborative",
+     11
+    ],
+    [
+     "passion",
+     10
+    ],
+    [
+     "future",
+     10
+    ]
+   ]
+  },
+  "Africa": {
+   "sites": 4,
+   "top": [
+    [
+     "supportive",
+     4
+    ],
+    [
+     "passion",
+     4
+    ],
+    [
+     "creative",
+     4
+    ],
+    [
+     "thrive",
+     4
+    ],
+    [
+     "opportunity",
+     4
+    ],
+    [
+     "growth",
+     4
+    ],
+    [
+     "inclusive",
+     4
+    ],
+    [
+     "challenging",
+     3
+    ]
+   ]
+  },
+  "Americas": {
+   "sites": 6,
+   "top": [
+    [
+     "community",
+     6
+    ],
+    [
+     "creative",
+     5
+    ],
+    [
+     "opportunity",
+     5
+    ],
+    [
+     "diverse",
+     5
+    ],
+    [
+     "inclusive",
+     5
+    ],
+    [
+     "supportive",
+     5
+    ],
+    [
+     "challenging",
+     4
+    ],
+    [
+     "connected",
+     4
+    ]
+   ]
+  },
+  "Global": {
+   "sites": 7,
+   "top": [
+    [
+     "challenging",
+     7
+    ],
+    [
+     "supportive",
+     7
+    ],
+    [
+     "nurturing",
+     7
+    ],
+    [
+     "future",
+     7
+    ],
+    [
+     "innovative",
+     6
+    ],
+    [
+     "creative",
+     6
+    ],
+    [
+     "thrive",
+     6
+    ],
+    [
+     "community",
+     6
+    ]
+   ]
+  }
+ },
+ "skipped": [
+  {
+   "name": "American School in London",
+   "reason": "Page text sits in panels the reader could not open; too little text to analyse"
+  },
+  {
+   "name": "Copenhagen International School",
+   "reason": "Bot-verification wall; text could not be read"
+  }
+ ],
+ "all_terms": [
+  {
+   "term": "community",
+   "sites": 54,
+   "share": 0.9473684210526315,
+   "uses": 435,
+   "prominence": 1.2621311635349197,
+   "headline_sites": 27,
+   "first_screen_sites": 26,
+   "weighted_total": 549.0270561376901
+  },
+  {
+   "term": "experience",
+   "sites": 52,
+   "share": 0.9122807017543859,
+   "uses": 218,
+   "prominence": 1.2178412420013875,
+   "headline_sites": 11,
+   "first_screen_sites": 11,
+   "weighted_total": 265.4893907563025
+  },
+  {
+   "term": "supportive",
+   "sites": 51,
+   "share": 0.8947368421052632,
+   "uses": 205,
+   "prominence": 1.1292230367078098,
+   "headline_sites": 7,
+   "first_screen_sites": 18,
+   "weighted_total": 231.490722525101
+  },
+  {
+   "term": "creative",
+   "sites": 51,
+   "share": 0.8947368421052632,
+   "uses": 192,
+   "prominence": 1.1495086797233858,
+   "headline_sites": 7,
+   "first_screen_sites": 12,
+   "weighted_total": 220.70566650689008
+  },
+  {
+   "term": "inspire",
+   "sites": 49,
+   "share": 0.8596491228070176,
+   "uses": 234,
+   "prominence": 1.3110886765251395,
+   "headline_sites": 13,
+   "first_screen_sites": 22,
+   "weighted_total": 306.79475030688263
+  },
+  {
+   "term": "excellence",
+   "sites": 49,
+   "share": 0.8596491228070176,
+   "uses": 202,
+   "prominence": 1.2566837464411393,
+   "headline_sites": 9,
+   "first_screen_sites": 12,
+   "weighted_total": 253.85011678111013
+  },
+  {
+   "term": "values",
+   "sites": 49,
+   "share": 0.8596491228070176,
+   "uses": 200,
+   "prominence": 1.6078627672417147,
+   "headline_sites": 24,
+   "first_screen_sites": 23,
+   "weighted_total": 321.57255344834294
+  },
+  {
+   "term": "environment",
+   "sites": 48,
+   "share": 0.8421052631578947,
+   "uses": 114,
+   "prominence": 1.1234892856619811,
+   "headline_sites": 3,
+   "first_screen_sites": 10,
+   "weighted_total": 128.07777856546585
+  },
+  {
+   "term": "opportunity",
+   "sites": 47,
+   "share": 0.8245614035087719,
+   "uses": 140,
+   "prominence": 1.177651276238164,
+   "headline_sites": 10,
+   "first_screen_sites": 12,
+   "weighted_total": 164.87117867334294
+  },
+  {
+   "term": "welcome",
+   "sites": 46,
+   "share": 0.8070175438596491,
+   "uses": 108,
+   "prominence": 1.8316484389509737,
+   "headline_sites": 27,
+   "first_screen_sites": 24,
+   "weighted_total": 197.81803140670516
+  },
+  {
+   "term": "success",
+   "sites": 46,
+   "share": 0.8070175438596491,
+   "uses": 112,
+   "prominence": 1.170796463239384,
+   "headline_sites": 6,
+   "first_screen_sites": 11,
+   "weighted_total": 131.129203882811
+  },
+  {
+   "term": "challenging",
+   "sites": 46,
+   "share": 0.8070175438596491,
+   "uses": 132,
+   "prominence": 1.1916003299677376,
+   "headline_sites": 4,
+   "first_screen_sites": 11,
+   "weighted_total": 157.29124355574135
+  },
+  {
+   "term": "growth",
+   "sites": 45,
+   "share": 0.7894736842105263,
+   "uses": 147,
+   "prominence": 1.2259936859614704,
+   "headline_sites": 6,
+   "first_screen_sites": 11,
+   "weighted_total": 180.22107183633614
+  },
+  {
+   "term": "activity",
+   "sites": 45,
+   "share": 0.7894736842105263,
+   "uses": 87,
+   "prominence": 1.0991540172321104,
+   "headline_sites": 1,
+   "first_screen_sites": 6,
+   "weighted_total": 95.62639949919361
+  },
+  {
+   "term": "develop",
+   "sites": 45,
+   "share": 0.7894736842105263,
+   "uses": 99,
+   "prominence": 1.0812556721754836,
+   "headline_sites": 1,
+   "first_screen_sites": 5,
+   "weighted_total": 107.04431154537286
+  },
+  {
+   "term": "future",
+   "sites": 44,
+   "share": 0.7719298245614035,
+   "uses": 126,
+   "prominence": 1.3967204752919038,
+   "headline_sites": 10,
+   "first_screen_sites": 12,
+   "weighted_total": 175.98677988677989
+  },
+  {
+   "term": "diverse",
+   "sites": 42,
+   "share": 0.7368421052631579,
+   "uses": 107,
+   "prominence": 1.1851347378106327,
+   "headline_sites": 4,
+   "first_screen_sites": 11,
+   "weighted_total": 126.8094169457377
+  },
+  {
+   "term": "mission",
+   "sites": 42,
+   "share": 0.7368421052631579,
+   "uses": 140,
+   "prominence": 2.1380089994022295,
+   "headline_sites": 32,
+   "first_screen_sites": 24,
+   "weighted_total": 299.32125991631216
+  },
+  {
+   "term": "passion",
+   "sites": 42,
+   "share": 0.7368421052631579,
+   "uses": 81,
+   "prominence": 1.1429320145278752,
+   "headline_sites": 3,
+   "first_screen_sites": 6,
+   "weighted_total": 92.57749317675788
+  },
+  {
+   "term": "inclusive",
+   "sites": 40,
+   "share": 0.7017543859649122,
+   "uses": 100,
+   "prominence": 1.2516709344115005,
+   "headline_sites": 6,
+   "first_screen_sites": 5,
+   "weighted_total": 125.16709344115004
+  },
+  {
+   "term": "leading",
+   "sites": 40,
+   "share": 0.7017543859649122,
+   "uses": 110,
+   "prominence": 1.2836703359029562,
+   "headline_sites": 7,
+   "first_screen_sites": 10,
+   "weighted_total": 141.2037369493252
+  },
+  {
+   "term": "unique",
+   "sites": 39,
+   "share": 0.6842105263157895,
+   "uses": 78,
+   "prominence": 1.394692291595412,
+   "headline_sites": 8,
+   "first_screen_sites": 5,
+   "weighted_total": 108.78599874444214
+  },
+  {
+   "term": "skills",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 106,
+   "prominence": 1.1152638980713918,
+   "headline_sites": 3,
+   "first_screen_sites": 6,
+   "weighted_total": 118.21797319556754
+  },
+  {
+   "term": "journey",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 87,
+   "prominence": 1.471099344886825,
+   "headline_sites": 13,
+   "first_screen_sites": 7,
+   "weighted_total": 127.98564300515378
+  },
+  {
+   "term": "collaborative",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 75,
+   "prominence": 1.1334320965101017,
+   "headline_sites": 4,
+   "first_screen_sites": 5,
+   "weighted_total": 85.00740723825763
+  },
+  {
+   "term": "strong",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 68,
+   "prominence": 1.1173672840180031,
+   "headline_sites": 2,
+   "first_screen_sites": 8,
+   "weighted_total": 75.9809753132242
+  },
+  {
+   "term": "caring",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 101,
+   "prominence": 1.3095684958935088,
+   "headline_sites": 7,
+   "first_screen_sites": 10,
+   "weighted_total": 132.2664180852444
+  },
+  {
+   "term": "provide",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 65,
+   "prominence": 1.090454822954823,
+   "headline_sites": 1,
+   "first_screen_sites": 6,
+   "weighted_total": 70.8795634920635
+  },
+  {
+   "term": "thrive",
+   "sites": 38,
+   "share": 0.6666666666666666,
+   "uses": 83,
+   "prominence": 1.2537568738844431,
+   "headline_sites": 5,
+   "first_screen_sites": 9,
+   "weighted_total": 104.06182053240877
+  },
+  {
+   "term": "nurturing",
+   "sites": 37,
+   "share": 0.6491228070175439,
+   "uses": 83,
+   "prominence": 1.2165558720471767,
+   "headline_sites": 6,
+   "first_screen_sites": 6,
+   "weighted_total": 100.97413737991567
+  },
+  {
+   "term": "approach",
+   "sites": 37,
+   "share": 0.6491228070175439,
+   "uses": 85,
+   "prominence": 1.18469449502566,
+   "headline_sites": 4,
+   "first_screen_sites": 6,
+   "weighted_total": 100.69903207718109
+  },
+  {
+   "term": "respect",
+   "sites": 37,
+   "share": 0.6491228070175439,
+   "uses": 77,
+   "prominence": 1.1344082429998872,
+   "headline_sites": 3,
+   "first_screen_sites": 6,
+   "weighted_total": 87.34943471099132
+  },
+  {
+   "term": "confident",
+   "sites": 36,
+   "share": 0.631578947368421,
+   "uses": 83,
+   "prominence": 1.1250311102606243,
+   "headline_sites": 2,
+   "first_screen_sites": 4,
+   "weighted_total": 93.37758215163181
+  },
+  {
+   "term": "offer",
+   "sites": 36,
+   "share": 0.631578947368421,
+   "uses": 68,
+   "prominence": 1.0612147576421873,
+   "headline_sites": 0,
+   "first_screen_sites": 3,
+   "weighted_total": 72.16260351966874
+  },
+  {
+   "term": "nationality",
+   "sites": 36,
+   "share": 0.631578947368421,
+   "uses": 66,
+   "prominence": 1.2343195444749273,
+   "headline_sites": 4,
+   "first_screen_sites": 6,
+   "weighted_total": 81.4650899353452
+  },
+  {
+   "term": "development",
+   "sites": 36,
+   "share": 0.631578947368421,
+   "uses": 93,
+   "prominence": 1.1147168911091614,
+   "headline_sites": 2,
+   "first_screen_sites": 7,
+   "weighted_total": 103.66867087315201
+  },
+  {
+   "term": "connected",
+   "sites": 35,
+   "share": 0.6140350877192983,
+   "uses": 71,
+   "prominence": 1.238425369704973,
+   "headline_sites": 5,
+   "first_screen_sites": 7,
+   "weighted_total": 87.92820124905307
+  },
+  {
+   "term": "innovative",
+   "sites": 35,
+   "share": 0.6140350877192983,
+   "uses": 80,
+   "prominence": 1.2320072416831227,
+   "headline_sites": 4,
+   "first_screen_sites": 7,
+   "weighted_total": 98.56057933464982
+  },
+  {
+   "term": "individual",
+   "sites": 35,
+   "share": 0.6140350877192983,
+   "uses": 86,
+   "prominence": 1.1052216352951325,
+   "headline_sites": 2,
+   "first_screen_sites": 8,
+   "weighted_total": 95.0490606353814
+  },
+  {
+   "term": "responsible",
+   "sites": 34,
+   "share": 0.5964912280701754,
+   "uses": 70,
+   "prominence": 1.103410077867625,
+   "headline_sites": 1,
+   "first_screen_sites": 4,
+   "weighted_total": 77.23870545073375
+  },
+  {
+   "term": "offers",
+   "sites": 34,
+   "share": 0.5964912280701754,
+   "uses": 78,
+   "prominence": 1.0838391487429948,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 84.5394536019536
+  },
+  {
+   "term": "facility",
+   "sites": 33,
+   "share": 0.5789473684210527,
+   "uses": 77,
+   "prominence": 1.253843270246401,
+   "headline_sites": 6,
+   "first_screen_sites": 4,
+   "weighted_total": 96.54593180897288
+  },
+  {
+   "term": "vision",
+   "sites": 32,
+   "share": 0.5614035087719298,
+   "uses": 86,
+   "prominence": 2.0506886076633624,
+   "headline_sites": 21,
+   "first_screen_sites": 18,
+   "weighted_total": 176.35922025904918
+  },
+  {
+   "term": "curious",
+   "sites": 32,
+   "share": 0.5614035087719298,
+   "uses": 77,
+   "prominence": 1.210677831738756,
+   "headline_sites": 4,
+   "first_screen_sites": 6,
+   "weighted_total": 93.22219304388422
+  },
+  {
+   "term": "arts",
+   "sites": 32,
+   "share": 0.5614035087719298,
+   "uses": 55,
+   "prominence": 1.1303392982537368,
+   "headline_sites": 1,
+   "first_screen_sites": 4,
+   "weighted_total": 62.168661403955525
+  },
+  {
+   "term": "independent",
+   "sites": 32,
+   "share": 0.5614035087719298,
+   "uses": 62,
+   "prominence": 1.160188699135568,
+   "headline_sites": 2,
+   "first_screen_sites": 6,
+   "weighted_total": 71.93169934640522
+  },
+  {
+   "term": "teaching",
+   "sites": 31,
+   "share": 0.543859649122807,
+   "uses": 64,
+   "prominence": 1.0731037363776161,
+   "headline_sites": 0,
+   "first_screen_sites": 3,
+   "weighted_total": 68.67863912816743
+  },
+  {
+   "term": "achieve",
+   "sites": 31,
+   "share": 0.543859649122807,
+   "uses": 64,
+   "prominence": 1.0658887553418803,
+   "headline_sites": 0,
+   "first_screen_sites": 3,
+   "weighted_total": 68.21688034188034
+  },
+  {
+   "term": "shape",
+   "sites": 31,
+   "share": 0.543859649122807,
+   "uses": 45,
+   "prominence": 1.3187324730461987,
+   "headline_sites": 3,
+   "first_screen_sites": 4,
+   "weighted_total": 59.342961287078936
+  },
+  {
+   "term": "empower",
+   "sites": 31,
+   "share": 0.543859649122807,
+   "uses": 68,
+   "prominence": 1.2146841108238167,
+   "headline_sites": 5,
+   "first_screen_sites": 5,
+   "weighted_total": 82.59851953601954
+  },
+  {
+   "term": "heart",
+   "sites": 31,
+   "share": 0.543859649122807,
+   "uses": 60,
+   "prominence": 1.1844183254109726,
+   "headline_sites": 3,
+   "first_screen_sites": 5,
+   "weighted_total": 71.06509952465835
+  },
+  {
+   "term": "engage",
+   "sites": 31,
+   "share": 0.543859649122807,
+   "uses": 67,
+   "prominence": 1.2336550799558135,
+   "headline_sites": 2,
+   "first_screen_sites": 8,
+   "weighted_total": 82.6548903570395
+  },
+  {
+   "term": "culture",
+   "sites": 31,
+   "share": 0.543859649122807,
+   "uses": 50,
+   "prominence": 1.1707566045066045,
+   "headline_sites": 1,
+   "first_screen_sites": 3,
+   "weighted_total": 58.537830225330225
+  },
+  {
+   "term": "believe",
+   "sites": 31,
+   "share": 0.543859649122807,
+   "uses": 54,
+   "prominence": 1.1342772317854017,
+   "headline_sites": 1,
+   "first_screen_sites": 7,
+   "weighted_total": 61.25097051641169
+  },
+  {
+   "term": "potential",
+   "sites": 30,
+   "share": 0.5263157894736842,
+   "uses": 49,
+   "prominence": 1.2031369502324394,
+   "headline_sites": 4,
+   "first_screen_sites": 4,
+   "weighted_total": 58.95371056138953
+  },
+  {
+   "term": "help",
+   "sites": 30,
+   "share": 0.5263157894736842,
+   "uses": 47,
+   "prominence": 1.195951536643026,
+   "headline_sites": 3,
+   "first_screen_sites": 3,
+   "weighted_total": 56.209722222222226
+  },
+  {
+   "term": "purpose",
+   "sites": 30,
+   "share": 0.5263157894736842,
+   "uses": 61,
+   "prominence": 1.410549543673941,
+   "headline_sites": 5,
+   "first_screen_sites": 12,
+   "weighted_total": 86.0435221641104
+  },
+  {
+   "term": "work",
+   "sites": 30,
+   "share": 0.5263157894736842,
+   "uses": 63,
+   "prominence": 1.1076281522710094,
+   "headline_sites": 3,
+   "first_screen_sites": 1,
+   "weighted_total": 69.7805735930736
+  },
+  {
+   "term": "committed",
+   "sites": 30,
+   "share": 0.5263157894736842,
+   "uses": 49,
+   "prominence": 1.0982102364755426,
+   "headline_sites": 1,
+   "first_screen_sites": 6,
+   "weighted_total": 53.81230158730159
+  },
+  {
+   "term": "impact",
+   "sites": 30,
+   "share": 0.5263157894736842,
+   "uses": 60,
+   "prominence": 1.098591519416991,
+   "headline_sites": 1,
+   "first_screen_sites": 4,
+   "weighted_total": 65.91549116501946
+  },
+  {
+   "term": "world-class",
+   "sites": 30,
+   "share": 0.5263157894736842,
+   "uses": 53,
+   "prominence": 1.324404467361113,
+   "headline_sites": 5,
+   "first_screen_sites": 6,
+   "weighted_total": 70.19343677013899
+  },
+  {
+   "term": "personal",
+   "sites": 29,
+   "share": 0.5087719298245614,
+   "uses": 52,
+   "prominence": 1.0555243825880618,
+   "headline_sites": 0,
+   "first_screen_sites": 4,
+   "weighted_total": 54.88726789457922
+  },
+  {
+   "term": "history",
+   "sites": 29,
+   "share": 0.5087719298245614,
+   "uses": 45,
+   "prominence": 1.499115068845461,
+   "headline_sites": 8,
+   "first_screen_sites": 6,
+   "weighted_total": 67.46017809804574
+  },
+  {
+   "term": "compassionate",
+   "sites": 28,
+   "share": 0.49122807017543857,
+   "uses": 48,
+   "prominence": 1.1605213279103206,
+   "headline_sites": 3,
+   "first_screen_sites": 1,
+   "weighted_total": 55.705023739695385
+  },
+  {
+   "term": "understanding",
+   "sites": 28,
+   "share": 0.49122807017543857,
+   "uses": 50,
+   "prominence": 1.1129472414378077,
+   "headline_sites": 0,
+   "first_screen_sites": 5,
+   "weighted_total": 55.64736207189038
+  },
+  {
+   "term": "exceptional",
+   "sites": 28,
+   "share": 0.49122807017543857,
+   "uses": 51,
+   "prominence": 1.2789877293533363,
+   "headline_sites": 3,
+   "first_screen_sites": 3,
+   "weighted_total": 65.22837419702014
+  },
+  {
+   "term": "global citizens",
+   "sites": 28,
+   "share": 0.49122807017543857,
+   "uses": 56,
+   "prominence": 1.3172920369610792,
+   "headline_sites": 7,
+   "first_screen_sites": 7,
+   "weighted_total": 73.76835406982043
+  },
+  {
+   "term": "content",
+   "sites": 28,
+   "share": 0.49122807017543857,
+   "uses": 29,
+   "prominence": 1.5029735561936373,
+   "headline_sites": 0,
+   "first_screen_sites": 25,
+   "weighted_total": 43.58623312961548
+  },
+  {
+   "term": "social",
+   "sites": 27,
+   "share": 0.47368421052631576,
+   "uses": 56,
+   "prominence": 1.0792537730501006,
+   "headline_sites": 1,
+   "first_screen_sites": 0,
+   "weighted_total": 60.43821129080563
+  },
+  {
+   "term": "commitment",
+   "sites": 27,
+   "share": 0.47368421052631576,
+   "uses": 49,
+   "prominence": 1.1247093239065582,
+   "headline_sites": 2,
+   "first_screen_sites": 2,
+   "weighted_total": 55.11075687142135
+  },
+  {
+   "term": "vibrant",
+   "sites": 27,
+   "share": 0.47368421052631576,
+   "uses": 46,
+   "prominence": 1.1532444005270093,
+   "headline_sites": 2,
+   "first_screen_sites": 2,
+   "weighted_total": 53.04924242424242
+  },
+  {
+   "term": "knowledge",
+   "sites": 27,
+   "share": 0.47368421052631576,
+   "uses": 39,
+   "prominence": 1.151679268025422,
+   "headline_sites": 2,
+   "first_screen_sites": 2,
+   "weighted_total": 44.91549145299145
+  },
+  {
+   "term": "build",
+   "sites": 27,
+   "share": 0.47368421052631576,
+   "uses": 45,
+   "prominence": 1.0907389251997095,
+   "headline_sites": 0,
+   "first_screen_sites": 4,
+   "weighted_total": 49.083251633986926
+  },
+  {
+   "term": "service",
+   "sites": 27,
+   "share": 0.47368421052631576,
+   "uses": 73,
+   "prominence": 1.2101247232173746,
+   "headline_sites": 7,
+   "first_screen_sites": 5,
+   "weighted_total": 88.33910479486835
+  },
+  {
+   "term": "outstanding",
+   "sites": 27,
+   "share": 0.47368421052631576,
+   "uses": 87,
+   "prominence": 1.1589231496111783,
+   "headline_sites": 4,
+   "first_screen_sites": 6,
+   "weighted_total": 100.8263140161725
+  },
+  {
+   "term": "founded",
+   "sites": 27,
+   "share": 0.47368421052631576,
+   "uses": 59,
+   "prominence": 1.174984570099226,
+   "headline_sites": 1,
+   "first_screen_sites": 9,
+   "weighted_total": 69.32408963585434
+  },
+  {
+   "term": "main",
+   "sites": 27,
+   "share": 0.47368421052631576,
+   "uses": 31,
+   "prominence": 1.5536614792544583,
+   "headline_sites": 1,
+   "first_screen_sites": 26,
+   "weighted_total": 48.16350585688821
+  },
+  {
+   "term": "meet",
+   "sites": 27,
+   "share": 0.47368421052631576,
+   "uses": 54,
+   "prominence": 1.207113894940692,
+   "headline_sites": 3,
+   "first_screen_sites": 5,
+   "weighted_total": 65.18415032679738
+  },
+  {
+   "term": "core",
+   "sites": 27,
+   "share": 0.47368421052631576,
+   "uses": 45,
+   "prominence": 1.5367316178438684,
+   "headline_sites": 7,
+   "first_screen_sites": 5,
+   "weighted_total": 69.15292280297408
+  },
+  {
+   "term": "three",
+   "sites": 26,
+   "share": 0.45614035087719296,
+   "uses": 46,
+   "prominence": 1.3527083175069425,
+   "headline_sites": 5,
+   "first_screen_sites": 5,
+   "weighted_total": 62.224582605319355
+  },
+  {
+   "term": "shared",
+   "sites": 26,
+   "share": 0.45614035087719296,
+   "uses": 34,
+   "prominence": 1.2695666501894876,
+   "headline_sites": 2,
+   "first_screen_sites": 5,
+   "weighted_total": 43.16526610644258
+  },
+  {
+   "term": "country",
+   "sites": 26,
+   "share": 0.45614035087719296,
+   "uses": 36,
+   "prominence": 1.1057208994708996,
+   "headline_sites": 0,
+   "first_screen_sites": 4,
+   "weighted_total": 39.805952380952384
+  },
+  {
+   "term": "reflective",
+   "sites": 26,
+   "share": 0.45614035087719296,
+   "uses": 49,
+   "prominence": 1.1604784470759635,
+   "headline_sites": 2,
+   "first_screen_sites": 2,
+   "weighted_total": 56.86344390672221
+  },
+  {
+   "term": "story",
+   "sites": 26,
+   "share": 0.45614035087719296,
+   "uses": 49,
+   "prominence": 1.5318357833657432,
+   "headline_sites": 9,
+   "first_screen_sites": 1,
+   "weighted_total": 75.05995338492141
+  },
+  {
+   "term": "offering",
+   "sites": 26,
+   "share": 0.45614035087719296,
+   "uses": 30,
+   "prominence": 1.2666666666666666,
+   "headline_sites": 3,
+   "first_screen_sites": 7,
+   "weighted_total": 38.0
+  },
+  {
+   "term": "safe",
+   "sites": 26,
+   "share": 0.45614035087719296,
+   "uses": 52,
+   "prominence": 1.0823870596969931,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 56.28412710424364
+  },
+  {
+   "term": "look",
+   "sites": 25,
+   "share": 0.43859649122807015,
+   "uses": 35,
+   "prominence": 1.0485260770975056,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 36.698412698412696
+  },
+  {
+   "term": "meaningful",
+   "sites": 25,
+   "share": 0.43859649122807015,
+   "uses": 37,
+   "prominence": 1.0658783783783783,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 39.4375
+  },
+  {
+   "term": "skip",
+   "sites": 25,
+   "share": 0.43859649122807015,
+   "uses": 25,
+   "prominence": 1.553449325184619,
+   "headline_sites": 0,
+   "first_screen_sites": 25,
+   "weighted_total": 38.83623312961548
+  },
+  {
+   "term": "sports",
+   "sites": 25,
+   "share": 0.43859649122807015,
+   "uses": 45,
+   "prominence": 1.0795479302832243,
+   "headline_sites": 0,
+   "first_screen_sites": 3,
+   "weighted_total": 48.5796568627451
+  },
+  {
+   "term": "goals",
+   "sites": 25,
+   "share": 0.43859649122807015,
+   "uses": 35,
+   "prominence": 1.0652930402930403,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 37.28525641025641
+  },
+  {
+   "term": "focus",
+   "sites": 25,
+   "share": 0.43859649122807015,
+   "uses": 42,
+   "prominence": 1.1497641509433962,
+   "headline_sites": 2,
+   "first_screen_sites": 3,
+   "weighted_total": 48.29009433962264
+  },
+  {
+   "term": "designed",
+   "sites": 25,
+   "share": 0.43859649122807015,
+   "uses": 43,
+   "prominence": 1.2398635810913512,
+   "headline_sites": 4,
+   "first_screen_sites": 2,
+   "weighted_total": 53.314133986928105
+  },
+  {
+   "term": "proud",
+   "sites": 24,
+   "share": 0.42105263157894735,
+   "uses": 35,
+   "prominence": 1.1125295572774563,
+   "headline_sites": 0,
+   "first_screen_sites": 6,
+   "weighted_total": 38.93853450471097
+  },
+  {
+   "term": "lifelong",
+   "sites": 24,
+   "share": 0.42105263157894735,
+   "uses": 31,
+   "prominence": 1.056346498483595,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 32.74674145299145
+  },
+  {
+   "term": "building",
+   "sites": 24,
+   "share": 0.42105263157894735,
+   "uses": 39,
+   "prominence": 1.2385689520123482,
+   "headline_sites": 5,
+   "first_screen_sites": 5,
+   "weighted_total": 48.30418912848158
+  },
+  {
+   "term": "spaces",
+   "sites": 24,
+   "share": 0.42105263157894735,
+   "uses": 36,
+   "prominence": 1.1232244103531233,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 40.436078772712435
+  },
+  {
+   "term": "wellbeing",
+   "sites": 24,
+   "share": 0.42105263157894735,
+   "uses": 52,
+   "prominence": 1.13291077597275,
+   "headline_sites": 1,
+   "first_screen_sites": 4,
+   "weighted_total": 58.911360350582996
+  },
+  {
+   "term": "different",
+   "sites": 24,
+   "share": 0.42105263157894735,
+   "uses": 46,
+   "prominence": 1.1340579710144927,
+   "headline_sites": 0,
+   "first_screen_sites": 3,
+   "weighted_total": 52.166666666666664
+  },
+  {
+   "term": "sustainable",
+   "sites": 24,
+   "share": 0.42105263157894735,
+   "uses": 67,
+   "prominence": 1.2134732549266773,
+   "headline_sites": 5,
+   "first_screen_sites": 3,
+   "weighted_total": 81.30270808008738
+  },
+  {
+   "term": "united",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 30,
+   "prominence": 1.2276785714285716,
+   "headline_sites": 3,
+   "first_screen_sites": 4,
+   "weighted_total": 36.830357142857146
+  },
+  {
+   "term": "integrity",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 31,
+   "prominence": 1.1903097798259088,
+   "headline_sites": 2,
+   "first_screen_sites": 3,
+   "weighted_total": 36.89960317460317
+  },
+  {
+   "term": "questions",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 34,
+   "prominence": 1.1226657329598506,
+   "headline_sites": 2,
+   "first_screen_sites": 0,
+   "weighted_total": 38.17063492063492
+  },
+  {
+   "term": "tradition",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 30,
+   "prominence": 1.055664488017429,
+   "headline_sites": 0,
+   "first_screen_sites": 3,
+   "weighted_total": 31.669934640522875
+  },
+  {
+   "term": "guide",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 34,
+   "prominence": 1.1319152661064424,
+   "headline_sites": 1,
+   "first_screen_sites": 4,
+   "weighted_total": 38.485119047619044
+  },
+  {
+   "term": "outside",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 27,
+   "prominence": 1.1202886710239652,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 30.24779411764706
+  },
+  {
+   "term": "feel",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 45,
+   "prominence": 1.1556881352386448,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 52.00596608573901
+  },
+  {
+   "term": "technology",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 36,
+   "prominence": 1.1030092592592593,
+   "headline_sites": 1,
+   "first_screen_sites": 1,
+   "weighted_total": 39.708333333333336
+  },
+  {
+   "term": "personalised",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 47,
+   "prominence": 1.181031076956408,
+   "headline_sites": 4,
+   "first_screen_sites": 0,
+   "weighted_total": 55.50846061695118
+  },
+  {
+   "term": "sense",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 40,
+   "prominence": 1.1098929980797352,
+   "headline_sites": 1,
+   "first_screen_sites": 3,
+   "weighted_total": 44.395719923189404
+  },
+  {
+   "term": "follow",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 29,
+   "prominence": 1.4369120251657375,
+   "headline_sites": 5,
+   "first_screen_sites": 3,
+   "weighted_total": 41.67044872980639
+  },
+  {
+   "term": "information",
+   "sites": 23,
+   "share": 0.40350877192982454,
+   "uses": 32,
+   "prominence": 1.05703125,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 33.825
+  },
+  {
+   "term": "share",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 30,
+   "prominence": 1.0970833333333334,
+   "headline_sites": 0,
+   "first_screen_sites": 4,
+   "weighted_total": 32.9125
+  },
+  {
+   "term": "prepare",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 31,
+   "prominence": 1.3006069392518,
+   "headline_sites": 4,
+   "first_screen_sites": 5,
+   "weighted_total": 40.3188151168058
+  },
+  {
+   "term": "come",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 34,
+   "prominence": 1.189093137254902,
+   "headline_sites": 1,
+   "first_screen_sites": 4,
+   "weighted_total": 40.42916666666667
+  },
+  {
+   "term": "think",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 31,
+   "prominence": 1.0705813092830019,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 33.18802058777306
+  },
+  {
+   "term": "principled",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 43,
+   "prominence": 1.335171371459217,
+   "headline_sites": 4,
+   "first_screen_sites": 6,
+   "weighted_total": 57.41236897274633
+  },
+  {
+   "term": "range",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 34,
+   "prominence": 1.064717553688142,
+   "headline_sites": 0,
+   "first_screen_sites": 3,
+   "weighted_total": 36.20039682539682
+  },
+  {
+   "term": "resilient",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 35,
+   "prominence": 1.1002994908655286,
+   "headline_sites": 0,
+   "first_screen_sites": 5,
+   "weighted_total": 38.5104821802935
+  },
+  {
+   "term": "process",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 32,
+   "prominence": 1.1565261994949496,
+   "headline_sites": 2,
+   "first_screen_sites": 2,
+   "weighted_total": 37.00883838383839
+  },
+  {
+   "term": "inquiry",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 43,
+   "prominence": 1.1790626606860948,
+   "headline_sites": 2,
+   "first_screen_sites": 0,
+   "weighted_total": 50.69969440950208
+  },
+  {
+   "term": "critical thinking",
+   "sites": 22,
+   "share": 0.38596491228070173,
+   "uses": 31,
+   "prominence": 1.1048506265526314,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 34.25036942313157
+  },
+  {
+   "term": "dedicated",
+   "sites": 21,
+   "share": 0.3684210526315789,
+   "uses": 36,
+   "prominence": 1.20102834984448,
+   "headline_sites": 3,
+   "first_screen_sites": 7,
+   "weighted_total": 43.23702059440128
+  },
+  {
+   "term": "latest",
+   "sites": 21,
+   "share": 0.3684210526315789,
+   "uses": 35,
+   "prominence": 1.34124716553288,
+   "headline_sites": 6,
+   "first_screen_sites": 0,
+   "weighted_total": 46.9436507936508
+  },
+  {
+   "term": "character",
+   "sites": 21,
+   "share": 0.3684210526315789,
+   "uses": 36,
+   "prominence": 1.2573839519704824,
+   "headline_sites": 4,
+   "first_screen_sites": 6,
+   "weighted_total": 45.26582227093736
+  },
+  {
+   "term": "foundation",
+   "sites": 21,
+   "share": 0.3684210526315789,
+   "uses": 33,
+   "prominence": 1.1401571407140714,
+   "headline_sites": 2,
+   "first_screen_sites": 4,
+   "weighted_total": 37.62518564356436
+  },
+  {
+   "term": "belonging",
+   "sites": 21,
+   "share": 0.3684210526315789,
+   "uses": 38,
+   "prominence": 1.3149915540077786,
+   "headline_sites": 3,
+   "first_screen_sites": 4,
+   "weighted_total": 49.96967905229559
+  },
+  {
+   "term": "ambitious",
+   "sites": 21,
+   "share": 0.3684210526315789,
+   "uses": 29,
+   "prominence": 1.1953499790720887,
+   "headline_sites": 2,
+   "first_screen_sites": 4,
+   "weighted_total": 34.66514939309057
+  },
+  {
+   "term": "including",
+   "sites": 21,
+   "share": 0.3684210526315789,
+   "uses": 47,
+   "prominence": 1.1073567222955019,
+   "headline_sites": 0,
+   "first_screen_sites": 3,
+   "weighted_total": 52.04576594788859
+  },
+  {
+   "term": "truly",
+   "sites": 21,
+   "share": 0.3684210526315789,
+   "uses": 39,
+   "prominence": 1.1923076923076923,
+   "headline_sites": 4,
+   "first_screen_sites": 3,
+   "weighted_total": 46.5
+  },
+  {
+   "term": "important",
+   "sites": 21,
+   "share": 0.3684210526315789,
+   "uses": 35,
+   "prominence": 1.0965986394557823,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 38.38095238095238
+  },
+  {
+   "term": "local",
+   "sites": 20,
+   "share": 0.3508771929824561,
+   "uses": 56,
+   "prominence": 1.101048752834467,
+   "headline_sites": 2,
+   "first_screen_sites": 4,
+   "weighted_total": 61.65873015873016
+  },
+  {
+   "term": "change",
+   "sites": 20,
+   "share": 0.3508771929824561,
+   "uses": 35,
+   "prominence": 1.2279295051353876,
+   "headline_sites": 4,
+   "first_screen_sites": 4,
+   "weighted_total": 42.977532679738566
+  },
+  {
+   "term": "rigorous",
+   "sites": 20,
+   "share": 0.3508771929824561,
+   "uses": 33,
+   "prominence": 1.2217522257616595,
+   "headline_sites": 2,
+   "first_screen_sites": 5,
+   "weighted_total": 40.31782345013477
+  },
+  {
+   "term": "areas",
+   "sites": 20,
+   "share": 0.3508771929824561,
+   "uses": 28,
+   "prominence": 1.2725155279503106,
+   "headline_sites": 4,
+   "first_screen_sites": 0,
+   "weighted_total": 35.630434782608695
+  },
+  {
+   "term": "top",
+   "sites": 20,
+   "share": 0.3508771929824561,
+   "uses": 46,
+   "prominence": 1.2314585616855438,
+   "headline_sites": 3,
+   "first_screen_sites": 3,
+   "weighted_total": 56.64709383753501
+  },
+  {
+   "term": "provides",
+   "sites": 20,
+   "share": 0.3508771929824561,
+   "uses": 35,
+   "prominence": 1.1384643165442279,
+   "headline_sites": 2,
+   "first_screen_sites": 3,
+   "weighted_total": 39.846251079047974
+  },
+  {
+   "term": "action",
+   "sites": 20,
+   "share": 0.3508771929824561,
+   "uses": 39,
+   "prominence": 1.2705661133878956,
+   "headline_sites": 5,
+   "first_screen_sites": 2,
+   "weighted_total": 49.55207842212793
+  },
+  {
+   "term": "developing",
+   "sites": 20,
+   "share": 0.3508771929824561,
+   "uses": 35,
+   "prominence": 1.1412414965986395,
+   "headline_sites": 1,
+   "first_screen_sites": 5,
+   "weighted_total": 39.94345238095238
+  },
+  {
+   "term": "positive",
+   "sites": 20,
+   "share": 0.3508771929824561,
+   "uses": 30,
+   "prominence": 1.0842881646655231,
+   "headline_sites": 1,
+   "first_screen_sites": 1,
+   "weighted_total": 32.528644939965695
+  },
+  {
+   "term": "modern",
+   "sites": 20,
+   "share": 0.3508771929824561,
+   "uses": 37,
+   "prominence": 1.0848348348348347,
+   "headline_sites": 0,
+   "first_screen_sites": 3,
+   "weighted_total": 40.138888888888886
+  },
+  {
+   "term": "interests",
+   "sites": 20,
+   "share": 0.3508771929824561,
+   "uses": 29,
+   "prominence": 1.023227969348659,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 29.67361111111111
+  },
+  {
+   "term": "members",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 30,
+   "prominence": 1.1507570806100218,
+   "headline_sites": 1,
+   "first_screen_sites": 3,
+   "weighted_total": 34.52271241830066
+  },
+  {
+   "term": "lives",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 37,
+   "prominence": 1.112060687060687,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 41.14624542124542
+  },
+  {
+   "term": "key",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 28,
+   "prominence": 1.1755898804166132,
+   "headline_sites": 1,
+   "first_screen_sites": 5,
+   "weighted_total": 32.91651665166517
+  },
+  {
+   "term": "results",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 65,
+   "prominence": 1.2009615384615384,
+   "headline_sites": 3,
+   "first_screen_sites": 2,
+   "weighted_total": 78.0625
+  },
+  {
+   "term": "quality",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 46,
+   "prominence": 1.1403079710144928,
+   "headline_sites": 1,
+   "first_screen_sites": 4,
+   "weighted_total": 52.454166666666666
+  },
+  {
+   "term": "holistic",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 43,
+   "prominence": 1.285030593340159,
+   "headline_sites": 3,
+   "first_screen_sites": 4,
+   "weighted_total": 55.25631551362683
+  },
+  {
+   "term": "choose",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 33,
+   "prominence": 1.482208448117539,
+   "headline_sites": 6,
+   "first_screen_sites": 1,
+   "weighted_total": 48.91287878787879
+  },
+  {
+   "term": "professional",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 25,
+   "prominence": 1.1045879005690327,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 27.614697514225817
+  },
+  {
+   "term": "globe",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 23,
+   "prominence": 1.30012077294686,
+   "headline_sites": 4,
+   "first_screen_sites": 5,
+   "weighted_total": 29.90277777777778
+  },
+  {
+   "term": "ensure",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 31,
+   "prominence": 1.0572964669738865,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 32.77619047619048
+  },
+  {
+   "term": "preparing",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 28,
+   "prominence": 1.181463387241689,
+   "headline_sites": 2,
+   "first_screen_sites": 5,
+   "weighted_total": 33.0809748427673
+  },
+  {
+   "term": "academically",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 24,
+   "prominence": 1.2681314634439633,
+   "headline_sites": 1,
+   "first_screen_sites": 3,
+   "weighted_total": 30.43515512265512
+  },
+  {
+   "term": "globally",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 35,
+   "prominence": 1.051575963718821,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 36.80515873015873
+  },
+  {
+   "term": "welcoming",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 26,
+   "prominence": 1.2888519066403683,
+   "headline_sites": 4,
+   "first_screen_sites": 2,
+   "weighted_total": 33.510149572649574
+  },
+  {
+   "term": "strive",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 28,
+   "prominence": 1.1285714285714286,
+   "headline_sites": 0,
+   "first_screen_sites": 5,
+   "weighted_total": 31.6
+  },
+  {
+   "term": "explore",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 32,
+   "prominence": 1.0494140625,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 33.58125
+  },
+  {
+   "term": "encourage",
+   "sites": 19,
+   "share": 0.3333333333333333,
+   "uses": 29,
+   "prominence": 1.0086206896551724,
+   "headline_sites": 0,
+   "first_screen_sites": 0,
+   "weighted_total": 29.25
+  },
+  {
+   "term": "working",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 27,
+   "prominence": 1.1623075998075998,
+   "headline_sites": 1,
+   "first_screen_sites": 4,
+   "weighted_total": 31.382305194805195
+  },
+  {
+   "term": "full",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 30,
+   "prominence": 1.234973544973545,
+   "headline_sites": 2,
+   "first_screen_sites": 3,
+   "weighted_total": 37.04920634920635
+  },
+  {
+   "term": "perspective",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 20,
+   "prominence": 1.1583333333333334,
+   "headline_sites": 0,
+   "first_screen_sites": 4,
+   "weighted_total": 23.166666666666668
+  },
+  {
+   "term": "active",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 24,
+   "prominence": 1.0067708333333334,
+   "headline_sites": 0,
+   "first_screen_sites": 0,
+   "weighted_total": 24.1625
+  },
+  {
+   "term": "access",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 22,
+   "prominence": 1.1318758234519104,
+   "headline_sites": 1,
+   "first_screen_sites": 1,
+   "weighted_total": 24.901268115942027
+  },
+  {
+   "term": "highest",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 27,
+   "prominence": 1.145288287688707,
+   "headline_sites": 1,
+   "first_screen_sites": 1,
+   "weighted_total": 30.92278376759509
+  },
+  {
+   "term": "encourages",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 20,
+   "prominence": 1.0919642857142857,
+   "headline_sites": 0,
+   "first_screen_sites": 3,
+   "weighted_total": 21.839285714285715
+  },
+  {
+   "term": "start",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 34,
+   "prominence": 1.3130684674802322,
+   "headline_sites": 3,
+   "first_screen_sites": 2,
+   "weighted_total": 44.644327894327894
+  },
+  {
+   "term": "live",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 24,
+   "prominence": 1.1478174603174602,
+   "headline_sites": 1,
+   "first_screen_sites": 4,
+   "weighted_total": 27.547619047619047
+  },
+  {
+   "term": "forward",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 29,
+   "prominence": 1.3298782156540776,
+   "headline_sites": 2,
+   "first_screen_sites": 3,
+   "weighted_total": 38.56646825396825
+  },
+  {
+   "term": "built",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 21,
+   "prominence": 1.0858708944793851,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 22.803288784067085
+  },
+  {
+   "term": "pathways",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 34,
+   "prominence": 1.1268828286031394,
+   "headline_sites": 1,
+   "first_screen_sites": 3,
+   "weighted_total": 38.31401617250674
+  },
+  {
+   "term": "tour",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 32,
+   "prominence": 1.2104204963235294,
+   "headline_sites": 3,
+   "first_screen_sites": 4,
+   "weighted_total": 38.73345588235294
+  },
+  {
+   "term": "board",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 32,
+   "prominence": 1.2501123366013072,
+   "headline_sites": 3,
+   "first_screen_sites": 4,
+   "weighted_total": 40.00359477124183
+  },
+  {
+   "term": "kind",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 26,
+   "prominence": 1.1261446886446886,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 29.279761904761905
+  },
+  {
+   "term": "guided",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 27,
+   "prominence": 1.1579218106995885,
+   "headline_sites": 1,
+   "first_screen_sites": 3,
+   "weighted_total": 31.26388888888889
+  },
+  {
+   "term": "strengths",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 25,
+   "prominence": 1.093888888888889,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 27.34722222222222
+  },
+  {
+   "term": "reach",
+   "sites": 18,
+   "share": 0.3157894736842105,
+   "uses": 24,
+   "prominence": 1.212624643874644,
+   "headline_sites": 2,
+   "first_screen_sites": 2,
+   "weighted_total": 29.102991452991454
+  },
+  {
+   "term": "embrace",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 25,
+   "prominence": 1.2013055555555556,
+   "headline_sites": 2,
+   "first_screen_sites": 4,
+   "weighted_total": 30.03263888888889
+  },
+  {
+   "term": "private",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 46,
+   "prominence": 1.1319142512077294,
+   "headline_sites": 1,
+   "first_screen_sites": 6,
+   "weighted_total": 52.06805555555555
+  },
+  {
+   "term": "following",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 24,
+   "prominence": 1.160763888888889,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 27.858333333333334
+  },
+  {
+   "term": "internationally",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 17,
+   "prominence": 1.1026665568188059,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 18.7453314659197
+  },
+  {
+   "term": "group",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 49,
+   "prominence": 1.386981697440881,
+   "headline_sites": 3,
+   "first_screen_sites": 5,
+   "weighted_total": 67.96210317460317
+  },
+  {
+   "term": "love of learning",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 20,
+   "prominence": 1.110531517094017,
+   "headline_sites": 0,
+   "first_screen_sites": 2,
+   "weighted_total": 22.210630341880343
+  },
+  {
+   "term": "step",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 24,
+   "prominence": 1.1244843234323432,
+   "headline_sites": 1,
+   "first_screen_sites": 1,
+   "weighted_total": 26.987623762376238
+  },
+  {
+   "term": "thinking",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 26,
+   "prominence": 1.07864010989011,
+   "headline_sites": 1,
+   "first_screen_sites": 0,
+   "weighted_total": 28.044642857142858
+  },
+  {
+   "term": "rich",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 27,
+   "prominence": 1.2216899386017033,
+   "headline_sites": 2,
+   "first_screen_sites": 4,
+   "weighted_total": 32.98562834224599
+  },
+  {
+   "term": "cultures",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 24,
+   "prominence": 1.2894114096944287,
+   "headline_sites": 4,
+   "first_screen_sites": 2,
+   "weighted_total": 30.945873832666287
+  },
+  {
+   "term": "stage",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 26,
+   "prominence": 1.1478296146922384,
+   "headline_sites": 1,
+   "first_screen_sites": 1,
+   "weighted_total": 29.8435699819982
+  },
+  {
+   "term": "advanced",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 24,
+   "prominence": 1.2503306878306877,
+   "headline_sites": 1,
+   "first_screen_sites": 1,
+   "weighted_total": 30.007936507936506
+  },
+  {
+   "term": "design",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 23,
+   "prominence": 1.0852842809364547,
+   "headline_sites": 1,
+   "first_screen_sites": 1,
+   "weighted_total": 24.96153846153846
+  },
+  {
+   "term": "space",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 32,
+   "prominence": 1.211803690687465,
+   "headline_sites": 1,
+   "first_screen_sites": 1,
+   "weighted_total": 38.77771810199888
+  },
+  {
+   "term": "providing",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 30,
+   "prominence": 1.0785115303983228,
+   "headline_sites": 1,
+   "first_screen_sites": 3,
+   "weighted_total": 32.355345911949684
+  },
+  {
+   "term": "ready",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 30,
+   "prominence": 1.3961519961519961,
+   "headline_sites": 3,
+   "first_screen_sites": 4,
+   "weighted_total": 41.884559884559884
+  },
+  {
+   "term": "play",
+   "sites": 17,
+   "share": 0.2982456140350877,
+   "uses": 24,
+   "prominence": 1.1873468137254901,
+   "headline_sites": 1,
+   "first_screen_sites": 5,
+   "weighted_total": 28.496323529411764
+  },
+  {
+   "term": "relationships",
+   "sites": 16,
+   "share": 0.2807017543859649,
+   "uses": 30,
+   "prominence": 1.2363756577054301,
+   "headline_sites": 3,
+   "first_screen_sites": 2,
+   "weighted_total": 37.0912697311629
+  },
+  {
+   "term": "fostering",
+   "sites": 16,
+   "share": 0.2807017543859649,
+   "uses": 25,
+   "prominence": 1.025,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 25.625
+  },
+  {
+   "term": "strategic",
+   "sites": 16,
+   "share": 0.2807017543859649,
+   "uses": 37,
+   "prominence": 1.456918571187439,
+   "headline_sites": 5,
+   "first_screen_sites": 4,
+   "weighted_total": 53.90598713393525
+  },
+  {
+   "term": "performance",
+   "sites": 16,
+   "share": 0.2807017543859649,
+   "uses": 21,
+   "prominence": 1.091600529100529,
+   "headline_sites": 1,
+   "first_screen_sites": 2,
+   "weighted_total": 22.92361111111111
+  },
+  {
+   "term": "environments",
+   "sites": 16,
+   "share": 0.2807017543859649,
+   "uses": 23,
+   "prominence": 1.3028381642512077,
+   "headline_sites": 2,
+   "first_screen_sites": 1,
+   "weighted_total": 29.96527777777778
+  },
+  {
+   "term": "member",
+   "sites": 16,
+   "share": 0.2807017543859649,
+   "uses": 19,
+   "prominence": 1.0263157894736843,
+   "headline_sites": 0,
+   "first_screen_sites": 1,
+   "weighted_total": 19.5
+  }
+ ],
+ "buzz_list": [
+  "21st-century",
+  "agency",
+  "ambitious",
+  "authentic",
+  "balanced",
+  "belonging",
+  "caring",
+  "challenging",
+  "character",
+  "collaborative",
+  "community",
+  "compassionate",
+  "confident",
+  "connected",
+  "creative",
+  "critical thinking",
+  "curious",
+  "diverse",
+  "empathy",
+  "empower",
+  "engage",
+  "flourish",
+  "future",
+  "future-ready",
+  "global citizens",
+  "growth",
+  "holistic",
+  "impact",
+  "inclusive",
+  "independent",
+  "individual",
+  "innovative",
+  "inquiry",
+  "inspire",
+  "integrity",
+  "international-mindedness",
+  "journey",
+  "joy",
+  "kind",
+  "lifelong",
+  "love of learning",
+  "nurturing",
+  "open-minded",
+  "opportunity",
+  "passion",
+  "personalised",
+  "potential",
+  "principled",
+  "purpose",
+  "real-world",
+  "reflective",
+  "resilient",
+  "respect",
+  "responsible",
+  "rigorous",
+  "safe",
+  "student-centred",
+  "success",
+  "supportive",
+  "sustainable",
+  "tailored",
+  "thrive",
+  "vibrant",
+  "welcoming",
+  "wellbeing",
+  "whole child"
+ ],
+ "super_list": [
+  "award-winning",
+  "best",
+  "cutting-edge",
+  "elite",
+  "excellence",
+  "exceptional",
+  "exceptionally",
+  "extraordinary",
+  "finest",
+  "first-class",
+  "high-quality",
+  "highest",
+  "leading",
+  "outstanding",
+  "premier",
+  "prestigious",
+  "remarkable",
+  "renowned",
+  "state-of-the-art",
+  "superb",
+  "top",
+  "unique",
+  "unparalleled",
+  "unrivalled",
+  "world-class"
+ ]
+}
