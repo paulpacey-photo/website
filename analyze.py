@@ -91,7 +91,7 @@ def tokens(text):
             found.append(canon)
             return ' '
         t = re.sub(r'\b(?:' + rx + r')\b', rep, t)
-    for w in re.findall(r"[a-z][a-z'-]*[a-z]|[a-z]", t):
+    for w in re.findall(r"[^\W\d_][^\W\d_'-]*(?:['-][^\W\d_]+)*", t):
         w = w.strip("'-")
         if w.endswith("'s"): w = w[:-2]
         if len(w) < 3 or w in STOP: continue
@@ -129,12 +129,31 @@ def load():
     return recs
 
 
+def own_words(site):
+    from urllib.parse import urlparse
+    t = norm(site['name'] + ' ' + urlparse(site['url']).netloc + ' ' + urlparse(site['url']).path + ' ' + site['country'])
+    return set(re.findall(r"[^\W\d_]+", t))
+
+
+def site_profile(rec):
+    """Per site: for each term, total weight, max weight, appearances, whether in a headline (weight>=2) or first screen."""
+    own = own_words(rec['site'])
+    prof = collections.defaultdict(lambda: {'w': 0.0, 'max': 0.0, 'n': 0, 'headline': 0, 'fold': 0})
+    total = 0.0
+    for w, text, fs, base, fold, role in site_blocks(rec):
+        for t in tokens(text):
+            if t in GENERIC or t in own: continue
+            d = prof[t]
+            d['w'] += w; d['max'] = max(d['max'], w); d['n'] += 1
+            if w >= 2.0: d['headline'] = 1
+            if fold: d['fold'] = 1
+            total += w
+    return prof, total
+
+
 if __name__ == '__main__':
     recs = load()
     for r in recs:
-        bl = site_blocks(r)
-        c = collections.Counter()
-        for w, text, *_ in bl:
-            for t in tokens(text):
-                if t not in GENERIC: c[t] += w
-        print(r['site']['name'], len(bl), 'blocks;', ', '.join(f'{k} {v:.1f}' for k, v in c.most_common(15)))
+        prof, total = site_profile(r)
+        top = sorted(prof.items(), key=lambda kv: -kv[1]['w'])[:15]
+        print(r['site']['name'], f'{total:.0f}', ', '.join(f"{k} {v['w']:.1f}" for k, v in top))
