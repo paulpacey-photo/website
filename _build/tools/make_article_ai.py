@@ -15,7 +15,7 @@ RED, INK, BODY, MUTED, CREAM, STONE = '#A42C35', '#1E1E1E', '#2E2B28', '#6B665F'
 
 COVER = '/_blob/06cc3238b6ccd5de9b96e8d61a8a0377'   # zipline rider in the forest
 BAND = {
-    1: '/_blob/1fd11a20accfae6d4f6cba5f56022cb5',   # archer
+    1: '/_blob/c70a6e49c666b7d98f849d327aa8ab61',   # mother hugging toddler in playground
     2: '/_blob/66216121c1359b55a182e351621e6b38',   # climbing wall
 }
 PORTRAIT = '/_blob/5cbcad31e477110391127e9cf157361c'
