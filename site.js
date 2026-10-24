@@ -403,3 +403,44 @@
   window.addEventListener('resize', on);
   frame();
 })();
+
+/* ---------- article videos: load and play only while on screen; poster only if motion is reduced ---------- */
+(function () {
+  var vids = document.querySelectorAll('video[data-autovideo]');
+  if (!vids.length) return;
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  function load(v) {
+    if (v.dataset.loaded) return;
+    v.dataset.loaded = '1';
+    var s = v.querySelector('source[data-src]');
+    if (s) { s.src = s.getAttribute('data-src'); v.load(); }
+  }
+  function play(v) { load(v); var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+  if (!('IntersectionObserver' in window)) { vids.forEach(play); return; }
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) play(e.target); else if (e.target.dataset.loaded) e.target.pause(); });
+  }, { rootMargin: '200px 0px', threshold: 0.1 });
+  vids.forEach(function (v) { io.observe(v); });
+})();
+
+/* ---------- article compare: toggle between the original photo and the AI-animated clip ---------- */
+(function () {
+  document.querySelectorAll('figure[data-compare]').forEach(function (fig) {
+    var photo = fig.querySelector('img[data-compare-photo]');
+    var vid = fig.querySelector('video');
+    var btns = fig.querySelectorAll('button[data-show]');
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var showPhoto = b.getAttribute('data-show') === 'photo';
+        photo.style.opacity = showPhoto ? '1' : '0';
+        btns.forEach(function (x) {
+          var on = x === b;
+          x.setAttribute('aria-pressed', on ? 'true' : 'false');
+          x.style.background = on ? '#1E1E1E' : 'transparent';
+          x.style.color = on ? '#FFFFFF' : '#1E1E1E';
+        });
+        if (vid && vid.dataset.loaded) { if (showPhoto) vid.pause(); else { var p = vid.play(); if (p && p.catch) p.catch(function () {}); } }
+      });
+    });
+  });
+})();

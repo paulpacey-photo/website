@@ -282,6 +282,8 @@ def build():
     open(os.path.join(OUT, 'pages.css'), 'w').write(''.join(shared))
     for f in ('site.css', 'site.js', 'wix.js'): shutil.copy(os.path.join(HERE, f), OUT)
     for p in glob.glob(os.path.join(HERE, 'static', '*')): shutil.copy(p, OUT)  # files served as-is (e.g. PDFs)
+    os.makedirs(os.path.join(OUT, 'media'), exist_ok=True)
+    for p in glob.glob(os.path.join(HERE, 'media', '*')): shutil.copy(p, os.path.join(OUT, 'media'))  # article videos and their stills
     built = {}
     for slug, fname, dboards, mboards, title, desc in PAGES:
         d = [board(b) for b in dboards]; m = [board(b) for b in mboards]
