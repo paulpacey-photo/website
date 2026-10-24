@@ -99,7 +99,7 @@ P('In front of the camera, one of the most exciting opportunities sits where the
 B.append(('band', 2, 'The fantasy is the hook.<br>The <i>real story</i> is the payoff.'))
 P('To do it well:')
 L([
-    ('Keep the child real; let AI build the world.', 'Film the real student and the real wonder, then place them in an AI-generated environment. The child’s face and emotion are never synthesized. You’ll still need parental consent for the use, and should check with your legal team whether a label applies, but you’re on far firmer ground.'),
+    ('Keep the child real; let AI build the world.', 'Film the real student and the real wonder, then place them in an AI-generated environment. The child’s face and emotion are never synthesized.'),
     ('Bookend it with reality.', 'Start in the real classroom, drift into the daydream, and come back to the real lesson. The fantasy is the hook; your school is the payoff.'),
     ('Move early.', 'Before long, AI fantasy sequences will be everywhere. Most schools plan marketing a year at a time, and consent and approvals take time, so the schools that start now have a window of a cycle or two before it becomes the new generic.'),
 ])
