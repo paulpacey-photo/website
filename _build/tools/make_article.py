@@ -17,6 +17,7 @@ BAND = {
     2: '/_blob/4e3a9d8ee137f04633bf6a310ed9f2ea',   # teacher and student
     3: '/_blob/9c30d14da3ed8313b4c30ba054b72f70',   # student concentrating
 }
+COVER = '/_blob/288217c0760261676c074644f8ff1e3d'
 PORTRAIT = '/_blob/5cbcad31e477110391127e9cf157361c'
 SIGNATURE = '/_blob/ed31b870cf6c1f8e89f4233c4fee7b09'
 
@@ -116,7 +117,7 @@ def render(m):
     # cover (placeholder) with parallax
     ch = 300 if m else 620
     out.append(f'''<!-- 3 COVER -->
-<div data-parallax="0.18" style="position: relative; height: {ch}px; overflow: hidden; background: #D8D0C4"><div data-parallax-layer="1" style="position: absolute; left: 0; right: 0; top: -12%; height: 124%; background: linear-gradient(160deg, #E4DED5 0%, #CFC7BC 55%, #B9B0A4 100%); display: flex; align-items: center; justify-content: center"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: {MUTED}; background: rgba(255,255,255,0.7); padding: 10px 14px">Cover image · placeholder</span></div></div>
+<div data-parallax="0.18" style="position: relative; height: {ch}px; overflow: hidden; background: #D8D0C4"><img data-parallax-layer="1" src="{COVER}" alt="A teacher laughing with young students in a school playground" style="position: absolute; left: 0; top: -18%; width: 100%; height: 136%; object-fit: cover; object-position: center 22%; display: block"></div>
 ''')
     body = []
     first_p = True
