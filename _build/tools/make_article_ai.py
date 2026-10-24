@@ -14,7 +14,7 @@ SERIF = "'Newsreader', Georgia, serif"
 RED, INK, BODY, MUTED, CREAM, STONE = '#A42C35', '#1E1E1E', '#2E2B28', '#6B665F', '#F6F2EC', '#E4DED5'
 
 COVER = '/_blob/06cc3238b6ccd5de9b96e8d61a8a0377'   # zipline rider in the forest
-BANDCAP = {2: 'AI-generated illustration'}
+BANDCAP = {}
 BAND = {
     1: '/_blob/c70a6e49c666b7d98f849d327aa8ab61',   # mother hugging toddler in playground
     2: '/_blob/200e93fbf198579bd5ca3425ced56bb7',   # AI-generated: girl reading with dragon
