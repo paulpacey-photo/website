@@ -13,7 +13,7 @@ NAME = 'Article-AI'
 SERIF = "'Newsreader', Georgia, serif"
 RED, INK, BODY, MUTED, CREAM, STONE = '#A42C35', '#1E1E1E', '#2E2B28', '#6B665F', '#F6F2EC', '#E4DED5'
 
-COVER = '/_blob/6db19b22cd0fe7b5c2c9312721b572d3'   # zipline rider in the forest
+COVER = '/_blob/06cc3238b6ccd5de9b96e8d61a8a0377'   # zipline rider in the forest
 BAND = {
     1: '/_blob/1fd11a20accfae6d4f6cba5f56022cb5',   # archer
     2: '/_blob/66216121c1359b55a182e351621e6b38',   # climbing wall
@@ -154,7 +154,7 @@ def render(m):
 ''')
     ch = 300 if m else 620
     out.append(f'''<!-- 3 COVER -->
-<div data-parallax="0.18" style="position: relative; height: {ch}px; overflow: hidden; background: #D8D0C4"><img data-parallax-layer="1" src="{COVER}" alt="" style="position: absolute; left: 0; top: -10%; width: 100%; height: 120%; object-fit: cover; object-position: 35% 8%; display: block"></div>
+<div data-parallax="0.18" style="position: relative; height: {ch}px; overflow: hidden; background: #D8D0C4"><img data-parallax-layer="1" src="{COVER}" alt="" style="position: absolute; left: 0; top: -10%; width: 100%; height: 120%; object-fit: cover; object-position: 40% 30%; display: block"></div>
 ''')
     body = []
     for blk in B:
