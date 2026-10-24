@@ -61,8 +61,7 @@ L([
     ('Bringing images to life.', 'Turning still photographs into short, moving moments.', '*'),
 ])
 P('This last point deserves an asterisk, because it is precisely where the slope starts to get slippery. In its current form, AI-generated motion is still hit-or-miss, but when it lands, it is almost impossible to distinguish from reality. In my world, I’ve learned this represents both the greatest opportunity and the greatest threat of our time.')
-P('My first laborious attempt to harness this technology produced a two-and-a-half-minute demo reel that I remain proud of to this day. Set to music, and artfully sequenced in a poetic story arc, it captured something genuine beyond what any single image could possibly accomplish. I will stand before any critic and defend the fact that I created nothing that wasn’t already present in the original stills. Emotionally and aesthetically, the reel was simply an extension and amplification of the core principles my work has always stood for.')
-P('But just as I thought I had found the keys to the kingdom, I had a rude awakening.')
+P('Just as I thought I had found the keys to the kingdom, I had a rude awakening.')
 
 H('The bad: the line I didn’t see')
 P('The moment I understood what was really at stake came from a client I’d worked with for more than a decade. I’d spent days on a sample reel that brought some of my favorite images from their shoot to life, and I was proud of it. I still am. I sent it expecting delight.')
