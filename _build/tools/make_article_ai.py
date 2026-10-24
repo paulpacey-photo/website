@@ -65,7 +65,7 @@ P('That’s the magic I don’t want schools to lose. It’s also where things g
 
 H('The bad: the line I didn’t see')
 P('The moment I understood what was really at stake came from a client I’d worked with for more than a decade. I’d spent days on a sample reel that brought some of my favorite images from their shoot to life, and I was proud of it. I still am. I sent it expecting delight.')
-P('What came back was concern, and they were right to raise it. I had been thinking like a creative. They were thinking like guardians. Those weren’t just my images; they were their students, now moving in ways no parent had agreed to, in a video the school hadn’t asked for. However beautiful the result, I had stepped over a line I hadn’t known was there.')
+P('What came back was alarm, and they were right to raise it. I had been thinking like a creative. They were thinking like guardians. Those weren’t just my images; they were their students, now moving in ways no parent had agreed to, in a video the school hadn’t asked for. However beautiful the result, I had stepped over a line I hadn’t known was there.')
 P('That’s the part of AI that rarely makes the headlines. The technology was never the problem. Consent was.')
 B.append(('band', 1, 'I had been thinking like a creative. They were thinking <i>like guardians.</i>'))
 H3('What the rules now say')
