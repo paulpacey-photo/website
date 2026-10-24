@@ -94,7 +94,7 @@ H('Keeping the magic')
 P('The answer isn’t to abandon AI. It’s to move it.')
 P('Behind the camera, everything in “the good” list above is still open to you. Those uses save time, protect students and mislead no one.')
 P('In front of the camera, one of the most exciting opportunities sits where the rules are kindest: content that is obviously not real. Picture a Primary student learning about the Stone Age who drifts into a daydream and finds herself in a prehistoric cave. Or a lesson on the planets that ends with a student standing on Mars. Nobody thinks it actually happened, so it isn’t pretending to be real. What it shows is true: what a great lesson does to a child’s imagination. And it would cut straight through the sea of identical corridor-and-classroom content most schools publish.')
-B.append(('band', 2, 'Nobody thinks it actually happened. What it shows is true: what a great lesson does to <i>a child’s imagination.</i>'))
+B.append(('band', 2, 'The fantasy is the hook.<br>The <i>real story</i> is the payoff.'))
 P('To do it well:')
 L([
     ('Keep the child real; let AI build the world.', 'Film the real student and the real wonder, then place them in an AI-generated environment. The child’s face and emotion are never synthesized. You’ll still need parental consent for the use, and should check with your legal team whether a label applies, but you’re on far firmer ground.'),
