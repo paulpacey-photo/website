@@ -58,7 +58,7 @@ L([
     ('Planning.', 'Mocking up a concept so a leadership team can approve an idea before a single frame is shot.'),
     ('Managing the library.', 'Tagging, captions and alt text that make hundreds of images searchable by theme, season or year group.'),
     ('Showing what doesn’t exist yet.', 'A clearly labeled “artist’s impression” of a new building.'),
-    ('Bringing images to life.', 'Turning still photographs into short, moving moments.'),
+    ('Bringing images to life.', 'Turning still photographs into short, moving moments.', '*'),
 ])
 P('This last point deserves an asterisk, because it is precisely where the slope starts to get slippery. In its current form, AI-generated motion is still hit-or-miss, but when it lands, it is almost impossible to distinguish from reality. In my world, I’ve learned this represents both the greatest opportunity and the greatest threat of our time.')
 P('My first laborious attempt to harness this technology produced a two-and-a-half-minute demo reel that I remain proud of to this day. Set to music, and artfully sequenced in a poetic story arc, it captured something genuine beyond what any single image could possibly accomplish. I will stand before any critic and defend the fact that I created nothing that wasn’t already present in the original stills. Emotionally and aesthetically, the reel was simply an extension and amplification of the core principles my work has always stood for.')
@@ -175,8 +175,8 @@ def render(m):
             body.append(f'<h3 data-reveal="1" style="{col}; box-sizing: border-box; margin-top: {40 if m else 56}px; margin-bottom: 0; font-size: {11 if m else 12}px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: {RED}">{blk[1]}</h3>')
         elif k == 'list':
             items = ''.join(
-                f'<li style="position: relative; margin-top: {16 if m else 20}px; padding-left: {22 if m else 28}px"><span aria-hidden="true" style="position: absolute; left: 0; top: {15 if m else 17}px; width: {10 if m else 12}px; height: 1px; background: {RED}"></span><strong style="font-weight: 600; color: {INK}">{b}</strong> {x}</li>'
-                for b, x in blk[1])
+                f'<li style="position: relative; margin-top: {16 if m else 20}px; padding-left: {22 if m else 28}px">{(f'<span aria-hidden="true" style="position: absolute; left: 0; top: {3 if m else 4}px; font-family: {SERIF}; font-size: {26 if m else 30}px; line-height: 1; color: {RED}">*</span>' if it[2:] == ('*',) else f'<span aria-hidden="true" style="position: absolute; left: 0; top: {15 if m else 17}px; width: {10 if m else 12}px; height: 1px; background: {RED}"></span>')}<strong style="font-weight: 600; color: {INK}">{it[0]}</strong> {it[1]}</li>'
+                for it in blk[1])
             body.append(f'<ul style="{col}; box-sizing: border-box; list-style: none; margin-top: {6 if m else 8}px; margin-bottom: 0; font-family: {SERIF}; font-size: {fs}px; line-height: {lh}; color: {BODY}">{items}</ul>')
         elif k == 'qs':
             items = ''.join(
