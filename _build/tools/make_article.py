@@ -15,7 +15,7 @@ RED, INK, BODY, MUTED, CREAM, STONE = '#A42C35', '#1E1E1E', '#2E2B28', '#6B665F'
 BAND = {
     1: '/_blob/9fdcc418b7bbc8f6e84fe90562a371b7',   # students celebrating, red wall
     2: '/_blob/4e3a9d8ee137f04633bf6a310ed9f2ea',   # teacher and student
-    3: '/_blob/9c30d14da3ed8313b4c30ba054b72f70',   # student concentrating
+    3: '/_blob/8432067a133b72906ffdbd0d22fc5bac',   # child laughing in ball pit
 }
 COVER = '/_blob/288217c0760261676c074644f8ff1e3d'
 PORTRAIT = '/_blob/5cbcad31e477110391127e9cf157361c'
