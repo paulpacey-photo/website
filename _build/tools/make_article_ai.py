@@ -14,9 +14,10 @@ SERIF = "'Newsreader', Georgia, serif"
 RED, INK, BODY, MUTED, CREAM, STONE = '#A42C35', '#1E1E1E', '#2E2B28', '#6B665F', '#F6F2EC', '#E4DED5'
 
 COVER = '/_blob/06cc3238b6ccd5de9b96e8d61a8a0377'   # zipline rider in the forest
+BANDCAP = {2: 'AI-generated illustration'}
 BAND = {
     1: '/_blob/c70a6e49c666b7d98f849d327aa8ab61',   # mother hugging toddler in playground
-    2: '/_blob/66216121c1359b55a182e351621e6b38',   # climbing wall
+    2: '/_blob/200e93fbf198579bd5ca3425ced56bb7',   # AI-generated: girl reading with dragon
 }
 PORTRAIT = '/_blob/5cbcad31e477110391127e9cf157361c'
 SIGNATURE = '/_blob/ed31b870cf6c1f8e89f4233c4fee7b09'
@@ -188,7 +189,7 @@ def render(m):
         elif k == 'band':
             n, q = blk[1], blk[2]
             h = 460 if m else 620
-            body.append(f'<div data-parallax="0.28" style="position: relative; margin-top: {56 if m else 96}px; margin-bottom: {16 if m else 24}px; height: {h}px; overflow: hidden; background: #1E1E1E"><img data-parallax-layer="1" src="{BAND[n]}" alt="" style="position: absolute; left: 0; top: -18%; width: 100%; height: 136%; object-fit: cover; display: block"><div style="position: absolute; inset: 0; background: rgba(20,20,20,0.58)"></div><div data-reveal="1" style="position: relative; box-sizing: border-box; height: 100%; padding: {"0 28px" if m else "0 160px"}; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center"><span aria-hidden="true" style="font-family: {SERIF}; font-size: {80 if m else 120}px; line-height: 0.6; height: {34 if m else 52}px; color: #CF5C65">“</span><blockquote style="margin: {18 if m else 26}px 0 0 0; max-width: 980px; font-family: {SERIF}; font-weight: 400; font-size: {30 if m else 54}px; line-height: 1.16; color: #ffffff">{q}</blockquote></div></div>')
+            body.append(f'<div data-parallax="0.28" style="position: relative; margin-top: {56 if m else 96}px; margin-bottom: {16 if m else 24}px; height: {h}px; overflow: hidden; background: #1E1E1E"><img data-parallax-layer="1" src="{BAND[n]}" alt="" style="position: absolute; left: 0; top: -18%; width: 100%; height: 136%; object-fit: cover; display: block"><div style="position: absolute; inset: 0; background: rgba(20,20,20,0.58)"></div>{('<span style="position: absolute; right: ' + ('16px' if m else '24px') + '; bottom: 12px; z-index: 2; font-family: Jost, sans-serif; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.72)">' + BANDCAP[n] + '</span>') if n in BANDCAP else ''}<div data-reveal="1" style="position: relative; box-sizing: border-box; height: 100%; padding: {"0 28px" if m else "0 160px"}; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center"><span aria-hidden="true" style="font-family: {SERIF}; font-size: {80 if m else 120}px; line-height: 0.6; height: {34 if m else 52}px; color: #CF5C65">“</span><blockquote style="margin: {18 if m else 26}px 0 0 0; max-width: 980px; font-family: {SERIF}; font-weight: 400; font-size: {30 if m else 54}px; line-height: 1.16; color: #ffffff">{q}</blockquote></div></div>')
         elif k == 'pull':
             body.append(f'<blockquote data-reveal="1" style="{wide}; box-sizing: border-box; margin-top: {40 if m else 64}px; margin-bottom: {8 if m else 16}px; {"margin-left: 24px; margin-right: 24px; padding: 6px 0 6px 20px" if m else "padding: 8px 0 8px 40px"}; border-left: 3px solid {RED}; font-family: {SERIF}; font-weight: 400; font-size: {27 if m else 40}px; line-height: 1.22; color: {RED}">{blk[1]}</blockquote>')
         elif k == 'final':
