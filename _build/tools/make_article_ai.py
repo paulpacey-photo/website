@@ -58,8 +58,9 @@ L([
     ('Planning.', 'Mocking up a concept so a leadership team can approve an idea before a single frame is shot.'),
     ('Managing the library.', 'Tagging, captions and alt text that make hundreds of images searchable by theme, season or year group.'),
     ('Showing what doesn’t exist yet.', 'A clearly labeled “artist’s impression” of a new building.'),
-    ('Bringing images to life.', 'This last point deserves an asterisk, because it is precisely where the slope starts to get slippery. In its current form, AI-generated motion is still hit-or-miss, but when it lands, it is almost impossible to distinguish from reality. In my world, I’ve learned this represents both the greatest opportunity and the greatest threat of our time.'),
+    ('Bringing images to life.', 'Adding subtle motion to still photographs, so a glance lingers and a laugh has room to breathe.'),
 ])
+P('This last point deserves an asterisk, because it is precisely where the slope starts to get slippery. In its current form, AI-generated motion is still hit-or-miss, but when it lands, it is almost impossible to distinguish from reality. In my world, I’ve learned this represents both the greatest opportunity and the greatest threat of our time.')
 P('My first laborious attempt to harness this technology produced a two-and-a-half-minute demo reel that I remain proud of to this day. Set to music, and artfully sequenced in a poetic story arc, it captured something genuine beyond what any single image could possibly accomplish. I will stand before any critic and defend the fact that I created nothing that wasn’t already present in the original stills. Emotionally and aesthetically, the reel was simply an extension and amplification of the core principles my work has always stood for.')
 P('But just as I thought I had found the keys to the kingdom, I had a rude awakening.')
 
