@@ -245,7 +245,7 @@ def name_fields(body):
     return re.sub(r'<(input|textarea)\b[^>]*>', rep, body)
 
 # ---------------------------------------------------------------- page assembly
-AUTO_HEIGHT = {'Services', 'Services-Mobile-2', 'Discovery', 'Discovery-Mobile', 'Article-Uncomfortable-Truth', 'Article-Uncomfortable-Truth-2', 'Article-Uncomfortable-Truth-Mobile', 'Article-Uncomfortable-Truth-Mobile-2', 'Article-Uncomfortable-Truth-Mobile-3', 'Article-AI', 'Article-AI-2', 'Article-AI-Mobile', 'Article-AI-Mobile-2', 'Article-AI-Mobile-3'}
+AUTO_HEIGHT = {'Resources', 'Resources-Mobile', 'Services', 'Services-Mobile-2', 'Discovery', 'Discovery-Mobile', 'Article-Uncomfortable-Truth', 'Article-Uncomfortable-Truth-2', 'Article-Uncomfortable-Truth-Mobile', 'Article-Uncomfortable-Truth-Mobile-2', 'Article-Uncomfortable-Truth-Mobile-3', 'Article-AI', 'Article-AI-2', 'Article-AI-Mobile', 'Article-AI-Mobile-2', 'Article-AI-Mobile-3'}
 
 def board(name):
     s = open(os.path.join(SRC, name + '.dc.html')).read()
