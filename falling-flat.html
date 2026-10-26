@@ -348,7 +348,8 @@ function showScore(){
  var b=document.getElementById('scorebox');b.classList.add('show');
 }
 /* PDF form: set ENDPOINT to the MailerLite form action URL once the account exists */
-var ENDPOINT='';
+var ENDPOINT='https://assets.mailerlite.com/jsonp/2744586/forms/202422579757057287/subscribe';
+try{fetch('https://assets.mailerlite.com/jsonp/2744586/forms/202422579757057287/takel');}catch(_){}
 var f=document.getElementById('pdfform'),msg=document.getElementById('pdfmsg');
 f.addEventListener('submit',function(e){
  e.preventDefault();
