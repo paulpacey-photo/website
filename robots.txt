@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /why-your-marketing-photos-are-falling-flat.pdf
 
 Sitemap: https://paulpacey.photography/sitemap.xml
