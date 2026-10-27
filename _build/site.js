@@ -244,7 +244,7 @@
         m.focus && m.setAttribute('tabindex', '-1');
       }).catch(function () {
         btn.disabled = false; btn.style.opacity = '';
-        message(form, btn, 'Sorry, something went wrong. Please try again, or email paulpacey@gmail.com.', 'err');
+        message(form, btn, 'Sorry, something went wrong. Please try again, or email paul@paulpacey.photography.', 'err');
       });
     }
     btn.addEventListener('click', submit);

@@ -309,7 +309,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <footer class="site-f"><div class="wrap">
 <div class="row">
 <a class="logo" href="index.html" aria-label="Paul Pacey — home"><img class="mark" src="img/260b764977aed2393c6045ade5a04036.svg" alt=""><img class="word" src="img/8200bf6b77d8e44d0d723eae1f9897f2.svg" alt="Paul Pacey"></a>
-<div class="contact"><a href="mailto:paulpacey@gmail.com">paulpacey@gmail.com</a><div><a href="tel:+420776182699" style="font-family:var(--sans);font-size:16px;color:var(--mute)">+420 776 182 699</a></div></div>
+<div class="contact"><a href="mailto:paul@paulpacey.photography">paul@paulpacey.photography</a><div><a href="tel:+420776182699" style="font-family:var(--sans);font-size:16px;color:var(--mute)">+420 776 182 699</a></div></div>
 </div>
 <div class="small"><span>Based in Prague. Working worldwide.</span><span>© 2026 Paul Pacey · paulpacey.photography</span></div>
 </div></footer>
@@ -359,7 +359,7 @@ f.addEventListener('submit',function(e){
  if(!ENDPOINT){msg.textContent='Thanks! The download is being set up — please check back shortly.';return;}
  var fd=new FormData(f);fd.delete('consent');fd.append('ml-submit','1');fd.append('anticsrf','true');
  msg.textContent='Sending…';
- fetch(ENDPOINT,{method:'POST',body:fd,mode:'no-cors'}).then(function(){msg.textContent='Done. Check your inbox: the PDF is on its way.';f.reset();}).catch(function(){msg.textContent='Something went wrong. Please try again, or email paulpacey@gmail.com.';});
+ fetch(ENDPOINT,{method:'POST',body:fd,mode:'no-cors'}).then(function(){msg.textContent='Done. Check your inbox: the PDF is on its way.';f.reset();}).catch(function(){msg.textContent='Something went wrong. Please try again, or email paul@paulpacey.photography.';});
 });
 /* reveal on scroll */
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}

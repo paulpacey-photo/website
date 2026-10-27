@@ -391,7 +391,7 @@ MENU = '''<div class="menu" id="menu" hidden>
 <a href="index.html">Home</a><a href="services.html">Services</a><a href="resources.html">Resources</a><a href="index.html#portfolio">Private portfolio</a><a href="contact.html">Contact</a>
 </nav>
 <div class="menu-foot"><a href="discovery.html" class="menu-cta">Start your discovery brief</a>
-<a href="mailto:paulpacey@gmail.com">paulpacey@gmail.com</a><a href="tel:+420776182699">+420 776 182 699</a></div>
+<a href="mailto:paul@paulpacey.photography">paul@paulpacey.photography</a><a href="tel:+420776182699">+420 776 182 699</a></div>
 </div>'''
 
 def bust_cache():
