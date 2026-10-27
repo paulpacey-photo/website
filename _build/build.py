@@ -59,7 +59,7 @@ GLOBAL = {
     'essay': 'resources.html#articles', 'lessons': 'resources.html#articles',
     'guide-download': 'index.html#resources',      # the guide sign-up form
     'planning-guide': 'planning-guide.html',
-    'falling-flat-guide': 'falling-flat.html',
+    'falling-flat-guide': 'misses-the-mark.html',
     'essay-read': 'resources.html#articles',          # TODO: essay page
     'call': 'services.html#call',
     'uncomfortable-truth': 'uncomfortable-truth.html',
