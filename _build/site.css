@@ -82,3 +82,5 @@ html.fx .in mark[data-hl="20"]{transition-delay:2.75s}
 .c3-w,.c3-ghost{font-family:'Bebas Neue','Oswald','Arial Narrow',sans-serif;text-transform:uppercase;line-height:.84;white-space:nowrap;color:#fff}
 .c3-w{text-align:left;letter-spacing:.005em;padding-top:.06em}
 .c3-ghost{z-index:100}
+/* footer page links */
+nav[aria-label="Footer"] a:hover,nav[aria-label="Footer"] a:focus-visible{color:#A42C35}
