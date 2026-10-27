@@ -148,6 +148,8 @@ h2{font-size:clamp(34px,4.6vw,64px)}
 .site-f .contact a{text-decoration:none;font-family:var(--serif);font-size:24px}
 .site-f .contact div{color:var(--mute);letter-spacing:.06em}
 .site-f .small{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:40px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.site-f .fnav{display:flex;gap:44px}.site-f .fnav a{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:inherit}.site-f .fnav a:hover,.site-f .fnav a:focus-visible{color:#A42C35}
+@media(max-width:860px){.site-f .row{flex-direction:column;text-align:center}.site-f .contact{text-align:center}.site-f .fnav{order:3;flex-wrap:wrap;justify-content:center;gap:16px 28px;margin-top:8px}.site-f .fnav a{font-size:11px;letter-spacing:.2em}.site-f .small{flex-direction:column;align-items:center;text-align:center;font-size:11px;letter-spacing:.18em}.site-f .dom{display:none}}
 /* image protection: a transparent layer sits over each photo so right-click / drag grabs nothing */
 .bleed:before,.round .ph:before{content:"";position:absolute;inset:0;z-index:1}
 .round .ph{position:relative}
@@ -320,9 +322,10 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <footer class="site-f"><div class="wrap">
 <div class="row">
 <a class="logo" href="index.html" aria-label="Paul Pacey — home"><img class="mark" src="img/260b764977aed2393c6045ade5a04036.svg" alt=""><img class="word" src="img/8200bf6b77d8e44d0d723eae1f9897f2.svg" alt="Paul Pacey"></a>
+<nav class="fnav" aria-label="Footer"><a href="index.html">Home</a><a href="services.html">Services</a><a href="resources.html">Resources</a><a href="index.html#portfolio">Private Portfolio</a></nav>
 <div class="contact"><a href="mailto:paul@paulpacey.photography">paul@paulpacey.photography</a><div><a href="tel:+420776182699" style="font-family:var(--sans);font-size:16px;color:var(--mute)">+420 776 182 699</a></div></div>
 </div>
-<div class="small"><span>Based in Prague. Working worldwide.</span><span>© 2026 Paul Pacey · paulpacey.photography</span></div>
+<div class="small"><span>Based in Prague. Working worldwide.</span><span>© 2026 Paul Pacey<span class="dom"> · paulpacey.photography</span></span></div>
 </div></footer>
 
 <script>
