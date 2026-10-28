@@ -156,7 +156,6 @@ h2{font-size:clamp(34px,4.6vw,64px)}
 .hero.slide{min-height:calc(100vh - var(--hh,0px));min-height:calc(100svh - var(--hh,0px))}
 .bleed.slide{height:100vh;height:100svh;min-height:480px;display:block}
 @media(max-width:700px){.bleed.slide{height:auto;min-height:0}.bleed.slide img{height:62svh}}
-@media(min-width:900px) and (min-height:620px){html{scroll-snap-type:y proximity}.slide{scroll-snap-align:start}.site-h{scroll-snap-align:start}.hero.slide{scroll-snap-align:none}}
 .bonus{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--pink2);margin:0 4px}
 /* spontaneity */
 .sq,.sa,.tbg{position:relative;overflow:hidden;background:var(--cream)}
@@ -197,6 +196,10 @@ h2{font-size:clamp(34px,4.6vw,64px)}
 .credits{padding:0 0 clamp(60px,8vw,110px)}
 .credits .credit{font-size:14px;color:var(--mute)}
 #score2{padding-top:60px}
+/* parallax: feature photos drift a little slower than the page */
+.px{position:relative;overflow:hidden}
+@media(min-width:701px){.bleed.px img,.tbg.px img.bg{position:absolute;left:0;top:-9%;width:100%;height:118%;will-change:transform}}
+@media(prefers-reduced-motion:reduce){.bleed.px img,.tbg.px img.bg{transform:none!important}}
 /* image protection: a transparent layer sits over each photo so right-click / drag grabs nothing */
 .bleed:before,.round .ph:before{content:"";position:absolute;inset:0;z-index:1}
 .round .ph{position:relative}
@@ -263,7 +266,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 </ul>
 </div></div></div></section>
 
-<figure class="bleed slide"><img loading="lazy" src="ff-aesthetic.webp" alt="A student in a lab coat and goggles holds a sheet of flame above her hands in a science demonstration">
+<figure class="bleed slide px"><img loading="lazy" src="ff-aesthetic.webp" alt="A student in a lab coat and goggles holds a sheet of flame above her hands in a science demonstration">
 <figcaption class="panel tr"><div class="on"><span>01</span>Does it look good?</div><div><span>02</span>Does it feel good?</div><div><span>03</span>Does it tell a story?</div><div><span>04</span><i>Is it believable?</i></div></figcaption></figure>
 
 <section class="crit slide"><div class="wrap">
@@ -282,7 +285,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 </ul>
 </div></div></div></section>
 
-<figure class="bleed slide"><img loading="lazy" src="ff-emotion.webp" alt="A teacher plays with laughing young pupils in the school playground">
+<figure class="bleed slide px"><img loading="lazy" src="ff-emotion.webp" alt="A teacher plays with laughing young pupils in the school playground">
 <figcaption class="panel tl"><div class="on"><span>01</span>Does it look good?</div><div class="on"><span>02</span>Does it feel good?</div><div><span>03</span>Does it tell a story?</div><div><span>04</span><i>Is it believable?</i></div></figcaption></figure>
 
 <section class="crit slide"><div class="wrap">
@@ -299,7 +302,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <div class="note"><b>Exception to the rule</b><i>Sometimes, less is more.</i> For hero imagery—like poster or billboard shots—a busy narrative can actually distract. A clean, minimal focus on a single student or teacher creates a stronger visual impact and leaves room for headline copy and graphics to deliver the message.</div>
 </div></div></div></section>
 
-<figure class="bleed slide"><img loading="lazy" src="ff-narrative.webp" alt="A student smiles quietly as she shapes a clay vessel in a sunlit art room">
+<figure class="bleed slide px"><img loading="lazy" src="ff-narrative.webp" alt="A student smiles quietly as she shapes a clay vessel in a sunlit art room">
 <figcaption class="panel tr"><div class="on"><span>01</span>Does it look good?</div><div class="on"><span>02</span>Does it feel good?</div><div class="on"><span>03</span>Does it tell a story?</div><div><span>04</span><i>Is it believable?</i></div></figcaption></figure>
 
 <section class="crit dark slide"><div class="wrap">
@@ -316,7 +319,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 </ul>
 </div></div></div></section>
 
-<figure class="bleed slide"><img loading="lazy" src="ff-authenticity.webp" alt="A delighted girl lies on the floor guiding a small coding robot as classmates work on tablets behind her">
+<figure class="bleed slide px"><img loading="lazy" src="ff-authenticity.webp" alt="A delighted girl lies on the floor guiding a small coding robot as classmates work on tablets behind her">
 <figcaption class="panel tl"><div class="on"><span>01</span>Does it look good?</div><div class="on"><span>02</span>Does it feel good?</div><div class="on"><span>03</span>Does it tell a story?</div><div class="on"><span>04</span><i>Is it believable?</i></div><p class="fin">Four out of four.</p></figcaption></figure>
 
 <section class="slide sq" id="spontaneity"><div class="big" aria-hidden="true">Q</div><div class="wrap reveal">
@@ -330,19 +333,19 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <p class="hall">The hallmark of authenticity.</p>
 </div></section>
 
-<section class="slide tbg"><img class="bg" loading="lazy" src="ff-spont-uke.webp" alt="" style="opacity:.2;object-position:50% 66%"><div class="wrap reveal">
+<section class="slide tbg px"><img class="bg" loading="lazy" src="ff-spont-uke.webp" alt="" style="opacity:.2;object-position:50% 66%"><div class="wrap reveal">
 <div class="eyebrow">Spontaneity</div>
 <h2>Not every image needs a big reaction<br class="dk"> <i>to be believable.</i></h2>
 <p>In the right balance, a healthy dose of honest introspection or quiet focus may be more befitting.</p>
 </div></section>
 
-<section class="slide tbg"><img class="bg" loading="lazy" src="ff-spont-bench.webp" alt="" style="opacity:.17;object-position:48% 100%"><div class="wrap reveal">
+<section class="slide tbg px"><img class="bg" loading="lazy" src="ff-spont-bench.webp" alt="" style="opacity:.17;object-position:48% 100%"><div class="wrap reveal">
 <div class="eyebrow">Spontaneity</div>
 <h2>But few images resonate on an emotional level more than <i>an authentic flash of unscripted joy.</i></h2>
 <p>Where a student’s genuine happiness bridges the gap between your school and a parent’s imagination.</p>
 </div></section>
 
-<section class="slide tbg"><img class="bg" loading="lazy" src="ff-spont-cheer.webp" alt="" style="opacity:.24;object-position:70% 30%"><div class="wrap reveal">
+<section class="slide tbg px"><img class="bg" loading="lazy" src="ff-spont-cheer.webp" alt="" style="opacity:.24;object-position:70% 30%"><div class="wrap reveal">
 <div class="eyebrow">Remember</div>
 <h2>While you can’t schedule spontaneity,<br class="dk"> <i>you <span class="mark">can<svg class="ul" viewBox="0 0 490 25" preserveAspectRatio="none" aria-hidden="true"><path d="M5 18.6 C40 13 120 7.6 229 6.6 C330 6 430 9 479 11.2 C481 11.8 481 12.6 479 13 C400 14 260 15.4 165 16.2 C100 16.8 40 18 5 18.6 Z"/></svg></span> make space for it.</i></h2>
 <p>A good plan should always make room for the moments you can’t plan for.</p>
@@ -432,7 +435,7 @@ var R=[
  {img:'ff-quiz-3.webp',alt:'Students relaxing on beanbags in a dim school corridor, faces in shadow',ans:'Aesthetic',fb:'Right moment, wrong light: dull skin tones and faces lost in shadow.'},
  {img:'ff-quiz-park.webp',alt:'A smiling girl in a blue shirt looks off to the side in an empty park',ans:'Narrative',fb:'A lovely, natural portrait, but nothing tells you where she is or what’s happening.'},
  {img:'ff-quiz-ws.webp',alt:'A student’s hand works through a printed worksheet at a desk',ans:'Emotion',fb:'A clear story, but with no faces in sight, there’s nothing to feel.'},
- {img:'ff-quiz-readers.webp',alt:'Three students in blazers smile down at one open book on a bench',ans:'Authenticity',fb:'Bright, sharp and smiling, but far too perfect. Three matching grins over one book never happen by chance.'},
+ {img:'ff-quiz-readers.webp',alt:'Three students in blazers smile down at one open book on a bench',ans:'Authenticity',fb:'Bright, sharp and smiling, but far too perfect. And count the boy’s fingers: this one is AI-generated.'},
  {img:'ff-quiz-tc.webp',alt:'A smiling teacher talks with a pupil seen from behind',ans:'Aesthetic',fb:'Warm and genuine, but the focus landed on the ponytail, not the teacher’s face.'},
  {img:'ff-quiz-4.webp',alt:'A smiling young girl in a tartan pinafore looks up at the camera',ans:'Narrative',fb:'But as a hero image, it doesn’t need a story. Still great.'}
 ];
@@ -494,6 +497,15 @@ f.addEventListener('submit',function(e){
 });
 /* header height, so the opening screen fits below it */
 var hh=document.querySelector('.site-h');function setH(){document.documentElement.style.setProperty('--hh',hh.offsetHeight+'px');}setH();addEventListener('resize',setH);
+/* parallax on the feature photos (wide screens, motion allowed) */
+(function(){
+ var mq=matchMedia('(min-width:701px) and (prefers-reduced-motion:no-preference)'),els=[].slice.call(document.querySelectorAll('.px')),tick=false;
+ function run(){tick=false;if(!mq.matches){els.forEach(function(e){var i=e.querySelector('img');if(i)i.style.transform='';});return;}
+  var vh=innerHeight;els.forEach(function(e){var r=e.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;
+   var p=(r.top+r.height/2-vh/2)/(vh/2+r.height/2);var i=e.querySelector('img');if(i)i.style.transform='translate3d(0,'+(p*-7).toFixed(2)+'%,0)';});}
+ function on(){if(!tick){tick=true;requestAnimationFrame(run);}}
+ addEventListener('scroll',on,{passive:true});addEventListener('resize',on);run();
+})();
 /* reveal on scroll */
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
 })();
