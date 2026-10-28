@@ -56,7 +56,7 @@ h2{font-size:clamp(34px,4.6vw,64px)}
 .intro{padding:clamp(80px,11vw,160px) 0}
 .intro h2{font-size:clamp(36px,5vw,72px);max-width:1100px}
 .intro p{max-width:760px;font-size:21px;color:var(--ink2);margin-top:36px}
-.intro .closer{font-family:var(--serif);font-size:clamp(24px,2.6vw,34px);line-height:1.35;color:var(--red);margin-top:36px;max-width:820px}
+.intro .closer{font-family:var(--serif);font-size:clamp(24px,2.6vw,34px);line-height:1.35;color:var(--red);margin-top:36px;max-width:1240px}
 /* four questions */
 .four{background:var(--dark);color:#fff;padding:clamp(70px,9vw,130px) 0}
 .four ol{list-style:none;margin-top:36px}
@@ -150,6 +150,47 @@ h2{font-size:clamp(34px,4.6vw,64px)}
 .site-f .small{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:40px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
 .site-f .fnav{display:flex;gap:44px}.site-f .fnav a{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:inherit}.site-f .fnav a:hover,.site-f .fnav a:focus-visible{color:#A42C35}
 @media(max-width:860px){.site-f .row{flex-direction:column;text-align:center}.site-f .contact{text-align:center}.site-f .fnav{order:3;flex-wrap:wrap;justify-content:center;gap:16px 28px;margin-top:8px}.site-f .fnav a{font-size:11px;letter-spacing:.2em}.site-f .small{flex-direction:column;align-items:center;text-align:center;font-size:11px;letter-spacing:.18em}.site-f .dom{display:none}}
+/* full-screen slides: each section fills one screen, like the PDF */
+.slide{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center}
+.slide>.wrap{width:100%}
+.hero.slide{min-height:calc(100vh - var(--hh,0px));min-height:calc(100svh - var(--hh,0px))}
+.bleed.slide{height:100vh;height:100svh;min-height:480px;display:block}
+@media(max-width:700px){.bleed.slide{height:auto;min-height:0}.bleed.slide img{height:62svh}}
+@media(min-width:900px) and (min-height:620px){html{scroll-snap-type:y proximity}.slide{scroll-snap-align:start}}
+.bonus{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--pink2);margin:0 4px}
+/* spontaneity */
+.sq,.sa,.tbg{position:relative;overflow:hidden;background:var(--cream)}
+.big{position:absolute;font-family:var(--serif);font-weight:300;line-height:.8;color:rgba(207,92,101,.16);pointer-events:none;user-select:none}
+.sq .big{font-size:clamp(420px,118vh,1350px);left:-.2em;top:-.12em}
+.sa .big{font-size:clamp(380px,100vh,1150px);right:-.05em;bottom:-.3em}
+.sq h2,.sa h2,.tbg h2{position:relative}
+.sq h2{font-size:clamp(38px,5.8vw,104px);line-height:1.1}
+.sa .word{font-size:clamp(76px,11.5vw,220px);line-height:1.1}
+.mark{position:relative;display:inline-block}
+.mark .ul{position:absolute;left:-1%;bottom:.02em;width:102%;height:.19em;fill:var(--red)}
+.tbg .mark .ul{bottom:-.08em;height:.17em}
+.sa .hall{font-family:var(--serif);font-size:clamp(24px,2.6vw,46px);color:var(--ink2);margin-top:clamp(28px,5vh,70px);position:relative}
+.tbg img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tbg .wrap{position:relative}
+.tbg h2{font-size:clamp(36px,5vw,92px);line-height:1.1;margin-top:24px;max-width:1300px;color:#000}
+.tbg h2 i,.sq h2 i{color:inherit}.tbg h2 i{color:var(--red)}
+.tbg p{font-size:clamp(19px,1.6vw,24px);color:#000;margin-top:32px;max-width:1100px}
+.tbg p.more{font-size:18px;color:var(--red);margin-top:18px}
+.tbg p.more a{text-decoration-thickness:1px;text-underline-offset:3px}
+.mont{background:var(--cream);height:100vh;height:100svh;min-height:420px;display:block;position:relative}
+.mont img{width:100%;height:100%;object-fit:contain}
+.mont:before{content:"";position:absolute;inset:0;z-index:1}
+@media(max-width:820px){.dk{display:none}}
+/* quiz on full screens */
+.quiz-intro.dark{background:var(--dark);color:#fff;padding:clamp(90px,11vw,160px) 0}
+.quiz-intro.dark .eyebrow{color:var(--d2)}
+.quiz-intro.dark .eyebrow:before{background:var(--pink)}
+.quiz-intro.dark h2 i{color:var(--pink2)}
+.quiz-intro.dark p{color:var(--d3)}
+.round.slide{padding:clamp(40px,6vh,80px) 0}
+.round .ph{max-height:78svh}
+.fb .next{display:inline-block;margin-top:14px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--red);text-decoration:none}
+.fb .next:hover{text-decoration:underline}
 /* image protection: a transparent layer sits over each photo so right-click / drag grabs nothing */
 .bleed:before,.round .ph:before{content:"";position:absolute;inset:0;z-index:1}
 .round .ph{position:relative}
@@ -175,7 +216,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 </header>
 
 <main>
-<section class="hero">
+<section class="hero slide">
 <img loading="eager" src="ff-hero-archer.webp" alt="A boy draws his bow and takes aim during an archery lesson" fetchpriority="high">
 <div class="wrap">
 <div class="eyebrow">Marketing guide</div>
@@ -184,13 +225,13 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 </div>
 </section>
 
-<section class="intro" id="start"><div class="wrap reveal">
+<section class="intro slide" id="start"><div class="wrap reveal">
 <h2>Before a parent reads a word,<br><i>your imagery has already spoken.</i></h2>
 <p>Your school only gets one first impression. Long before prospective parents read about your curriculum or values, your imagery has already created an instant emotional connection, or a subtle reason to move on. Knowing which is easier than you think.</p>
-<p class="closer">You don’t need to be a photographer to judge a photograph objectively. <i>You need four simple questions.</i></p>
+<p class="closer">You don’t need to be a photographer to judge a photograph objectively.<br><i>You need four simple questions.</i></p>
 </div></section>
 
-<section class="four"><div class="wrap">
+<section class="four slide"><div class="wrap">
 <div class="eyebrow" style="color:var(--d2)">Four simple questions</div>
 <ol>
 <li class="reveal"><span class="n">01</span><span class="q">Does it look good?</span><span class="l">Aesthetic</span></li>
@@ -200,7 +241,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 </ol>
 </div></section>
 
-<section class="crit"><div class="wrap">
+<section class="crit slide"><div class="wrap">
 <div class="eyebrow">Aesthetic</div>
 <div class="grid reveal">
 <div class="num">01</div>
@@ -211,15 +252,15 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <li><b>Exposure:</b> Is it too dark or too light? Can you clearly see the faces?</li>
 <li><b>Composition:</b> Does it feel balanced? Is anything awkwardly cut off? Is there more in the frame than it needs?</li>
 <li><b>Focus:</b> Is it obvious what the image is about? Is that subject sharp when you zoom in?</li>
-<li><b>Light:</b> Is the light flattering to faces, or flat, harsh and full of shadows?</li>
+<li><b>Light:</b> Is the light flattering to faces, or is it either lifeless and flat or too harsh with heavy shadows?</li>
 <li><b>Color:</b> Do skin tones look natural and healthy?</li>
 </ul>
 </div></div></div></section>
 
-<figure class="bleed"><img loading="lazy" src="ff-aesthetic.webp" alt="A student in a lab coat and goggles holds a sheet of flame above her hands in a science demonstration">
+<figure class="bleed slide"><img loading="lazy" src="ff-aesthetic.webp" alt="A student in a lab coat and goggles holds a sheet of flame above her hands in a science demonstration">
 <figcaption class="panel tr"><div class="on"><span>01</span>Does it look good?</div><div><span>02</span>Does it feel good?</div><div><span>03</span>Does it tell a story?</div><div><span>04</span><i>Is it believable?</i></div></figcaption></figure>
 
-<section class="crit"><div class="wrap">
+<section class="crit slide"><div class="wrap">
 <div class="eyebrow">Emotion</div>
 <div class="grid reveal">
 <div class="num">02</div>
@@ -235,10 +276,10 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 </ul>
 </div></div></div></section>
 
-<figure class="bleed"><img loading="lazy" src="ff-emotion.webp" alt="A teacher plays with laughing young pupils in the school playground">
+<figure class="bleed slide"><img loading="lazy" src="ff-emotion.webp" alt="A teacher plays with laughing young pupils in the school playground">
 <figcaption class="panel tl"><div class="on"><span>01</span>Does it look good?</div><div class="on"><span>02</span>Does it feel good?</div><div><span>03</span>Does it tell a story?</div><div><span>04</span><i>Is it believable?</i></div></figcaption></figure>
 
-<section class="crit"><div class="wrap">
+<section class="crit slide"><div class="wrap">
 <div class="eyebrow">Narrative</div>
 <div class="grid reveal">
 <div class="num">03</div>
@@ -246,17 +287,16 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <h2>Does it tell a story?</h2>
 <p class="sub">Narrative is the context behind your message: who’s there, what’s happening, and why it matters.</p>
 <ul>
-<li><b>Moment:</b> Does the image tell a story?</li>
+<li><b>Moment:</b> Is there a defining moment that tells a bigger story?</li>
 <li><b>Clarity:</b> Is it understood at a glance, or does it need explaining?</li>
-<li><b>Engagement:</b> Are people engaged with each other or their work, rather than posing for the camera?</li>
 </ul>
 <div class="note"><b>Exception to the rule</b><i>Sometimes, less is more.</i> For hero imagery—like poster or billboard shots—a busy narrative can actually distract. A clean, minimal focus on a single student or teacher creates a stronger visual impact and leaves room for headline copy and graphics to deliver the message.</div>
 </div></div></div></section>
 
-<figure class="bleed"><img loading="lazy" src="ff-narrative.webp" alt="A student smiles quietly as she shapes a clay vessel in a sunlit art room">
+<figure class="bleed slide"><img loading="lazy" src="ff-narrative.webp" alt="A student smiles quietly as she shapes a clay vessel in a sunlit art room">
 <figcaption class="panel tr"><div class="on"><span>01</span>Does it look good?</div><div class="on"><span>02</span>Does it feel good?</div><div class="on"><span>03</span>Does it tell a story?</div><div><span>04</span><i>Is it believable?</i></div></figcaption></figure>
 
-<section class="crit dark"><div class="wrap">
+<section class="crit dark slide"><div class="wrap">
 <div class="eyebrow">Authenticity · The final test</div>
 <div class="grid reveal">
 <div class="num">04</div>
@@ -265,23 +305,53 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <p class="sub">An image can look good, feel good, tell a story—and still fail completely if it isn’t believable. Instead of building trust, a clearly manufactured image signals that the reality of your school doesn’t match the marketing.</p>
 <ul>
 <li><b>Unscripted:</b> Does the moment look and feel natural, or does everything look a little <i>too</i> rigid or orchestrated?</li>
-<li><b>Spontaneous:</b> Is there an unmistakable sense of an unplanned moment or interaction?</li>
-<li><b>Credible:</b> Do the props and subjects belong in the space, or do they feel out of place?</li>
+<li><b>Engagement:</b> Are people engaged with each other or their work, rather than posing for the camera?</li>
+<li><b>Spontaneous:</b> <span class="bonus">Bonus</span> Is there an unmistakable sense of an unplanned moment or interaction?</li>
 </ul>
 </div></div></div></section>
 
-<figure class="bleed"><img loading="lazy" src="ff-authenticity.webp" alt="A delighted girl lies on the floor guiding a small coding robot as classmates work on tablets behind her">
+<figure class="bleed slide"><img loading="lazy" src="ff-authenticity.webp" alt="A delighted girl lies on the floor guiding a small coding robot as classmates work on tablets behind her">
 <figcaption class="panel tl"><div class="on"><span>01</span>Does it look good?</div><div class="on"><span>02</span>Does it feel good?</div><div class="on"><span>03</span>Does it tell a story?</div><div class="on"><span>04</span><i>Is it believable?</i></div><p class="fin">Four out of four.</p></figcaption></figure>
 
-<section id="quiz" class="quiz-intro"><div class="wrap reveal">
-<div class="eyebrow">Spot the gaps</div>
-<h2 style="margin-top:24px">Let’s put it <i>to the test.</i></h2>
-<p>Four images, each missing one piece. Ask the four questions, then tap the one you think is missing.</p>
+<section class="slide sq" id="spontaneity"><div class="big" aria-hidden="true">Q</div><div class="wrap reveal">
+<h2>Now, what’s the one thing<br><i>these images have in common?</i></h2>
+</div></section>
+
+<figure class="slide mont"><picture><source media="(max-aspect-ratio: 1/1)" srcset="ff-spont-montage-m.webp"><img loading="lazy" src="ff-spont-montage.webp" alt="Six school moments: a laughing teacher at an easel, a boy sprinting across a pitch, two girls grinning over a science experiment, girls tossing a hat, boys sharing a book, and three girls dancing on the grass"></picture></figure>
+
+<section class="slide sa"><div class="big" aria-hidden="true">A</div><div class="wrap reveal">
+<h2 class="word"><span class="mark"><i>Spontaneity.</i><svg class="ul" viewBox="0 0 490 25" preserveAspectRatio="none" aria-hidden="true"><path d="M5 18.6 C40 13 120 7.6 229 6.6 C330 6 430 9 479 11.2 C481 11.8 481 12.6 479 13 C400 14 260 15.4 165 16.2 C100 16.8 40 18 5 18.6 Z"/></svg></span></h2>
+<p class="hall">The hallmark of authenticity.</p>
+</div></section>
+
+<section class="slide tbg"><img class="bg" loading="lazy" src="ff-spont-uke.webp" alt="" style="opacity:.2;object-position:50% 66%"><div class="wrap reveal">
+<div class="eyebrow">Spontaneity</div>
+<h2>Not every image needs a big reaction<br class="dk"> <i>to be believable.</i></h2>
+<p>In the right balance, a healthy dose of honest introspection or quiet focus may be more befitting.</p>
+</div></section>
+
+<section class="slide tbg"><img class="bg" loading="lazy" src="ff-spont-bench.webp" alt="" style="opacity:.17;object-position:48% 100%"><div class="wrap reveal">
+<div class="eyebrow">Spontaneity</div>
+<h2>But few images resonate on an emotional level more than <i>an authentic flash of unscripted joy.</i></h2>
+<p>Where a student’s genuine happiness bridges the gap between your school and a parent’s imagination.</p>
+</div></section>
+
+<section class="slide tbg"><img class="bg" loading="lazy" src="ff-spont-cheer.webp" alt="" style="opacity:.24;object-position:70% 30%"><div class="wrap reveal">
+<div class="eyebrow">Remember</div>
+<h2>While you can’t schedule spontaneity,<br class="dk"> <i>you <span class="mark">can<svg class="ul" viewBox="0 0 490 25" preserveAspectRatio="none" aria-hidden="true"><path d="M5 18.6 C40 13 120 7.6 229 6.6 C330 6 430 9 479 11.2 C481 11.8 481 12.6 479 13 C400 14 260 15.4 165 16.2 C100 16.8 40 18 5 18.6 Z"/></svg></span> make space for it.</i></h2>
+<p>A good plan should always make room for the moments you can’t plan for.</p>
+<p class="more">Read more in my free scheduling guide, <a href="resources.html#scheduling"><i>“Just Work Your Magic” Isn’t a Plan</i></a>.</p>
+</div></section>
+
+<section id="quiz" class="slide quiz-intro dark"><div class="wrap reveal">
+<div class="eyebrow">Putting it all together</div>
+<h2 style="margin-top:24px">Ready?<br>Let’s put it <i>to the test!</i></h2>
+<p>Six images, each missing one piece. Ask the four questions, then tap the one you think is missing.</p>
 </div></section>
 
 <div id="rounds"></div>
 
-<section class="score"><div class="wrap">
+<section class="score" id="score"><div class="wrap">
 <div class="box" id="scorebox" aria-live="polite">
 <div class="eyebrow">Your score</div>
 <h3 id="scoreline" style="margin-top:18px"></h3>
@@ -291,13 +361,13 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <p class="credit">All images by Paul Pacey, except round 2 (AI-generated).</p>
 </div></section>
 
-<section class="standard"><div class="wrap reveal">
-<div class="eyebrow">The standard</div>
+<section class="standard slide"><div class="wrap reveal">
+<div class="eyebrow">The takeaway</div>
 <h2 style="margin-top:24px">Great imagery isn’t left<br class="dk"> <i>to chance.</i></h2>
 <p>Great school marketing photography comes from creating the right environment, knowing what to look for, and holding your visuals to the highest standards—one image at a time.</p>
 </div></section>
 
-<section class="finale"><div class="wrap reveal">
+<section class="finale slide"><div class="wrap reveal">
 <h2>Now, how do your own images <i>stack up?</i></h2>
 <p>If the honest answer is “not quite,” let’s <a href="https://calendly.com/paulpacey/30min" target="_blank" rel="noopener">talk</a> and close the gap.</p>
 <p class="rights">© 2026 Paul Pacey. This framework and all material in this guide are the intellectual property of Paul Pacey.</p>
@@ -335,12 +405,14 @@ var R=[
  {img:'ff-quiz-1.webp',alt:'Students quietly painting at easels in a school art room',ans:'Emotion',fb:'Well lit and well composed. Clear narrative, but emotionally a little flat.'},
  {img:'ff-quiz-2.webp',alt:'Three students in lab coats and goggles smile at a beaker of clear liquid in a tidy science lab',ans:'Authenticity',fb:'Polished and pleasant, but clearly performative. Doesn’t fool anybody.'},
  {img:'ff-quiz-3.webp',alt:'Students relaxing on beanbags in a dim school corridor, faces in shadow',ans:'Aesthetic',fb:'Right moment, wrong light: dull skin tones and faces lost in shadow.'},
+ {img:'ff-quiz-ws.webp',alt:'A student’s hand works through a printed worksheet at a desk',ans:'Emotion',fb:'A clear story, but with no faces in sight, there’s nothing to feel.'},
+ {img:'ff-quiz-tc.webp',alt:'A smiling teacher talks with a pupil seen from behind',ans:'Aesthetic',fb:'Warm and genuine, but the focus landed on the ponytail, not the teacher’s face.'},
  {img:'ff-quiz-4.webp',alt:'A smiling young girl in a tartan pinafore looks up at the camera',ans:'Narrative',fb:'But as a hero image, it doesn’t need a story. Still great.'}
 ];
 var host=document.getElementById('rounds'),done=0,score=0;
 R.forEach(function(r,i){
- var s=document.createElement('section');s.className='round';
- s.innerHTML='<div class="wrap grid"><div class="ph"><img loading="lazy" src="'+r.img+'" alt="'+r.alt+'"></div><div><div class="eyebrow">Round '+(i+1)+' of 4</div><h3>Which piece <i>is missing?</i></h3><div class="opts" role="group" aria-label="Choose the missing piece"></div><div class="fb" aria-live="polite"></div></div></div>';
+ var s=document.createElement('section');s.className='round slide';s.id='r'+(i+1);
+ s.innerHTML='<div class="wrap grid"><div class="ph"><img loading="lazy" src="'+r.img+'" alt="'+r.alt+'"></div><div><div class="eyebrow">Round '+(i+1)+' of '+R.length+'</div><h3>Which piece <i>is missing?</i></h3><div class="opts" role="group" aria-label="Choose the missing piece"></div><div class="fb" aria-live="polite"></div></div></div>';
  var opts=s.querySelector('.opts'),fb=s.querySelector('.fb');
  C.forEach(function(c,j){
   var b=document.createElement('button');b.type='button';b.className='opt';b.innerHTML='<span>0'+(j+1)+'</span>'+c;
@@ -348,7 +420,7 @@ R.forEach(function(r,i){
    var ok=c===r.ans;done++;if(ok)score++;
    opts.querySelectorAll('button').forEach(function(x){x.disabled=true;if(x.textContent.slice(2)===r.ans)x.classList.add('right');});
    if(!ok)b.classList.add('wrong');
-   fb.innerHTML='<strong>'+(ok?'Correct.':'Not quite.')+' Missing: '+r.ans+'.</strong><p>'+r.fb+'</p>';
+   fb.innerHTML='<strong>'+(ok?'Correct.':'Not quite.')+' Missing: '+r.ans+'.</strong><p>'+r.fb+'</p><a class="next" href="'+(i<R.length-1?'#r'+(i+2):'#score')+'">'+(i<R.length-1?'Next image':'See your score')+' <span aria-hidden="true">↓</span></a>';
    if(done===R.length)showScore();
   });
   opts.appendChild(b);
@@ -356,8 +428,8 @@ R.forEach(function(r,i){
  host.appendChild(s);
 });
 function showScore(){
- var m=['Every gap slipped past. Run the four questions once more and they’ll start to jump out.','A start. One gap spotted; the questions get sharper with practice.','Halfway there. Two gaps spotted. You’re already seeing more than most.','Sharp eye. Three of four. The trick round catches almost everyone.','Four for four. You’re ready to audit your own website.'];
- document.getElementById('scoreline').innerHTML='You spotted <i>'+score+' of 4.</i>';
+ var m=['Every gap slipped past. Run the four questions once more and they’ll start to jump out.','A start. One gap spotted; the questions get sharper with practice.','Two gaps spotted. Keep the four questions handy and the rest will start to jump out.','Halfway there. Three gaps spotted. You’re already seeing more than most.','Good eye. Four of six spotted.','Sharp eye. Five of six. The hero image catches almost everyone.','Six for six. You’re ready to audit your own website.'];
+ document.getElementById('scoreline').innerHTML='You spotted <i>'+score+' of '+R.length+'.</i>';
  document.getElementById('scoremsg').textContent=m[score];
  var b=document.getElementById('scorebox');b.classList.add('show');
 }
@@ -375,6 +447,8 @@ f.addEventListener('submit',function(e){
  msg.textContent='Sending…';
  fetch(ENDPOINT,{method:'POST',body:fd,mode:'no-cors'}).then(function(){msg.textContent='Done. Check your inbox: the PDF is on its way.';f.reset();}).catch(function(){msg.textContent='Something went wrong. Please try again, or email paul@paulpacey.photography.';});
 });
+/* header height, so the opening screen fits below it */
+var hh=document.querySelector('.site-h');function setH(){document.documentElement.style.setProperty('--hh',hh.offsetHeight+'px');}setH();addEventListener('resize',setH);
 /* reveal on scroll */
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
 })();
