@@ -443,7 +443,13 @@ var R=[
 ];
 /* bonus rounds: answers can also be 'Nothing' */
 var NOTHING='Nothing. It’s all there.';
-var R2=[];
+var R2=[
+ {img:'ff-quiz-b-glare.webp',alt:'Two young girls lean their heads together in bright sunlight, one in a royal costume',ans:'Aesthetic',fb:'All the warmth you could ask for, but the light is too harsh: blown-out skin and a face lost to the glare.'},
+ {img:'ff-quiz-b-award.webp',alt:'A teacher bends down to a boy as a pupil holds up a “happy award” certificate',ans:'Emotion',fb:'A clear moment of recognition, but with no faces to read, there’s nothing to feel.'},
+ {img:'ff-quiz-b-dad.webp',alt:'A father lifts his laughing young son into the air at a school event',ans:NOTHING,fb:'It looks good, feels good, tells a story, and it’s unmistakably real. All four.'},
+ {img:'ff-quiz-b-shadow.webp',alt:'The shadow of a child with arms outstretched falls across a sunlit gym wall',ans:'Narrative',fb:'Striking and full of energy, but there’s no telling who, where or why.'},
+ {img:'ff-quiz-b-hall.webp',alt:'A pupil raises his hand during an assembly in a large, dim school hall',ans:'Aesthetic',fb:'A real moment with a story, but the room is dim and cluttered, and the faces are too small to read.'}
+];
 var score=0,score2=0;
 function build(list,host,choices,prefix,last,onDone){
  var done=0;
