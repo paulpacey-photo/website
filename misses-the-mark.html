@@ -198,8 +198,10 @@ h2{font-size:clamp(34px,4.6vw,64px)}
 #score2{padding-top:60px}
 /* parallax: feature photos drift a little slower than the page */
 .px{position:relative;overflow:hidden}
-@media(min-width:701px){.bleed.px img,.tbg.px img.bg{position:absolute;left:0;top:-9%;width:100%;height:118%;will-change:transform}}
-@media(prefers-reduced-motion:reduce){.bleed.px img,.tbg.px img.bg{transform:none!important}}
+@media(min-width:701px){.bleed.px img,.tbg.px img.bg{position:absolute;left:0;top:-9%;width:100%;height:118%;will-change:transform}.hero.px img{top:-6%;height:112%;will-change:transform}}
+@media(min-width:701px){.tbg.low .wrap{padding-top:16vh}}
+.tbg img.bg[data-fy]{max-width:none;object-fit:cover}
+@media(prefers-reduced-motion:reduce){.bleed.px img,.tbg.px img.bg,.hero.px img{transform:none!important}}
 /* image protection: a transparent layer sits over each photo so right-click / drag grabs nothing */
 .bleed:before,.round .ph:before{content:"";position:absolute;inset:0;z-index:1}
 .round .ph{position:relative}
@@ -225,7 +227,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 </header>
 
 <main>
-<section class="hero slide">
+<section class="hero slide px">
 <img loading="eager" src="ff-hero-archer.webp" alt="A boy draws his bow and takes aim during an archery lesson" fetchpriority="high">
 <div class="wrap">
 <div class="eyebrow">Marketing guide</div>
@@ -339,13 +341,13 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <p>In the right balance, a healthy dose of honest introspection or quiet focus may be more befitting.</p>
 </div></section>
 
-<section class="slide tbg px"><img class="bg" loading="lazy" src="ff-spont-bench.webp" alt="" style="opacity:.17;object-position:48% 100%"><div class="wrap reveal">
+<section class="slide tbg px low"><img class="bg" loading="lazy" src="ff-spont-bench.webp" alt="" data-fx=".5" data-fy=".3" data-ft=".13" style="opacity:.17"><div class="wrap reveal">
 <div class="eyebrow">Spontaneity</div>
 <h2>But few images resonate on an emotional level more than <i>an authentic flash of unscripted joy.</i></h2>
 <p>Where a student’s genuine happiness bridges the gap between your school and a parent’s imagination.</p>
 </div></section>
 
-<section class="slide tbg px"><img class="bg" loading="lazy" src="ff-spont-cheer.webp" alt="" style="opacity:.24;object-position:70% 30%"><div class="wrap reveal">
+<section class="slide tbg px low"><img class="bg" loading="lazy" src="ff-spont-cheer.webp" alt="" data-fx=".49" data-fy=".37" data-ft=".17" style="opacity:.24"><div class="wrap reveal">
 <div class="eyebrow">Remember</div>
 <h2>While you can’t schedule spontaneity,<br class="dk"> <i>you <span class="mark">can<svg class="ul" viewBox="0 0 490 25" preserveAspectRatio="none" aria-hidden="true"><path d="M5 18.6 C40 13 120 7.6 229 6.6 C330 6 430 9 479 11.2 C481 11.8 481 12.6 479 13 C400 14 260 15.4 165 16.2 C100 16.8 40 18 5 18.6 Z"/></svg></span> make space for it.</i></h2>
 <p>A good plan should always make room for the moments you can’t plan for.</p>
@@ -497,14 +499,26 @@ f.addEventListener('submit',function(e){
 });
 /* header height, so the opening screen fits below it */
 var hh=document.querySelector('.site-h');function setH(){document.documentElement.style.setProperty('--hh',hh.offsetHeight+'px');}setH();addEventListener('resize',setH);
-/* parallax on the feature photos (wide screens, motion allowed) */
+/* parallax on the feature photos (wide screens, motion allowed).
+   Images with data-fy keep their faces near the top of the section (face line data-fy of the photo lands at data-ft of the section). */
 (function(){
  var mq=matchMedia('(min-width:701px) and (prefers-reduced-motion:no-preference)'),els=[].slice.call(document.querySelectorAll('.px')),tick=false;
- function run(){tick=false;if(!mq.matches){els.forEach(function(e){var i=e.querySelector('img');if(i)i.style.transform='';});return;}
-  var vh=innerHeight;els.forEach(function(e){var r=e.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;
-   var p=(r.top+r.height/2-vh/2)/(vh/2+r.height/2);var i=e.querySelector('img');if(i)i.style.transform='translate3d(0,'+(p*-7).toFixed(2)+'%,0)';});}
- function on(){if(!tick){tick=true;requestAnimationFrame(run);}}
- addEventListener('scroll',on,{passive:true});addEventListener('resize',on);run();
+ function face(e,i,p,on){
+  var W=e.clientWidth,H=e.clientHeight,a=i.naturalWidth/i.naturalHeight;if(!a)return;
+  var fy=+i.dataset.fy,ft=+i.dataset.ft,fx=+(i.dataset.fx||.5),R=on?.035:0;
+  var h=Math.max(H*(1+2*R),W/a,(ft+R)*H/fy,(1-ft+R)*H/(1-fy)),w=h*a;
+  var x=Math.min(0,Math.max(W-w,W/2-fx*w)),y=ft*H-fy*h;
+  i.style.cssText+=';position:absolute;left:'+x+'px;top:'+y+'px;width:'+w+'px;height:'+h+'px;transform:translate3d(0,'+(p*R*H).toFixed(1)+'px,0)';
+ }
+ function run(){tick=false;var on=mq.matches,vh=innerHeight;
+  els.forEach(function(e){var i=e.querySelector('img');if(!i)return;var r=e.getBoundingClientRect();
+   if(i.dataset.fy){if(r.bottom<-vh||r.top>2*vh)return;var p=on?Math.max(-1,Math.min(1,(r.top+r.height/2-vh/2)/(vh/2+r.height/2))):0;face(e,i,-p,on);return;}
+   if(!on){i.style.transform='';return;}
+   if(r.bottom<0||r.top>vh)return;
+   var p=(r.top+r.height/2-vh/2)/(vh/2+r.height/2);i.style.transform='translate3d(0,'+(p*-7).toFixed(2)+'%,0)';});}
+ function go(){if(!tick){tick=true;requestAnimationFrame(run);}}
+ addEventListener('scroll',go,{passive:true});addEventListener('resize',go);
+ els.forEach(function(e){var i=e.querySelector('img');if(i&&!i.complete)i.addEventListener('load',go);});run();
 })();
 /* reveal on scroll */
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
