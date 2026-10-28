@@ -191,6 +191,12 @@ h2{font-size:clamp(34px,4.6vw,64px)}
 .round .ph{max-height:78svh}
 .fb .next{display:inline-block;margin-top:14px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--red);text-decoration:none}
 .fb .next:hover{text-decoration:underline}
+.score .acts{display:flex;flex-wrap:wrap;align-items:center;gap:32px;margin-top:32px}
+.score .btn.ghost.light{color:var(--cream)}
+.score .btn.ghost.light:hover{color:var(--pink2)}
+.credits{padding:0 0 clamp(60px,8vw,110px)}
+.credits .credit{font-size:14px;color:var(--mute)}
+#score2{padding-top:60px}
 /* image protection: a transparent layer sits over each photo so right-click / drag grabs nothing */
 .bleed:before,.round .ph:before{content:"";position:absolute;inset:0;z-index:1}
 .round .ph{position:relative}
@@ -346,7 +352,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <section id="quiz" class="slide quiz-intro dark"><div class="wrap reveal">
 <div class="eyebrow">Putting it all together</div>
 <h2 style="margin-top:24px">Ready?<br>Let’s put it <i>to the test!</i></h2>
-<p>Six images, each missing one piece. Ask the four questions, then tap the one you think is missing.</p>
+<p>Eight images, each missing one piece: two for each of the four questions. Ask them, then tap the one you think is missing.</p>
 </div></section>
 
 <div id="rounds"></div>
@@ -357,11 +363,30 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <h3 id="scoreline" style="margin-top:18px"></h3>
 <p id="scoremsg"></p>
 <p class="take">Aesthetic, emotion and authenticity are non-negotiable. Narrative depends on the job.</p>
+<div class="acts" id="scoreacts"><button class="btn" type="button" id="keepgoing">Keep going</button><a class="btn ghost light" href="#takeaway">Stop here</a></div>
 </div>
-<p class="credit">All images by Paul Pacey, except round 2 (AI-generated).</p>
 </div></section>
 
-<section class="standard slide"><div class="wrap reveal">
+<div id="bonus" hidden>
+<section class="slide quiz-intro dark" id="bonus-intro"><div class="wrap">
+<div class="eyebrow">Bonus rounds</div>
+<h2 style="margin-top:24px">Five more. <i>One new answer.</i></h2>
+<p id="bonusmsg">This time, an image might have nothing missing at all. If all four pieces are there, choose “Nothing. It’s all there.”</p>
+</div></section>
+<div id="rounds2"></div>
+<section class="score" id="score2"><div class="wrap">
+<div class="box" id="scorebox2" aria-live="polite">
+<div class="eyebrow">Final score</div>
+<h3 id="scoreline2" style="margin-top:18px"></h3>
+<p id="scoremsg2"></p>
+<div class="acts"><a class="btn" href="#takeaway">Finish</a></div>
+</div>
+</div></section>
+</div>
+
+<section class="credits"><div class="wrap"><p class="credit">All images by Paul Pacey, except rounds 2 and 6 (AI-generated).</p></div></section>
+
+<section class="standard slide" id="takeaway"><div class="wrap reveal">
 <div class="eyebrow">The takeaway</div>
 <h2 style="margin-top:24px">Great imagery isn’t left<br class="dk"> <i>to chance.</i></h2>
 <p>Great school marketing photography comes from creating the right environment, knowing what to look for, and holding your visuals to the highest standards—one image at a time.</p>
@@ -405,34 +430,54 @@ var R=[
  {img:'ff-quiz-1.webp',alt:'Students quietly painting at easels in a school art room',ans:'Emotion',fb:'Well lit and well composed. Clear narrative, but emotionally a little flat.'},
  {img:'ff-quiz-2.webp',alt:'Three students in lab coats and goggles smile at a beaker of clear liquid in a tidy science lab',ans:'Authenticity',fb:'Polished and pleasant, but clearly performative. Doesn’t fool anybody.'},
  {img:'ff-quiz-3.webp',alt:'Students relaxing on beanbags in a dim school corridor, faces in shadow',ans:'Aesthetic',fb:'Right moment, wrong light: dull skin tones and faces lost in shadow.'},
+ {img:'ff-quiz-park.webp',alt:'A smiling girl in a blue shirt looks off to the side in an empty park',ans:'Narrative',fb:'A lovely, natural portrait, but nothing tells you where she is or what’s happening.'},
  {img:'ff-quiz-ws.webp',alt:'A student’s hand works through a printed worksheet at a desk',ans:'Emotion',fb:'A clear story, but with no faces in sight, there’s nothing to feel.'},
+ {img:'ff-quiz-readers.webp',alt:'Three students in blazers smile down at one open book on a bench',ans:'Authenticity',fb:'Bright, sharp and smiling, but far too perfect. Three matching grins over one book never happen by chance.'},
  {img:'ff-quiz-tc.webp',alt:'A smiling teacher talks with a pupil seen from behind',ans:'Aesthetic',fb:'Warm and genuine, but the focus landed on the ponytail, not the teacher’s face.'},
  {img:'ff-quiz-4.webp',alt:'A smiling young girl in a tartan pinafore looks up at the camera',ans:'Narrative',fb:'But as a hero image, it doesn’t need a story. Still great.'}
 ];
-var host=document.getElementById('rounds'),done=0,score=0;
-R.forEach(function(r,i){
- var s=document.createElement('section');s.className='round slide';s.id='r'+(i+1);
- s.innerHTML='<div class="wrap grid"><div class="ph"><img loading="lazy" src="'+r.img+'" alt="'+r.alt+'"></div><div><div class="eyebrow">Round '+(i+1)+' of '+R.length+'</div><h3>Which piece <i>is missing?</i></h3><div class="opts" role="group" aria-label="Choose the missing piece"></div><div class="fb" aria-live="polite"></div></div></div>';
- var opts=s.querySelector('.opts'),fb=s.querySelector('.fb');
- C.forEach(function(c,j){
-  var b=document.createElement('button');b.type='button';b.className='opt';b.innerHTML='<span>0'+(j+1)+'</span>'+c;
-  b.addEventListener('click',function(){
-   var ok=c===r.ans;done++;if(ok)score++;
-   opts.querySelectorAll('button').forEach(function(x){x.disabled=true;if(x.textContent.slice(2)===r.ans)x.classList.add('right');});
-   if(!ok)b.classList.add('wrong');
-   fb.innerHTML='<strong>'+(ok?'Correct.':'Not quite.')+' Missing: '+r.ans+'.</strong><p>'+r.fb+'</p><a class="next" href="'+(i<R.length-1?'#r'+(i+2):'#score')+'">'+(i<R.length-1?'Next image':'See your score')+' <span aria-hidden="true">↓</span></a>';
-   if(done===R.length)showScore();
+/* bonus rounds: answers can also be 'Nothing' */
+var NOTHING='Nothing. It’s all there.';
+var R2=[];
+var score=0,score2=0;
+function build(list,host,choices,prefix,last,onDone){
+ var done=0;
+ list.forEach(function(r,i){
+  var s=document.createElement('section');s.className='round slide';s.id=prefix+(i+1);
+  s.innerHTML='<div class="wrap grid"><div class="ph"><img loading="lazy" src="'+r.img+'" alt="'+r.alt+'"></div><div><div class="eyebrow">'+(prefix==='r'?'Round ':'Bonus round ')+(i+1)+' of '+list.length+'</div><h3>Which piece <i>is missing?</i></h3><div class="opts" role="group" aria-label="Choose the missing piece"></div><div class="fb" aria-live="polite"></div></div></div>';
+  var opts=s.querySelector('.opts'),fb=s.querySelector('.fb');
+  choices.forEach(function(c,j){
+   var b=document.createElement('button');b.type='button';b.className='opt';b.dataset.c=c;b.innerHTML='<span>0'+(j+1)+'</span>'+c;
+   b.addEventListener('click',function(){
+    var ok=c===r.ans;done++;if(ok)onDone.hit();
+    opts.querySelectorAll('button').forEach(function(x){x.disabled=true;if(x.dataset.c===r.ans)x.classList.add('right');});
+    if(!ok)b.classList.add('wrong');
+    var nothing=r.ans===NOTHING;
+    fb.innerHTML='<strong>'+(ok?'Correct.':'Not quite.')+(nothing?' Nothing missing.':' Missing: '+r.ans+'.')+'</strong><p>'+r.fb+'</p><a class="next" href="'+(i<list.length-1?'#'+prefix+(i+2):'#'+last)+'">'+(i<list.length-1?'Next image':'See your score')+' <span aria-hidden="true">↓</span></a>';
+    if(done===list.length)onDone.end();
+   });
+   opts.appendChild(b);
   });
-  opts.appendChild(b);
+  host.appendChild(s);
  });
- host.appendChild(s);
-});
-function showScore(){
- var m=['Every gap slipped past. Run the four questions once more and they’ll start to jump out.','A start. One gap spotted; the questions get sharper with practice.','Two gaps spotted. Keep the four questions handy and the rest will start to jump out.','Halfway there. Three gaps spotted. You’re already seeing more than most.','Good eye. Four of six spotted.','Sharp eye. Five of six. The hero image catches almost everyone.','Six for six. You’re ready to audit your own website.'];
+}
+build(R,document.getElementById('rounds'),C,'r','score',{hit:function(){score++;},end:function(){
+ var m=['Every gap slipped past. Run the four questions once more and they’ll start to jump out.','A start. One gap spotted; the questions get sharper with practice.','Two gaps spotted. Keep the four questions handy and the rest will start to jump out.','Three of eight. You’re starting to see what parents see.','Halfway there. Four gaps spotted. You’re already seeing more than most.','Good eye. Five of eight spotted.','Sharp eye. Six of eight.','Seven of eight. Very little gets past you.','Eight for eight. You’re ready to audit your own website.'];
  document.getElementById('scoreline').innerHTML='You spotted <i>'+score+' of '+R.length+'.</i>';
  document.getElementById('scoremsg').textContent=m[score];
- var b=document.getElementById('scorebox');b.classList.add('show');
-}
+ document.getElementById('scorebox').classList.add('show');
+}});
+build(R2,document.getElementById('rounds2'),C.concat([NOTHING]),'b','score2',{hit:function(){score2++;},end:function(){
+ document.getElementById('scoreline2').innerHTML='Bonus rounds: <i>'+score2+' of '+R2.length+'.</i>';
+ document.getElementById('scoremsg2').textContent='That’s '+(score+score2)+' of '+(R.length+R2.length)+' overall. Now try the four questions on your own website.';
+ document.getElementById('scorebox2').classList.add('show');
+}});
+if(!R2.length){document.getElementById('bonusmsg').textContent='Five more images are on their way. Check back soon.';document.getElementById('score2').hidden=true;}
+document.getElementById('keepgoing').addEventListener('click',function(){
+ var bn=document.getElementById('bonus');bn.hidden=false;
+ document.getElementById('scoreacts').style.display='none';
+ document.getElementById('bonus-intro').scrollIntoView({behavior:'smooth'});
+});
 /* PDF form: set ENDPOINT to the MailerLite form action URL once the account exists */
 var ENDPOINT='https://assets.mailerlite.com/jsonp/2744586/forms/202422579757057287/subscribe';
 try{fetch('https://assets.mailerlite.com/jsonp/2744586/forms/202422579757057287/takel');}catch(_){}
