@@ -191,6 +191,7 @@ h2{font-size:clamp(34px,4.6vw,64px)}
 .fb .next{display:inline-block;margin-top:14px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--red);text-decoration:none}
 .fb .next:hover{text-decoration:underline}
 .score .acts{display:flex;flex-wrap:wrap;align-items:center;gap:32px;margin-top:32px}
+.score .btn[hidden]{display:none}
 .score .btn.ghost.light{color:var(--cream)}
 .score .btn.ghost.light:hover{color:var(--pink2)}
 .credits{padding:0 0 clamp(60px,8vw,110px)}
@@ -384,7 +385,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <div class="eyebrow">Final score</div>
 <h3 id="scoreline2" style="margin-top:18px"></h3>
 <p id="scoremsg2"></p>
-<div class="acts"><a class="btn" href="#takeaway">Finish</a></div>
+<div class="acts"><a class="btn" id="talk2" href="https://calendly.com/paulpacey/30min" target="_blank" rel="noopener" hidden>Let’s talk</a><a class="btn" id="finish2" href="#takeaway">Finish</a></div>
 </div>
 </div></section>
 </div>
@@ -480,7 +481,11 @@ build(R,document.getElementById('rounds'),C,'r','score',{hit:function(){score++;
 }});
 build(R2,document.getElementById('rounds2'),C.concat([NOTHING]),'b','score2',{hit:function(){score2++;},end:function(){
  document.getElementById('scoreline2').innerHTML='Bonus rounds: <i>'+score2+' of '+R2.length+'.</i>';
- document.getElementById('scoremsg2').textContent='That’s '+(score+score2)+' of '+(R.length+R2.length)+' overall. Now try the four questions on your own website.';
+ var tot=R.length+R2.length,all=score+score2;
+ if(all===tot){document.getElementById('scoreline2').innerHTML='Thirteen <i>for thirteen.</i>'.replace('Thirteen',tot===13?'Thirteen':String(tot)).replace('thirteen',tot===13?'thirteen':String(tot));
+  document.getElementById('scoremsg2').textContent='You see what parents see. Now let’s make sure your website shows it.';
+  var t=document.getElementById('talk2');if(t)t.hidden=false;document.getElementById('finish2').className='btn ghost light';}
+ else document.getElementById('scoremsg2').textContent='That’s '+all+' of '+tot+' overall. Now try the four questions on your own website.';
  document.getElementById('scorebox2').classList.add('show');
 }});
 if(!R2.length){document.getElementById('bonusmsg').textContent='Five more images are on their way. Check back soon.';document.getElementById('score2').hidden=true;}
