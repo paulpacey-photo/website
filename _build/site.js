@@ -12,7 +12,19 @@
   function jump(id, smooth) {
     var t = findTarget(id);
     if (!t) return false;
-    t.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+    var y = t.getBoundingClientRect().top + window.pageYOffset;
+    /* Sections with a form (e.g. Portfolio access): land so the form's buttons are in view,
+       not hidden just below the fold. Only scroll further down if the buttons would be cut off. */
+    var f = t.querySelector('form');
+    var btn = f && f.querySelector('button');
+    if (btn) {
+      var last = btn;
+      f.querySelectorAll('a').forEach(function (a) { if (a.getBoundingClientRect().bottom > last.getBoundingClientRect().bottom && a.compareDocumentPosition(btn) & Node.DOCUMENT_POSITION_PRECEDING && a.getBoundingClientRect().top - btn.getBoundingClientRect().bottom < 80) last = a; });
+      var bottom = Math.max(btn.getBoundingClientRect().bottom, last.getBoundingClientRect().bottom) + window.pageYOffset;
+      var needed = bottom + 32 - window.innerHeight;
+      if (needed > y) y = needed;
+    }
+    window.scrollTo({ top: y, behavior: smooth ? 'smooth' : 'auto' });
     return true;
   }
   doc.addEventListener('click', function (e) {
