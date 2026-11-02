@@ -13,7 +13,8 @@ NAME = 'Article-Agents'
 SERIF = "'Newsreader', Georgia, serif"
 RED, INK, BODY, MUTED, CREAM, STONE = '#A42C35', '#1E1E1E', '#2E2B28', '#6B665F', '#F6F2EC', '#E4DED5'
 
-COVER = None   # IMAGE PLACEHOLDER: hero photo to come (a real, emotional school moment)
+COVER = '/_blob/f4cd2ccde04eadc8b2a29e6b23be876b'   # hand moving a chess piece (Paul's own photo)
+COVER_POS = '50% 38%'
 PH_BG = '#E4DED5'
 BANDCAP = {}
 BANDPOS = {}
@@ -138,7 +139,7 @@ def render(m):
 ''')
     ch = 300 if m else 620
     out.append(f'''<!-- 3 COVER -->
-<div data-parallax="0.18" style="position: relative; height: {ch}px; overflow: hidden; background: {PH_BG}">{'' if COVER is None else f'<img data-parallax-layer="1" src="{COVER}" alt="" style="position: absolute; left: 0; top: -10%; width: 100%; height: 120%; object-fit: cover; object-position: 40% 30%; display: block">'}</div>
+<div data-parallax="0.18" style="position: relative; height: {ch}px; overflow: hidden; background: {PH_BG}">{'' if COVER is None else f'<img data-parallax-layer="1" src="{COVER}" alt="A student’s hand moving a chess piece mid-game" style="position: absolute; left: 0; top: -10%; width: 100%; height: 120%; object-fit: cover; object-position: {COVER_POS}; display: block">'}</div>
 ''')
     body = []
     for blk in B:
