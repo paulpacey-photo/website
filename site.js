@@ -13,16 +13,21 @@
     var t = findTarget(id);
     if (!t) return false;
     var y = t.getBoundingClientRect().top + window.pageYOffset;
-    /* Sections with a form (e.g. Portfolio access): land so the form's buttons are in view,
-       not hidden just below the fold. Only scroll further down if the buttons would be cut off. */
+    /* Sections with a form (e.g. Portfolio access): frame the block from its eyebrow label
+       down to the form's button/link, centred with even space above and below.
+       If that block is taller than the screen, land so the buttons are still in view. */
     var f = t.querySelector('form');
     var btn = f && f.querySelector('button');
     if (btn) {
-      var last = btn;
-      f.querySelectorAll('a').forEach(function (a) { if (a.getBoundingClientRect().bottom > last.getBoundingClientRect().bottom && a.compareDocumentPosition(btn) & Node.DOCUMENT_POSITION_PRECEDING && a.getBoundingClientRect().top - btn.getBoundingClientRect().bottom < 80) last = a; });
-      var bottom = Math.max(btn.getBoundingClientRect().bottom, last.getBoundingClientRect().bottom) + window.pageYOffset;
-      var needed = bottom + 32 - window.innerHeight;
-      if (needed > y) y = needed;
+      var py = window.pageYOffset, vh = window.innerHeight;
+      var bottom = btn.getBoundingClientRect().bottom;
+      var nx = btn.nextElementSibling;  /* "Already have a password?" link sits right after the button */
+      if (nx && nx.tagName === 'A') bottom = Math.max(bottom, nx.getBoundingClientRect().bottom);
+      var head = f.parentElement.firstElementChild;
+      var top = (head && head !== f ? head.getBoundingClientRect().top : t.getBoundingClientRect().top);
+      top += py; bottom += py;
+      var h = bottom - top;
+      y = (h <= vh) ? top - (vh - h) / 2 : bottom + 32 - vh;
     }
     window.scrollTo({ top: y, behavior: smooth ? 'smooth' : 'auto' });
     return true;
