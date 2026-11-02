@@ -77,7 +77,7 @@ P('This agent does that work continuously. It follows each stage of the journey,
 WHY('you can’t fix what you can’t see, and the cheapest new families are often the ones you’re already losing.')
 H3('5. The story finder')
 P('This is the agent closest to my own work. Every school produces remarkable stories every single day: a science project that went somewhere unexpected, a student who found her voice in drama, a teacher who turned a field trip into a lesson nobody will forget. Most never reach the marketing team.')
-B.append(('ph', ''))   # IMAGE PLACEHOLDER: a real "story worth telling" moment from Paul's archive
+B.append(('img', '/_blob/1e8e7e78be9304821096f7d053d698e2', 'Teachers, parents and young students walking hand in hand along a leafy school path', 'A moment like this rarely makes it to the marketing team.'))
 P('This agent gathers them from where they already live: newsletters, teacher posts, the school calendar, class blogs. It flags the moments worth telling, and builds a content calendar from them. It also knows what’s coming up, so the moments worth capturing on camera are planned for, not discovered afterwards.')
 WHY('parents don’t choose a school because of its claims. They choose it because of the moments that make those claims believable.')
 H3('6. The content repurposing agent')
@@ -177,6 +177,11 @@ def render(m):
                 + '</ul></div>'
                 for i, (title, q, items) in enumerate(blk[1]))
             body.append(f'<div data-reveal="1" style="{wide}; box-sizing: border-box; margin-top: {32 if m else 48}px; display: grid; grid-template-columns: {"1fr" if m else "repeat(3, minmax(0, 1fr))"}; gap: {14 if m else 20}px">{cols}</div>')
+        elif k == 'img':
+            _, src, alt, cap = blk
+            capt = (f'<figcaption style="margin-top: 12px; font-size: {13 if m else 14}px; line-height: 1.5; color: {MUTED}">{cap}</figcaption>') if cap else ''
+            mm = '; margin-left: 0; margin-right: 0' if m else ''
+            body.append(f'<figure data-reveal="1" style="{wide}; box-sizing: border-box; margin-top: {32 if m else 48}px; margin-bottom: 0{mm}"><img src="{src}" alt="{alt}" style="display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover"></figure>'.replace('</figure>', capt + '</figure>'))
         elif k == 'ph':
             cap = blk[1]
             capt = (f'<figcaption style="margin-top: 12px; font-size: {13 if m else 14}px; line-height: 1.5; color: {MUTED}">{cap}</figcaption>') if cap else ''
