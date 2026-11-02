@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://paulpacey.photography/planning-guide.html#article",
+      "headline": "Planning Your Photo Campaign",
+      "description": "A free nine-step framework for planning a school marketing photo campaign, from discovery brief to final edit.",
+      "url": "https://paulpacey.photography/planning-guide.html",
+      "mainEntityOfPage": "https://paulpacey.photography/planning-guide.html",
+      "image": "https://paulpacey.photography/share-image.jpg",
+      "datePublished": "2026-10-24",
+      "inLanguage": "en-US",
+      "author": {
+        "@type": "Person",
+        "@id": "https://paulpacey.photography/#paul",
+        "name": "Paul Pacey",
+        "url": "https://paulpacey.photography/",
+        "jobTitle": "Marketing photographer and visual strategist for international schools"
+      },
+      "publisher": {
+        "@id": "https://paulpacey.photography/#paul"
+      },
+      "about": [
+        "Planning a school marketing photo shoot"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "International school marketing and admissions teams"
+      }
+    }
+  ]
+}
