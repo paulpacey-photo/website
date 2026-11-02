@@ -14,8 +14,8 @@ STEPS = [
       '<b>Discovery report:</b> what we heard, and where to focus', 'A clear scope, goals and price'], None),
     ('Ready.', '02', 'We lock in the dates and make it official', 'Once we agree on the plan, we commit to it together.',
      ['Dates agreed around your calendar and my availability', 'Contract signed', '50% deposit paid on signing'], None),
-    ('Set.', '03', 'I design your list of activities', 'Your goals, turned into real moments we can photograph.',
-     ['Tailor-made activities, built around your pillars and goals', 'Options for every age group',
+    ('Set.', '03', 'I design your shot list', 'Your goals, turned into real moments we can photograph.',
+     ['A tailor-made shot list, with a time-tested activity for every shot', 'Options for every age group',
       'Ready-to-send templates for teacher communications', 'A scheduling template to keep it simple'], None),
     ('Set.', '04', 'Your teachers tell us what’s already happening', 'The best activities are often the ones already planned.',
      ['The school shares the activity list with teachers', 'Teachers flag what’s already in their plans',
@@ -39,7 +39,7 @@ PHASES = [
     ('Set.', 'Design, gather, close the gaps, prepare', ['03', '04', '05', '06'], False),
     ('Shine.', 'Shoot, deliver, look back', ['07', '08', '09'], True),
 ]
-SHORT = {'01': 'Align goals, scope, price', '02': 'Lock dates, sign', '03': 'Design activities', '04': 'Teachers respond',
+SHORT = {'01': 'Align goals, scope, price', '02': 'Lock dates, sign', '03': 'Design the shot list', '04': 'Teachers respond',
          '05': 'Close the gaps', '06': 'Finalize and prepare', '07': 'Shoot, stay flexible', '08': 'Deliver the edit',
          '09': 'Look back together'}
 
