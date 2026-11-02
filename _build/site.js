@@ -220,6 +220,29 @@
     'Send a message': { kind: 'message', ok: 'Thank you. Your message is with me, and I’ll be in touch soon.' },
     'Discovery brief': { kind: 'discovery', next: 'thanks.html' }
   };
+  /* free tailored shot list offer (from the Essential 10 guide): discovery.html?shotlist */
+  var SHOTLIST = /[?&]shotlist\b/.test(location.search);
+  if (SHOTLIST) {
+    KINDS['Discovery brief'].next = 'thanks.html?shotlist';
+    doc.querySelectorAll('form[aria-label="Discovery brief"]').forEach(function (f) {
+      var h = doc.createElement('input'); h.type = 'hidden'; h.name = 'request';
+      h.value = 'Free tailored shot list (from the Essential 10 guide)'; f.appendChild(h);
+    });
+    doc.querySelectorAll('h3').forEach(function (h) { if (h.textContent === 'You receive your Discovery report') h.textContent = 'You receive your tailored shot list'; });
+    doc.querySelectorAll('p').forEach(function (p) {
+      var t = p.textContent;
+      if (t.indexOf('Before we speak, tell me about your school') === 0) {
+        var n = doc.createElement('p');
+        n.textContent = 'Your free tailored shot list: complete this brief and I\u2019ll send you twenty shots chosen for your school, your Essential 10 plus ten more, within 3 working days.';
+        n.style.cssText = 'margin:24px 0 0 0;padding:16px 20px;border-left:3px solid #A42C35;background:#FDFCFA;font-size:' + getComputedStyle(p).fontSize + ';line-height:1.6;color:#1E1E1E';
+        p.parentNode.insertBefore(n, p.nextSibling);
+      }
+      if (t.indexOf('Your answers are with me') === 0) {
+        p.textContent = 'Your answers are with me. Your tailored shot list will be in your inbox within 3 working days.';
+      }
+      if (t === 'What we found, where to focus, and a first list of activities.') p.textContent = 'Twenty shots chosen for your school, with direction for each, within 3 working days.';
+    });
+  }
   function collect(form) {
     var data = {};
     form.querySelectorAll('input[name], textarea[name]').forEach(function (f) {

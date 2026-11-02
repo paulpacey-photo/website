@@ -39,7 +39,7 @@
     return el.getAttribute('placeholder') || el.name;
   }
 
-  var CONTACT = { name: 1, email: 1, school: 1, role: 1, 'yourschool-org': 1, 'if-part-of-one-optional': 1 };
+  var CONTACT = { name: 1, email: 1, school: 1, role: 1, 'yourschool-org': 1, 'if-part-of-one-optional': 1, request: 1 };
   function discoveryAnswers(form) {
     var blocks = [], byQ = {}, order = [];
     form.querySelectorAll('input[name], textarea[name]').forEach(function (el) {
@@ -89,7 +89,7 @@
     var v;
     if (kind === 'portfolio' || kind === 'message') v = { name: d.name, school: d.school, role: d.role, email: d.email, message: d.message };
     else if (kind === 'guide') v = { name: d.name, school: d.school, email: d.email, newsletter: d.newsletter === 'yes' };
-    else if (kind === 'discovery') v = { name: d.name, role: d.role, school: d.school, email: d.email, website: d['yourschool-org'], school_group: d['if-part-of-one-optional'], answers: discoveryAnswers(form).slice(0, 20000) };
+    else if (kind === 'discovery') v = { name: d.name, role: d.role, school: d.school, email: d.email, website: d['yourschool-org'], school_group: d['if-part-of-one-optional'], answers: ((d.request ? 'REQUEST: ' + d.request + '\n\n' : '') + discoveryAnswers(form)).slice(0, 20000) };
     var body = JSON.stringify({ submission: { formId: FORMS[kind], submissions: clean(v) } });
     return token().then(function (t) {
       return fetch(API + '/form-submission-service/v4/submissions', {
