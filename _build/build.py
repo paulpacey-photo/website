@@ -45,6 +45,11 @@ PAGES = [
      ['Article-AI-Mobile', 'Article-AI-Mobile-2', 'Article-AI-Mobile-3'],
      'AI in International School Marketing: The Good, the Bad and the Ugly | Paul Pacey',
      'Where AI genuinely helps school marketing, where the new EU labeling rules and consent draw the line, and how to keep the magic without losing authenticity.'),
+    ('agents-article', 'ai-agents-school-marketing.html',
+     ['Article-Agents', 'Article-Agents-2'],
+     ['Article-Agents-Mobile', 'Article-Agents-Mobile-2', 'Article-Agents-Mobile-3'],
+     'Found, Chosen, Kept: Where AI Agents Belong in School Marketing | Paul Pacey',
+     'Eight AI agents an international school marketing team could set up to be found, be chosen and keep families, plus the three lines not to cross.'),
     ('privacy', 'privacy.html', ['Privacy'], ['Privacy-Mobile'],
      'Privacy policy | Paul Pacey', 'How Paul Pacey Photography handles your personal data.'),
 ]
@@ -65,6 +70,7 @@ GLOBAL = {
     'strategic-shoot': 'services.html#core',
     'uncomfortable-truth': 'uncomfortable-truth.html',
     'ai-article': 'ai-in-school-marketing.html',
+    'agents-article': 'ai-agents-school-marketing.html',
     'articles': 'resources.html#articles',
 }
 NAV = {'home': 'index.html', 'top': 'index.html', 'services': 'services.html',
@@ -249,7 +255,7 @@ def name_fields(body):
     return re.sub(r'<(input|textarea)\b[^>]*>', rep, body)
 
 # ---------------------------------------------------------------- page assembly
-AUTO_HEIGHT = {'Resources', 'Resources-Mobile', 'Services', 'Services-Mobile-2', 'Discovery', 'Discovery-Mobile', 'Article-Uncomfortable-Truth', 'Article-Uncomfortable-Truth-2', 'Article-Uncomfortable-Truth-Mobile', 'Article-Uncomfortable-Truth-Mobile-2', 'Article-Uncomfortable-Truth-Mobile-3', 'Article-AI', 'Article-AI-2', 'Article-AI-Mobile', 'Article-AI-Mobile-2', 'Article-AI-Mobile-3'}
+AUTO_HEIGHT = {'Resources', 'Resources-Mobile', 'Services', 'Services-Mobile-2', 'Discovery', 'Discovery-Mobile', 'Article-Uncomfortable-Truth', 'Article-Uncomfortable-Truth-2', 'Article-Uncomfortable-Truth-Mobile', 'Article-Uncomfortable-Truth-Mobile-2', 'Article-Uncomfortable-Truth-Mobile-3', 'Article-AI', 'Article-AI-2', 'Article-AI-Mobile', 'Article-AI-Mobile-2', 'Article-AI-Mobile-3', 'Article-Agents', 'Article-Agents-2', 'Article-Agents-Mobile', 'Article-Agents-Mobile-2', 'Article-Agents-Mobile-3'}
 
 def board(name):
     s = open(os.path.join(SRC, name + '.dc.html')).read()
