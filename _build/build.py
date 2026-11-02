@@ -16,8 +16,8 @@ DOMAIN = 'https://paulpacey.photography'
 PAGES = [
     # slug, file, desktop boards, mobile boards, title, description
     ('index', 'index.html', ['Main', 'Main-2'], ['Mobile', 'Mobile-2'],
-     'Paul Pacey | Marketing Photography for International Schools',
-     'Marketing photography and visual brand strategy for international schools. 200+ campaigns in 30+ countries.'),
+     'Marketing Photography for International Schools | Paul Pacey',
+     'Marketing photography for international schools and school groups, planned with your team and shot documentary-style. 200+ campaigns in 30+ countries.'),
     ('services', 'services.html', ['Services'], ['Services-Mobile', 'Services-Mobile-2'],
      'International School Photo Campaigns & Audits | Paul Pacey',
      'Strategic Shoots, visual audits, multi-year partnerships and team training for international schools and school groups across 30+ countries.'),
