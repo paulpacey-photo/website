@@ -48,7 +48,7 @@ PAGES = [
     ('agents-article', 'ai-agents-school-marketing.html',
      ['Article-Agents', 'Article-Agents-2'],
      ['Article-Agents-Mobile', 'Article-Agents-Mobile-2', 'Article-Agents-Mobile-3'],
-     'Found, Chosen, Kept: Where AI Agents Belong in School Marketing | Paul Pacey',
+     'Where AI Agents Belong in International School Marketing | Paul Pacey',
      'Eight AI agents an international school marketing team could set up to be found, be chosen and keep families, plus the three lines not to cross.'),
     ('privacy', 'privacy.html', ['Privacy'], ['Privacy-Mobile'],
      'Privacy policy | Paul Pacey', 'How Paul Pacey Photography handles your personal data.'),
