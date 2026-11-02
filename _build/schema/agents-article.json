@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://paulpacey.photography/ai-agents-school-marketing.html#article",
+      "headline": "Found, Chosen, Kept: Where AI Agents Belong in School Marketing",
+      "description": "Eight AI agents an international school marketing team could set up to be found, be chosen and keep families, plus the three lines not to cross.",
+      "url": "https://paulpacey.photography/ai-agents-school-marketing.html",
+      "mainEntityOfPage": "https://paulpacey.photography/ai-agents-school-marketing.html",
+      "image": "https://paulpacey.photography/share-image.jpg",
+      "datePublished": "2026-11-02",
+      "inLanguage": "en-US",
+      "author": {
+        "@type": "Person",
+        "@id": "https://paulpacey.photography/#paul",
+        "name": "Paul Pacey",
+        "url": "https://paulpacey.photography/",
+        "jobTitle": "Marketing photographer and visual strategist for international schools"
+      },
+      "publisher": {
+        "@id": "https://paulpacey.photography/#paul"
+      },
+      "about": [
+        "AI agents in school marketing",
+        "International school admissions and enrollment"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "International school marketing and admissions teams"
+      }
+    }
+  ]
+}
