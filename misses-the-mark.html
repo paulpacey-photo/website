@@ -242,7 +242,7 @@ h2{font-size:clamp(34px,4.6vw,64px)}
 .px{position:relative;overflow:hidden}
 @media(min-width:701px){.bleed.px img,.tbg.px img.bg{position:absolute;left:0;top:-9%;width:100%;height:118%;will-change:transform}.hero.px img{top:-6%;height:112%;will-change:transform}}
 @media(min-width:701px){.tbg.low .wrap{padding-top:16vh}}
-.tbg img.bg[data-fy]{max-width:none;object-fit:cover}
+.tbg img.bg[data-fy],.bleed img[data-fy]{max-width:none;object-fit:cover}
 @media(prefers-reduced-motion:reduce){.bleed.px img,.tbg.px img.bg,.hero.px img{transform:none!important}}
 /* image protection: a transparent layer sits over each photo so right-click / drag grabs nothing */
 .bleed:before,.round .ph:before{content:"";position:absolute;inset:0;z-index:1}
@@ -346,7 +346,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <div class="note"><b>Exception to the rule</b><i>Sometimes, less is more.</i> For hero imagery—like poster or billboard shots—a busy narrative can actually distract. A clean, minimal focus on a single student or teacher creates a stronger visual impact and leaves room for headline copy and graphics to deliver the message.</div>
 </div></div></div></section>
 
-<figure class="bleed slide px"><img loading="lazy" src="ff-authenticity.webp" alt="A delighted girl lies on the floor guiding a small coding robot as classmates work on tablets behind her">
+<figure class="bleed slide px"><img loading="lazy" src="ff-authenticity.webp" data-fx=".5" data-fy=".62" data-ft=".6" data-r=".01" alt="A delighted girl lies on the floor guiding a small coding robot as classmates work on tablets behind her">
 <figcaption class="panel tl"><div class="on"><span>01</span>Does it look good?</div><div class="on"><span>02</span>Does it feel good?</div><div class="on"><span>03</span>Does it tell a story?</div><div><span>04</span><i>Is it believable?</i></div></figcaption></figure>
 
 <section class="crit dark slide"><div class="wrap">
@@ -556,13 +556,14 @@ var hh=document.querySelector('.site-h');function setH(){document.documentElemen
  var mq=matchMedia('(min-width:701px) and (prefers-reduced-motion:no-preference)'),els=[].slice.call(document.querySelectorAll('.px')),tick=false;
  function face(e,i,p,on){
   var W=e.clientWidth,H=e.clientHeight,a=i.naturalWidth/i.naturalHeight;if(!a)return;
-  var fy=+i.dataset.fy,ft=+i.dataset.ft,fx=+(i.dataset.fx||.5),R=on?.035:0;
+  var fy=+i.dataset.fy,ft=+i.dataset.ft,fx=+(i.dataset.fx||.5),R=on?+(i.dataset.r||.035):0;
   var h=Math.max(H*(1+2*R),W/a,(ft+R)*H/fy,(1-ft+R)*H/(1-fy)),w=h*a;
   var x=Math.min(0,Math.max(W-w,W/2-fx*w)),y=ft*H-fy*h;
   i.style.cssText+=';position:absolute;left:'+x+'px;top:'+y+'px;width:'+w+'px;height:'+h+'px;transform:translate3d(0,'+(p*R*H).toFixed(1)+'px,0)';
  }
  function run(){tick=false;var on=mq.matches,vh=innerHeight;
   els.forEach(function(e){var i=e.querySelector('img');if(!i)return;var r=e.getBoundingClientRect();
+   if(i.dataset.fy&&e.classList.contains('bleed')&&!matchMedia('(min-width:701px)').matches){i.removeAttribute('style');return;}
    if(i.dataset.fy){if(r.bottom<-vh||r.top>2*vh)return;var p=on?Math.max(-1,Math.min(1,(r.top+r.height/2-vh/2)/(vh/2+r.height/2))):0;face(e,i,-p,on);return;}
    if(!on){i.style.transform='';return;}
    if(r.bottom<0||r.top>vh)return;
