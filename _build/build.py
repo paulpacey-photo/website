@@ -62,6 +62,7 @@ GLOBAL = {
     'falling-flat-guide': 'misses-the-mark.html',
     'essay-read': 'resources.html#articles',          # TODO: essay page
     'call': 'services.html#call',
+    'strategic-shoot': 'services.html#core',
     'uncomfortable-truth': 'uncomfortable-truth.html',
     'ai-article': 'ai-in-school-marketing.html',
     'articles': 'resources.html#articles',
@@ -69,6 +70,8 @@ GLOBAL = {
 NAV = {'home': 'index.html', 'top': 'index.html', 'services': 'services.html',
        'resources': 'resources.html', 'portfolio': 'index.html#portfolio', 'contact': 'contact.html'}
 ALWAYS = {'contact', 'home'}  # never treated as in-page anchors
+NOINDEX = {'thanks'}  # pages kept out of search results
+ROBOTS = '<meta name="robots" content="noindex">\n'
 
 # ---------------------------------------------------------------- assets
 def build_assets():
@@ -304,7 +307,7 @@ def build():
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
-<link rel="canonical" href="{DOMAIN}/{'' if slug == 'index' else fname}">
+{ROBOTS if slug in NOINDEX else ''}<link rel="canonical" href="{DOMAIN}/{'' if slug == 'index' else fname}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{DOMAIN}/{'' if slug == 'index' else fname}">
 <meta property="og:title" content="{html.escape(title)}">
