@@ -25,8 +25,8 @@ BAND = {
 PORTRAIT = '/_blob/5cbcad31e477110391127e9cf157361c'
 SIGNATURE = '/_blob/ed31b870cf6c1f8e89f4233c4fee7b09'
 
-TITLE_HTML = 'Found, Chosen, Kept: <i>Where AI Agents Belong in School Marketing</i>'
-DEK = 'The eight new hires your marketing team doesn’t need to interview.'
+TITLE_HTML = 'Eight New Hires <i>Your Marketing Team Doesn’t Need to Interview For</i>'
+DEK = 'Three areas where AI agents belong in school marketing.'
 READ = '8 min read'
 
 
