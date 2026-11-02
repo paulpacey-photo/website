@@ -62,6 +62,7 @@ GLOBAL = {
     'falling-flat-guide': 'misses-the-mark.html',
     'essay-read': 'resources.html#articles',          # TODO: essay page
     'call': 'services.html#call',
+    'strategic-shoot': 'services.html#core',
     'uncomfortable-truth': 'uncomfortable-truth.html',
     'ai-article': 'ai-in-school-marketing.html',
     'articles': 'resources.html#articles',
