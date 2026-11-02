@@ -152,7 +152,7 @@
         if (!r.height || r.bottom < -200 || r.top > vh + 200) return;
         var k = parseFloat(box.getAttribute('data-parallax')) || 0.2;
         var z = parseFloat(getComputedStyle(doc.documentElement).getPropertyValue('--z')) || 1;
-        var off = ((r.top + r.height / 2) - vh / 2) * -k / z;
+        var off = box.hasAttribute('data-parallax-hero') ? Math.max(0, -r.top) * k / z : ((r.top + r.height / 2) - vh / 2) * -k / z;
         var l = box.querySelector('[data-parallax-layer]');
         if (l) l.style.transform = 'translate3d(0,' + off.toFixed(1) + 'px,0)';
       });
