@@ -96,7 +96,7 @@ WHY('keeping a family costs far less than finding a new one, and a family that s
 
 H('Three lines I wouldn’t cross')
 P('Agents make a small team far more capable. They also make it easier to cut corners that matter. Schools hold something more precious than most businesses do: the trust of families with their children. So I’d hold three firm lines.')
-B.append(('ph', ''))   # IMAGE PLACEHOLDER: optional, an authentic, unstaged moment
+B.append(('img', '/_blob/ce47ad2c99d5145d480f0d9da495d8c6', 'A smiling student looks up from his work in class', 'Real students, in a real classroom. Parents can tell the difference.'))
 L([
     ('Keep children’s data out of it.', 'Student names, photos, records and anything that identifies a child stay out of AI tools unless your data protection set-up is watertight, and your data protection lead has signed it off. Most of these agents don’t need student data at all.'),
     ('A person sends every message to a family.', 'Agents draft; people decide. One clumsy automated email, with the wrong name or the wrong tone at the wrong moment, can undo years of goodwill.'),
