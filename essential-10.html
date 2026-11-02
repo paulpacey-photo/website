@@ -39,13 +39,13 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08}
 a:focus-visible,.btn:focus-visible{outline:2px solid var(--red);outline-offset:4px}
 /* header */
 .site-h{background:#fff}
-.site-h .wrap{display:flex;align-items:flex-end;justify-content:space-between;padding-top:24px;padding-bottom:24px;gap:24px}
-.logo{display:flex;flex-direction:column;gap:12px;text-decoration:none}
-.logo .mark{width:54px}.logo .word{width:124px}
-.nav{display:flex;align-items:center;gap:44px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;padding-bottom:6px}
+.site-h .wrap{display:flex;align-items:flex-end;justify-content:space-between;box-sizing:border-box;height:152px;padding-top:0;padding-bottom:24px;gap:24px}
+.logo{display:flex;flex-direction:column;align-items:center;gap:16px;text-decoration:none}
+.logo .mark{display:block;width:54px;height:76px}.logo .word{display:block;width:124px;height:12px}
+.nav{display:flex;align-items:center;gap:44px;font-size:12px;font-weight:500;letter-spacing:.22em;line-height:normal;text-transform:uppercase}
 .nav a{text-decoration:none}.nav a:hover,.nav a[aria-current]{color:var(--red)}
 .nav .box{border:1px solid var(--ink);padding:12px 20px}
-@media(max-width:860px){.nav a:not(.box){display:none}.logo .mark{width:40px}.logo .word{width:100px}}
+@media(max-width:860px){.nav a:not(.box){display:none}.site-h .wrap{height:100px;padding-bottom:0;align-items:center}.logo{gap:9px}.logo .mark{width:30px;height:42px}.logo .word{width:94px;height:9px}}
 /* hero */
 .hero{background:var(--cream);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:stretch}
 .hero .copy{padding:clamp(56px,8vw,128px) var(--pad);display:flex;flex-direction:column;justify-content:center;gap:32px}
@@ -149,7 +149,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--red);outline-offset:4
 <h1>10 images every school brand library <i>can’t do without.</i></h1>
 <p>What to capture, how it resonates, and why it works.</p>
 </div>
-<div class="img"><img src="e10-hero-flame.webp" alt="A student in safety goggles holds out a hand as a flame blooms in a science lab" width="1093" height="1440" fetchpriority="high"></div>
+<div class="img"><img loading="lazy" decoding="async" src="e10-hero-flame.webp" alt="A student in safety goggles holds out a hand as a flame blooms in a science lab" width="1093" height="1440" fetchpriority="high"></div>
 </section>
 
 <section class="premise" id="premise"><div class="wrap">
