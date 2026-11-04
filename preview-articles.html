@@ -24,9 +24,9 @@
 <script>(function(){var d=document.documentElement;function fit(){var w=d.clientWidth||window.innerWidth;var m=w<820;d.classList.toggle('is-m',m);d.classList.toggle('is-d',!m);d.style.setProperty('--z',m?Math.min(w/390,1.6):Math.min(w/1440,1.33));}fit();window.addEventListener('resize',fit);if(window.IntersectionObserver&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))d.classList.add('fx');})();
 </script>
 <style id="lift-test">
-#articles article:first-of-type>a>div,#m-articles article:first-of-type>a>div{box-shadow:0 0 0 rgba(30,30,30,0)!important;transform:translateY(0) scale(1);transition:transform .55s cubic-bezier(.2,.7,.2,1),box-shadow .55s cubic-bezier(.2,.7,.2,1);will-change:transform}
-#articles article:first-of-type:hover>a>div,#m-articles article:first-of-type.lift>a>div{transform:translateY(-12px) scale(1.045);box-shadow:-20px 30px 34px -8px rgba(30,30,30,.34),-4px 8px 12px rgba(30,30,30,.12)!important}
-@media (prefers-reduced-motion:reduce){#articles article:first-of-type>a>div,#m-articles article:first-of-type>a>div{transition:none}}
+#articles>article>a>div,#m-articles article:first-of-type>a>div{box-shadow:0 0 0 rgba(30,30,30,0)!important;transform:translateY(0) scale(1);transition:transform .55s cubic-bezier(.2,.7,.2,1),box-shadow .55s cubic-bezier(.2,.7,.2,1);will-change:transform}
+#articles>article:hover>a>div,#m-articles article:first-of-type.lift>a>div{transform:translateY(-12px) scale(1.045);box-shadow:-20px 30px 34px -8px rgba(30,30,30,.34),-4px 8px 12px rgba(30,30,30,.12)!important}
+@media (prefers-reduced-motion:reduce){#articles>article>a>div,#m-articles article:first-of-type>a>div{transition:none}}
 </style>
 <meta name="robots" content="noindex,nofollow">
 </head>
