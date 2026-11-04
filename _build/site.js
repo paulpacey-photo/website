@@ -484,3 +484,12 @@
     });
   });
 })();
+
+/* ---------- article covers: on touch screens, lift the card nearest the middle of the screen ---------- */
+(function () {
+  if (!window.matchMedia || matchMedia('(hover: hover)').matches || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { e.target.classList.toggle('lift', e.isIntersecting); });
+  }, { rootMargin: '-35% 0px -35% 0px' });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-lift]'), function (c) { var a = c.closest('article'); if (a) io.observe(a); });
+})();
