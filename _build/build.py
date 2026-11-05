@@ -78,6 +78,8 @@ NAV = {'home': 'index.html', 'top': 'index.html', 'services': 'services.html',
 ALWAYS = {'contact', 'home'}  # never treated as in-page anchors
 NOINDEX = {'thanks'}  # pages kept out of search results
 ROBOTS = '<meta name="robots" content="noindex">\n'
+# Cloudflare Web Analytics: cookieless visit statistics (token is public)
+ANALYTICS = '<!-- Cloudflare Web Analytics --><script type=\'module\' src=\'https://static.cloudflareinsights.com/beacon.min.js\' data-cf-beacon=\'{"token": "5ff85ecdaae04854ac5af979d10d8dd1"}\'></script><!-- End Cloudflare Web Analytics -->\n'
 
 # ---------------------------------------------------------------- assets
 def build_assets():
@@ -330,7 +332,7 @@ def build():
 <link rel="stylesheet" href="pages.css">
 <link rel="stylesheet" href="styles.css">
 <script>{open(os.path.join(HERE, 'fit.js')).read()}</script>
-</head>
+{ANALYTICS}</head>
 <body data-page="{slug}">
 <div class="v-d" id="layout-d">
 {dbody}
