@@ -90,7 +90,7 @@ def build_assets():
         if ext == '.svg':
             name = bid + '.svg'; shutil.copy(p, os.path.join(OUT, 'img', name))
         elif bid == 'c5aa90e6520ebdd69fd4caa29326c030':
-            name = 'share-image.jpg'; Image.open(p).convert('RGB').save(os.path.join(OUT, name), quality=88)
+            name = 'share-image-2.jpg'; Image.open(p).convert('RGB').save(os.path.join(OUT, name), quality=88)
             m[bid] = name; continue
         else:
             im = Image.open(p)
@@ -377,7 +377,7 @@ def build():
     print('built', sorted(os.listdir(OUT)), len(reg), 'styles')
 
 MEDIA = json.load(open(os.path.join(HERE, 'media.json'))) if os.path.exists(os.path.join(HERE, 'media.json')) else {}
-SHARE = MEDIA.get('share', DOMAIN + '/share-image.jpg')
+SHARE = MEDIA.get('share', DOMAIN + '/share-image-2.jpg')
 
 
 def schema(slug, body):
