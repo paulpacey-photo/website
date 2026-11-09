@@ -39,7 +39,7 @@ PAGES = [
      ['Article-Uncomfortable-Truth', 'Article-Uncomfortable-Truth-2'],
      ['Article-Uncomfortable-Truth-Mobile', 'Article-Uncomfortable-Truth-Mobile-2', 'Article-Uncomfortable-Truth-Mobile-3'],
      'The Uncomfortable Truth About International School Marketing | Paul Pacey',
-     'Strip the superlatives from competing school websites and the same handful of words remains. Where real distinctiveness lives, and why photography is a mirror.'),
+     'A study of 100 international school websites found the same 20 “differentiators” on most of them. What that means for schools trying to stand out, and where real difference shows.'),
     ('ai-article', 'ai-in-school-marketing.html',
      ['Article-AI', 'Article-AI-2'],
      ['Article-AI-Mobile', 'Article-AI-Mobile-2', 'Article-AI-Mobile-3'],
@@ -90,7 +90,7 @@ def build_assets():
         if ext == '.svg':
             name = bid + '.svg'; shutil.copy(p, os.path.join(OUT, 'img', name))
         elif bid == 'c5aa90e6520ebdd69fd4caa29326c030':
-            name = 'share-image.jpg'; Image.open(p).convert('RGB').save(os.path.join(OUT, name), quality=88)
+            name = 'share-image-2.jpg'; Image.open(p).convert('RGB').save(os.path.join(OUT, name), quality=88)
             m[bid] = name; continue
         else:
             im = Image.open(p)
@@ -377,7 +377,7 @@ def build():
     print('built', sorted(os.listdir(OUT)), len(reg), 'styles')
 
 MEDIA = json.load(open(os.path.join(HERE, 'media.json'))) if os.path.exists(os.path.join(HERE, 'media.json')) else {}
-SHARE = MEDIA.get('share', DOMAIN + '/share-image.jpg')
+SHARE = MEDIA.get('share', DOMAIN + '/share-image-2.jpg')
 
 
 def schema(slug, body):
