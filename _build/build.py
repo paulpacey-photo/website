@@ -39,7 +39,7 @@ PAGES = [
      ['Article-Uncomfortable-Truth', 'Article-Uncomfortable-Truth-2'],
      ['Article-Uncomfortable-Truth-Mobile', 'Article-Uncomfortable-Truth-Mobile-2', 'Article-Uncomfortable-Truth-Mobile-3'],
      'The Uncomfortable Truth About International School Marketing | Paul Pacey',
-     'Strip the superlatives from competing school websites and the same handful of words remains. Where real distinctiveness lives, and why photography is a mirror.'),
+     'Strip the superlatives from competing school websites and the same handful of words remains. Where real distinctiveness lives, and the test that shows whether a school proves what it says.'),
     ('ai-article', 'ai-in-school-marketing.html',
      ['Article-AI', 'Article-AI-2'],
      ['Article-AI-Mobile', 'Article-AI-Mobile-2', 'Article-AI-Mobile-3'],
