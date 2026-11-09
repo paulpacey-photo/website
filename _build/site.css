@@ -43,7 +43,7 @@ a[aria-label="LinkedIn"]:hover svg,a[aria-label="LinkedIn"]:focus-visible svg{tr
 /* Articles: reveal on scroll, highlighted words, parallax, reading progress */
 html.fx [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
 html.fx [data-reveal].in{opacity:1;transform:none}
-mark[data-hl]{background-image:url(hl-1.webp);background-repeat:no-repeat;background-position:0 62%;background-size:100% 78%;mix-blend-mode:multiply;padding:0 3px!important;margin:0 -1px;-webkit-box-decoration-break:clone;box-decoration-break:clone}mark[data-hl="2"],mark[data-hl="5"],mark[data-hl="8"],mark[data-hl="11"],mark[data-hl="14"],mark[data-hl="17"],mark[data-hl="20"]{background-image:url(hl-2.webp)}mark[data-hl="3"],mark[data-hl="6"],mark[data-hl="9"],mark[data-hl="12"],mark[data-hl="15"],mark[data-hl="18"]{background-image:url(hl-3.webp)}
+mark[data-hl]{background-image:url(hl-1.webp);background-repeat:no-repeat;background-position:0 62%;background-size:100% 78%;mix-blend-mode:multiply;padding:0 3px!important;margin:0 -1px;-webkit-box-decoration-break:clone;box-decoration-break:clone}mark[data-hl="2"],mark[data-hl="5"],mark[data-hl="8"],mark[data-hl="11"],mark[data-hl="14"],mark[data-hl="17"],mark[data-hl="20"]{background-image:url(hl-2.webp)}mark[data-hl="3"],mark[data-hl="6"],mark[data-hl="9"],mark[data-hl="12"],mark[data-hl="15"],mark[data-hl="18"],mark[data-hl="21"]{background-image:url(hl-3.webp)}
 html.fx mark[data-hl]{background-size:0% 78%;transition:background-size .55s cubic-bezier(.3,.6,.4,1)}
 html.fx .in mark[data-hl]{background-size:100% 78%}
 html.fx .in mark[data-hl="1"]{transition-delay:0.47s}
@@ -66,6 +66,7 @@ html.fx .in mark[data-hl="17"]{transition-delay:2.39s}
 html.fx .in mark[data-hl="18"]{transition-delay:2.51s}
 html.fx .in mark[data-hl="19"]{transition-delay:2.63s}
 html.fx .in mark[data-hl="20"]{transition-delay:2.75s}
+html.fx .in mark[data-hl="21"]{transition-delay:2.87s}
 [data-parallax-layer]{will-change:transform}
 .read-progress{position:fixed;left:0;top:0;width:100%;height:3px;background:#A42C35;transform-origin:0 50%;transform:scaleX(0);z-index:900;pointer-events:none}
 /* Landing page: 3D word cloud */
