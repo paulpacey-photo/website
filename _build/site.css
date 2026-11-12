@@ -90,5 +90,9 @@ nav[aria-label="Footer"] a:hover,nav[aria-label="Footer"] a:focus-visible{color:
 article:hover [data-lift],article.lift [data-lift]{transform:translateY(-12px) scale(1.045);box-shadow:-20px 30px 34px -8px rgba(30,30,30,.34),-4px 8px 12px rgba(30,30,30,.12)!important}
 article:hover [data-lift="soon"],article.lift [data-lift="soon"]{box-shadow:-14px 22px 28px -8px rgba(30,30,30,.22),-3px 6px 10px rgba(30,30,30,.08)!important}
 @media (prefers-reduced-motion:reduce){[data-lift]{transition:none}}
-/* highlights outside articles: draw in when their paragraph scrolls into view */
-html.fx [data-hl-in].in mark[data-hl]{transition-delay:.15s}
+/* highlights outside articles: the original thicker stroke, drawn line by line in reading order (site.js splits each mark into lines) */
+[data-hl-in] mark[data-hl]{background:none!important;padding:0!important;margin:0!important;mix-blend-mode:normal}
+[data-hl-in] .hl-line{background:url(hl-1.webp) 0 50%/100% 100% no-repeat;-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:.12em .32em;margin:0 -.32em}
+[data-hl-in] mark[data-hl="2"] .hl-line{background-image:url(hl-2.webp)}[data-hl-in] mark[data-hl="3"] .hl-line{background-image:url(hl-3.webp)}
+html.fx [data-hl-in] .hl-line{background-size:0% 100%;transition-property:background-size;transition-timing-function:cubic-bezier(.45,.05,.55,.95)}
+html.fx [data-hl-in] .hl-line.on{background-size:100% 100%}
