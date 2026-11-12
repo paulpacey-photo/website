@@ -530,7 +530,7 @@
     p.querySelectorAll('mark[data-hl]').forEach(function (m) {
       m.setAttribute('data-done', '1');
       m.querySelectorAll('.hl-line').forEach(function (l) {
-        var d = 0.4 + l.getBoundingClientRect().width / 620;
+        var d = 0.5 + l.getBoundingClientRect().width / 496;
         l.style.transitionDuration = d.toFixed(2) + 's';
         l.style.transitionDelay = (t - now).toFixed(2) + 's';
         t += d;
