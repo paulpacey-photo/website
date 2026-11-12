@@ -524,7 +524,9 @@
   if (!fx || !('IntersectionObserver' in window)) return;
   var queueEnd = 0;
   function play(p) {
-    var now = performance.now() / 1000, t = Math.max(now + 0.2, queueEnd);
+    var sec = p.closest('section') || document.body, first = !sec.hasAttribute('data-hl-started');
+    sec.setAttribute('data-hl-started', '');
+    var now = performance.now() / 1000, t = Math.max(now + (first ? 3 : 0.2), queueEnd);   // first highlight in a section waits 3s so the headline is read first
     p.querySelectorAll('mark[data-hl]').forEach(function (m) {
       m.setAttribute('data-done', '1');
       m.querySelectorAll('.hl-line').forEach(function (l) {
