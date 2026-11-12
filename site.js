@@ -139,7 +139,7 @@
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
-    doc.querySelectorAll('[data-reveal]').forEach(function (el) { io.observe(el); });
+    doc.querySelectorAll('[data-reveal], [data-hl-in]').forEach(function (el) { io.observe(el); });
     var layers = Array.prototype.slice.call(doc.querySelectorAll('[data-parallax]'));
     var bar = null;
     if (doc.querySelector('[data-article]')) { bar = doc.createElement('div'); bar.className = 'read-progress'; doc.body.appendChild(bar); }

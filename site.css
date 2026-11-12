@@ -90,3 +90,5 @@ nav[aria-label="Footer"] a:hover,nav[aria-label="Footer"] a:focus-visible{color:
 article:hover [data-lift],article.lift [data-lift]{transform:translateY(-12px) scale(1.045);box-shadow:-20px 30px 34px -8px rgba(30,30,30,.34),-4px 8px 12px rgba(30,30,30,.12)!important}
 article:hover [data-lift="soon"],article.lift [data-lift="soon"]{box-shadow:-14px 22px 28px -8px rgba(30,30,30,.22),-3px 6px 10px rgba(30,30,30,.08)!important}
 @media (prefers-reduced-motion:reduce){[data-lift]{transition:none}}
+/* highlights outside articles: draw in when their paragraph scrolls into view */
+html.fx [data-hl-in].in mark[data-hl]{transition-delay:.15s}
