@@ -535,7 +535,7 @@
         l.style.transitionDelay = (t - now).toFixed(2) + 's';
         t += d;
       });
-      t += 0.9;                                              // pause before the next highlight
+      t += 2;                                                // 2-second pause before the next highlight
     });
     queueEnd = t;
     requestAnimationFrame(function () { requestAnimationFrame(function () {
