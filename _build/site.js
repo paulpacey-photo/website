@@ -528,12 +528,12 @@
     p.querySelectorAll('mark[data-hl]').forEach(function (m) {
       m.setAttribute('data-done', '1');
       m.querySelectorAll('.hl-line').forEach(function (l) {
-        var d = 0.22 + l.getBoundingClientRect().width / 1100;
+        var d = 0.4 + l.getBoundingClientRect().width / 620;
         l.style.transitionDuration = d.toFixed(2) + 's';
         l.style.transitionDelay = (t - now).toFixed(2) + 's';
         t += d;
       });
-      t += 0.5;                                              // brief pause before the next highlight
+      t += 0.9;                                              // pause before the next highlight
     });
     queueEnd = t;
     requestAnimationFrame(function () { requestAnimationFrame(function () {
