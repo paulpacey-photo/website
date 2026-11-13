@@ -552,12 +552,14 @@
   function play(sec) {
     var now = performance.now() / 1000;
     var plan = schedule(sec);
-    // manual calibration: data-hl-at="2 4" on a highlight sets its lines' start times (seconds after the headline appears)
+    // manual calibration: data-hl-at="2 3" / data-hl-dur="1 0.8" on a highlight set its lines' start times (seconds after the headline appears) and draw times
     plan.forEach(function (p) {
       var m = p.line.closest('mark[data-hl-at]'); if (!m) return;
       var at = m.getAttribute('data-hl-at').trim().split(/[\s,]+/).map(parseFloat);
       var i = Array.prototype.indexOf.call(m.querySelectorAll('.hl-line'), p.line);
       if (i >= 0 && i < at.length && !isNaN(at[i])) p.start = at[i];
+      var du = (m.getAttribute('data-hl-dur') || '').trim().split(/[\s,]+/).map(parseFloat);
+      if (i >= 0 && i < du.length && !isNaN(du[i])) p.dur = du[i];
     });
     sec.querySelectorAll('mark[data-hl]').forEach(function (m) { m.setAttribute('data-done', '1'); });
     plan.forEach(function (p) {
