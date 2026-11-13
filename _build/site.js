@@ -552,6 +552,19 @@
   function play(sec) {
     var now = performance.now() / 1000;
     var plan = schedule(sec);
+    // measured calibration: data-hl-span="2.62 5.0" = when a reader reaches and finishes the phrase (seconds after the
+    // headline appears, from the read-and-tap tests); the phrase's lines share that time in proportion to their length
+    sec.querySelectorAll('mark[data-hl-span]').forEach(function (m) {
+      var sp = m.getAttribute('data-hl-span').trim().split(/[\s,]+/).map(parseFloat); if (sp.length < 2 || isNaN(sp[0]) || isNaN(sp[1])) return;
+      var ls = Array.prototype.slice.call(m.querySelectorAll('.hl-line')), tot = 0;
+      ls.forEach(function (l) { tot += l.textContent.length; });
+      var t = sp[0];
+      ls.forEach(function (l) {
+        var d = (sp[1] - sp[0]) * l.textContent.length / (tot || 1);
+        plan.forEach(function (p) { if (p.line === l) { p.start = t; p.dur = Math.max(0.3, d); } });
+        t += d;
+      });
+    });
     // manual calibration: data-hl-at="2 3" / data-hl-dur="1 0.8" on a highlight set its lines' start times (seconds after the headline appears) and draw times
     plan.forEach(function (p) {
       var m = p.line.closest('mark[data-hl-at]'); if (!m) return;
