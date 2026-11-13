@@ -502,6 +502,7 @@
   var marks = Array.prototype.slice.call(document.querySelectorAll('[data-hl-in] mark[data-hl]'));
   if (!marks.length) return;
   var fx = document.documentElement.classList.contains('fx');
+  var TAP_LAG = 0.3;   // typical delay between the eyes reaching a word and the tap that records it
   var HEAD = 0.42, WORD = 0.24, STOP = 0.3, HEAD_STOP = 0.5, AFTER_HEAD = 0.6, PARA = 0.35;
   function esc(t) { return t.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
   function split(m) {
@@ -556,6 +557,7 @@
     // headline appears, from the read-and-tap tests); the phrase's lines share that time in proportion to their length
     sec.querySelectorAll('mark[data-hl-span]').forEach(function (m) {
       var sp = m.getAttribute('data-hl-span').trim().split(/[\s,]+/).map(parseFloat); if (sp.length < 2 || isNaN(sp[0]) || isNaN(sp[1])) return;
+      sp = [Math.max(0, sp[0] - TAP_LAG), Math.max(0.3, sp[1] - TAP_LAG)];   // remove the delay between eyes arriving and the finger tapping
       var ls = Array.prototype.slice.call(m.querySelectorAll('.hl-line')), tot = 0;
       ls.forEach(function (l) { tot += l.textContent.length; });
       var t = sp[0];
@@ -584,10 +586,10 @@
       plan.forEach(function (p) { p.line.classList.add('on'); });
     }); });
   }
-  // start the clock when a section's headline is fully on screen (or its first highlight, if it has no headline)
+  // start the clock as the section's headline enters the screen, which is when a reader starts on it (or its first highlight, if it has no headline)
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { io.unobserve(e.target); play(e.target.__hlSec); } });
-  }, { rootMargin: '0px 0px -15% 0px', threshold: 1 });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
   var secs = [];
   marks.forEach(function (m) { var s = m.closest('section') || document.body; if (secs.indexOf(s) < 0) secs.push(s); });
   secs.forEach(function (s) { var h = s.querySelector('h1, h2') || s.querySelector('mark[data-hl]'); h.__hlSec = s; io.observe(h); });
