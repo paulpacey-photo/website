@@ -505,7 +505,15 @@
     if (!m.getClientRects().length) return;
     var txt = m.getAttribute('data-txt'); if (txt == null) { txt = m.textContent; m.setAttribute('data-txt', txt); }
     var done = m.getAttribute('data-done') === '1';
-    m.innerHTML = txt.split(/(\s+)/).map(function (w) { return '<span>' + esc(w) + '</span>'; }).join('');
+    // split into words, and around dashes: browsers can wrap a line next to "—", so "vision—visual" must be
+    // three pieces or part of it gets drawn together with the line above
+    var toks = [];
+    txt.split(/(\s+)/).forEach(function (w) {
+      if (/^\s+$/.test(w)) { toks.push(w); return; }
+      var parts = w.split(/([—–])/);   // the dash is its own piece: browsers may break before or after it
+      parts.forEach(function (p) { if (p) toks.push(p); });
+    });
+    m.innerHTML = toks.map(function (w) { return '<span>' + esc(w) + '</span>'; }).join('');
     var lines = [], cur = null, top = null;
     Array.prototype.forEach.call(m.children, function (s) {
       var t = Math.round(s.getBoundingClientRect().top);
@@ -521,7 +529,13 @@
   function all() { marks.forEach(split); }
   all();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
-  var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(all, 150); });
+  // phones fire 'resize' when the address bar shows or hides while scrolling; only re-split when the width really changes,
+  // otherwise lines being drawn would be rebuilt mid-animation
+  var rt, lastW = window.innerWidth;
+  window.addEventListener('resize', function () {
+    if (window.innerWidth === lastW) return; lastW = window.innerWidth;
+    clearTimeout(rt); rt = setTimeout(all, 150);
+  });
   if (!fx || !('IntersectionObserver' in window)) return;
 
   // Fixed sequence, no reading model: the first highlighted line starts 1.9s after the headline appears;
