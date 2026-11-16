@@ -494,16 +494,12 @@
   Array.prototype.forEach.call(document.querySelectorAll('[data-lift]'), function (c) { var a = c.closest('article'); if (a) io.observe(a); });
 })();
 
-/* ---------- highlights outside articles: timed to a reader's eye ----------
-   Each highlight is split into its visual lines. When a section's headline comes into view, a "reading clock"
-   starts: headline words at a slower pace, body words at ~250 words a minute, short pauses at full stops and
-   between paragraphs. Each highlighted line draws while the reader would be reading those words. */
+/* ---------- highlights outside articles: drawn line by line in sequence ----------
+   Each highlight is split into its visual lines, which draw one after another once the section's headline appears. */
 (function () {
   var marks = Array.prototype.slice.call(document.querySelectorAll('[data-hl-in] mark[data-hl]'));
   if (!marks.length) return;
   var fx = document.documentElement.classList.contains('fx');
-  var TAP_LAG = 0.3;   // typical delay between the eyes reaching a word and the tap that records it
-  var HEAD = 0.42, WORD = 0.24, STOP = 0.3, HEAD_STOP = 0.5, AFTER_HEAD = 0.6, PARA = 0.35;
   function esc(t) { return t.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
   function split(m) {
     if (!m.getClientRects().length) return;
@@ -528,62 +524,22 @@
   var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(all, 150); });
   if (!fx || !('IntersectionObserver' in window)) return;
 
-  // walk the section's visible text in reading order and give each highlighted line a start time and duration
-  function schedule(sec) {
-    var head = sec.querySelector('h1, h2'), t = 0, lastBlock = null, plan = [];
-    var walker = document.createTreeWalker(sec, NodeFilter.SHOW_TEXT, null);
-    var n, inHeadDone = false;
-    while ((n = walker.nextNode())) {
-      var el = n.parentElement; if (!el || !n.nodeValue.trim() || !el.getClientRects().length) continue;
-      if (el.closest('script, style, svg, button')) continue;
-      var isHead = head && head.contains(n);
-      if (!isHead && head && !inHeadDone && head.compareDocumentPosition(n) & Node.DOCUMENT_POSITION_FOLLOWING) { t += AFTER_HEAD; inHeadDone = true; }
-      var block = el.closest('p, h1, h2, h3, li, blockquote, figcaption') || el;
-      if (lastBlock && block !== lastBlock && !isHead) t += PARA;
-      lastBlock = block;
-      var line = el.closest('.hl-line'), start = t;
-      (n.nodeValue.match(/\S+/g) || []).forEach(function (w) {
-        t += isHead ? HEAD : WORD;
-        if (/[.!?]["”’)]*$/.test(w)) t += isHead ? HEAD_STOP : STOP;
-      });
-      if (line) plan.push({ line: line, start: start, dur: Math.max(0.35, t - start) });
-    }
-    return plan;
-  }
+  // Fixed sequence, no reading model: the first highlighted line starts 1.9s after the headline appears;
+  // each following line (across all highlights in the section, top to bottom) starts 0.2s after the previous one finishes.
+  var FIRST = 1.9, GAP = 0.2;
   function play(sec) {
-    var now = performance.now() / 1000;
-    var plan = schedule(sec);
-    // measured calibration: data-hl-span="2.62 5.0" = when a reader reaches and finishes the phrase (seconds after the
-    // headline appears, from the read-and-tap tests); the phrase's lines share that time in proportion to their length
-    sec.querySelectorAll('mark[data-hl-span]').forEach(function (m) {
-      var sp = m.getAttribute('data-hl-span').trim().split(/[\s,]+/).map(parseFloat); if (sp.length < 2 || isNaN(sp[0]) || isNaN(sp[1])) return;
-      sp = [Math.max(0, sp[0] - TAP_LAG), Math.max(0.3, sp[1] - TAP_LAG)];   // remove the delay between eyes arriving and the finger tapping
-      var ls = Array.prototype.slice.call(m.querySelectorAll('.hl-line')), tot = 0;
-      ls.forEach(function (l) { tot += l.textContent.length; });
-      var t = sp[0];
-      ls.forEach(function (l) {
-        var d = (sp[1] - sp[0]) * l.textContent.length / (tot || 1);
-        plan.forEach(function (p) { if (p.line === l) { p.start = t; p.dur = Math.max(0.3, d); } });
-        t += d;
-      });
-    });
-    // manual calibration: data-hl-at="2 3" / data-hl-dur="1 0.8" on a highlight set its lines' start times (seconds after the headline appears) and draw times
-    plan.forEach(function (p) {
-      var m = p.line.closest('mark[data-hl-at]'); if (!m) return;
-      var at = m.getAttribute('data-hl-at').trim().split(/[\s,]+/).map(parseFloat);
-      var i = Array.prototype.indexOf.call(m.querySelectorAll('.hl-line'), p.line);
-      if (i >= 0 && i < at.length && !isNaN(at[i])) p.start = at[i];
-      var du = (m.getAttribute('data-hl-dur') || '').trim().split(/[\s,]+/).map(parseFloat);
-      if (i >= 0 && i < du.length && !isNaN(du[i])) p.dur = du[i];
-    });
+    var lines = Array.prototype.slice.call(sec.querySelectorAll('mark[data-hl] .hl-line')).filter(function (l) { return l.getClientRects().length; });
     sec.querySelectorAll('mark[data-hl]').forEach(function (m) { m.setAttribute('data-done', '1'); });
-    plan.forEach(function (p) {
-      p.line.style.transitionDuration = p.dur.toFixed(2) + 's';
-      p.line.style.transitionTimingFunction = 'linear';
-      p.line.style.transitionDelay = p.start.toFixed(2) + 's';
+    var t = FIRST;
+    lines.forEach(function (l) {
+      var d = 0.5 + l.getBoundingClientRect().width / 496;   // draw speed: longer lines take a little longer
+      l.style.transitionDuration = d.toFixed(2) + 's';
+      l.style.transitionTimingFunction = 'linear';
+      l.style.transitionDelay = t.toFixed(2) + 's';
+      t += d + GAP;
     });
     requestAnimationFrame(function () { requestAnimationFrame(function () {
-      plan.forEach(function (p) { p.line.classList.add('on'); });
+      lines.forEach(function (l) { l.classList.add('on'); });
     }); });
   }
   // start the clock as the section's headline enters the screen, which is when a reader starts on it (or its first highlight, if it has no headline)
