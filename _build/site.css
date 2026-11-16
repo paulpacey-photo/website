@@ -44,29 +44,6 @@ a[aria-label="LinkedIn"]:hover svg,a[aria-label="LinkedIn"]:focus-visible svg{tr
 html.fx [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
 html.fx [data-reveal].in{opacity:1;transform:none}
 mark[data-hl]{background-image:url(hl-1.webp);background-repeat:no-repeat;background-position:0 62%;background-size:100% 78%;mix-blend-mode:multiply;padding:0 3px!important;margin:0 -1px;-webkit-box-decoration-break:clone;box-decoration-break:clone}mark[data-hl="2"],mark[data-hl="5"],mark[data-hl="8"],mark[data-hl="11"],mark[data-hl="14"],mark[data-hl="17"],mark[data-hl="20"]{background-image:url(hl-2.webp)}mark[data-hl="3"],mark[data-hl="6"],mark[data-hl="9"],mark[data-hl="12"],mark[data-hl="15"],mark[data-hl="18"],mark[data-hl="21"]{background-image:url(hl-3.webp)}
-html.fx mark[data-hl]{background-size:0% 78%;transition:background-size .55s cubic-bezier(.3,.6,.4,1)}
-html.fx .in mark[data-hl]{background-size:100% 78%}
-html.fx .in mark[data-hl="1"]{transition-delay:0.47s}
-html.fx .in mark[data-hl="2"]{transition-delay:0.59s}
-html.fx .in mark[data-hl="3"]{transition-delay:0.71s}
-html.fx .in mark[data-hl="4"]{transition-delay:0.83s}
-html.fx .in mark[data-hl="5"]{transition-delay:0.95s}
-html.fx .in mark[data-hl="6"]{transition-delay:1.07s}
-html.fx .in mark[data-hl="7"]{transition-delay:1.19s}
-html.fx .in mark[data-hl="8"]{transition-delay:1.31s}
-html.fx .in mark[data-hl="9"]{transition-delay:1.43s}
-html.fx .in mark[data-hl="10"]{transition-delay:1.55s}
-html.fx .in mark[data-hl="11"]{transition-delay:1.67s}
-html.fx .in mark[data-hl="12"]{transition-delay:1.79s}
-html.fx .in mark[data-hl="13"]{transition-delay:1.91s}
-html.fx .in mark[data-hl="14"]{transition-delay:2.03s}
-html.fx .in mark[data-hl="15"]{transition-delay:2.15s}
-html.fx .in mark[data-hl="16"]{transition-delay:2.27s}
-html.fx .in mark[data-hl="17"]{transition-delay:2.39s}
-html.fx .in mark[data-hl="18"]{transition-delay:2.51s}
-html.fx .in mark[data-hl="19"]{transition-delay:2.63s}
-html.fx .in mark[data-hl="20"]{transition-delay:2.75s}
-html.fx .in mark[data-hl="21"]{transition-delay:2.87s}
 [data-parallax-layer]{will-change:transform}
 .read-progress{position:fixed;left:0;top:0;width:100%;height:3px;background:#A42C35;transform-origin:0 50%;transform:scaleX(0);z-index:900;pointer-events:none}
 /* Landing page: 3D word cloud */
@@ -90,9 +67,7 @@ nav[aria-label="Footer"] a:hover,nav[aria-label="Footer"] a:focus-visible{color:
 article:hover [data-lift],article.lift [data-lift]{transform:translateY(-12px) scale(1.045);box-shadow:-20px 30px 34px -8px rgba(30,30,30,.34),-4px 8px 12px rgba(30,30,30,.12)!important}
 article:hover [data-lift="soon"],article.lift [data-lift="soon"]{box-shadow:-14px 22px 28px -8px rgba(30,30,30,.22),-3px 6px 10px rgba(30,30,30,.08)!important}
 @media (prefers-reduced-motion:reduce){[data-lift]{transition:none}}
-/* highlights outside articles: the original thicker stroke, drawn line by line in reading order (site.js splits each mark into lines) */
-[data-hl-in] mark[data-hl]{background:none!important;padding:0!important;margin:0!important;mix-blend-mode:normal}
-[data-hl-in] .hl-line{background:url(hl-1.webp) 0 50%/100% 100% no-repeat;-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:.12em .32em;margin:0 -.32em}
-[data-hl-in] mark[data-hl="2"] .hl-line{background-image:url(hl-2.webp)}[data-hl-in] mark[data-hl="3"] .hl-line{background-image:url(hl-3.webp)}
-html.fx [data-hl-in] .hl-line{background-size:0% 100%;transition-property:background-size;transition-timing-function:cubic-bezier(.45,.05,.55,.95)}
-html.fx [data-hl-in] .hl-line.on{background-size:100% 100%}
+
+/* highlights outside articles: the fuller stroke, static */
+[data-hl-in] mark[data-hl]{background:url(hl-1.webp) 0 50%/100% 100% no-repeat!important;padding:.12em .32em!important;margin:0 -.32em!important;mix-blend-mode:normal;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+[data-hl-in] mark[data-hl="2"]{background-image:url(hl-2.webp)!important}[data-hl-in] mark[data-hl="3"]{background-image:url(hl-3.webp)!important}
